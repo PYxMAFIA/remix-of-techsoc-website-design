@@ -1,0 +1,1185 @@
+"use client"
+
+import { useState } from 'react'
+import { motion } from "framer-motion"
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { toast } from 'sonner'
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Twitter,
+  Linkedin,
+  Send,
+  Star,
+  Upload,
+  X,
+  ExternalLink,
+  Users,
+  MessageCircle,
+  ChevronRight,
+  Sparkles,
+  Zap,
+  Heart,
+  Globe
+} from 'lucide-react'
+
+interface FormErrors {
+  [key: string]: string
+}
+
+const GUILDS = [
+  { value: 'developers', label: 'Developers Guild' },
+  { value: 'designers', label: 'Designers Guild' },
+  { value: 'researchers', label: 'Researchers Guild' },
+  { value: 'community', label: 'Community Guild' },
+  { value: 'content', label: 'Content Guild' }
+]
+
+const FEEDBACK_CATEGORIES = [
+  { value: 'website', label: 'Website Experience' },
+  { value: 'events', label: 'Events' },
+  { value: 'community', label: 'Community' },
+  { value: 'content', label: 'Content & Resources' },
+  { value: 'technical', label: 'Technical Issues' },
+  { value: 'other', label: 'Other' }
+]
+
+const CONTACT_SUBJECTS = [
+  { value: 'general', label: 'General Inquiry' },
+  { value: 'partnership', label: 'Partnership' },
+  { value: 'media', label: 'Media & Press' },
+  { value: 'support', label: 'Support' },
+  { value: 'feedback', label: 'Feedback' }
+]
+
+const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
+
+const validateRequired = (value: string): boolean => {
+  return value.trim().length > 0
+}
+
+export default function FooterJoinContact() {
+  // Newsletter state
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Form states
+  const [joinForm, setJoinForm] = useState({ name: '', email: '', guild: '' })
+  const [joinErrors, setJoinErrors] = useState<FormErrors>({})
+  const [joinSubmitting, setJoinSubmitting] = useState(false)
+
+  const [showApplyModal, setShowApplyModal] = useState(false)
+  const [applyForm, setApplyForm] = useState({
+    name: '', email: '', guild: '', experience: '', motivation: '', portfolio: ''
+  })
+  const [applyErrors, setApplyErrors] = useState<FormErrors>({})
+  const [applySubmitting, setApplySubmitting] = useState(false)
+
+  const [feedbackForm, setFeedbackForm] = useState({
+    category: '', rating: 0, message: '', file: null as File | null
+  })
+  const [feedbackErrors, setFeedbackErrors] = useState<FormErrors>({})
+  const [feedbackSubmitting, setFeedbackSubmitting] = useState(false)
+  const [showFeedbackConfirm, setShowFeedbackConfirm] = useState(false)
+
+  const [contactForm, setContactForm] = useState({ subject: '', message: '' })
+  const [contactErrors, setContactErrors] = useState<FormErrors>({})
+  const [contactSubmitting, setContactSubmitting] = useState(false)
+
+  // Animation states
+  const [clickedButtons, setClickedButtons] = useState<string[]>([])
+  const [sparklePositions, setSparklePositions] = useState<{[key: string]: {x: number, y: number}[]}>({})
+
+  // Newsletter handler
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    setIsSubmitting(true)
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    toast.success('Subscribed successfully!', {
+      description: 'You\'ll receive updates about upcoming events and opportunities.'
+    })
+    
+    setEmail('')
+    setIsSubmitting(false)
+  }
+
+  const handleButtonClick = (buttonId: string, event: React.MouseEvent) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    const sparkles = Array.from({ length: 6 }, (_, i) => ({
+      x: Math.random() * rect.width,
+      y: Math.random() * rect.height
+    }))
+    
+    setSparklePositions(prev => ({ ...prev, [buttonId]: sparkles }))
+    setClickedButtons(prev => [...prev, buttonId])
+    
+    setTimeout(() => {
+      setClickedButtons(prev => prev.filter(id => id !== buttonId))
+      setSparklePositions(prev => {
+        const newPos = { ...prev }
+        delete newPos[buttonId]
+        return newPos
+      })
+    }, 1000)
+  }
+
+  // Join Us Form Handlers
+  const validateJoinForm = () => {
+    const errors: FormErrors = {}
+    
+    if (!validateRequired(joinForm.name)) {
+      errors.name = 'Name is required'
+    }
+    
+    if (!validateRequired(joinForm.email)) {
+      errors.email = 'Email is required'
+    } else if (!validateEmail(joinForm.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    
+    if (!joinForm.guild) {
+      errors.guild = 'Please select a guild'
+    }
+    
+    setJoinErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleJoinSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateJoinForm()) return
+    
+    setJoinSubmitting(true)
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      toast.success('Welcome to the guild!', {
+        description: 'We\'ll be in touch soon with next steps.'
+      })
+      
+      setJoinForm({ name: '', email: '', guild: '' })
+      setJoinErrors({})
+    } catch (error) {
+      toast.error('Something went wrong', {
+        description: 'Please try again later.'
+      })
+    } finally {
+      setJoinSubmitting(false)
+    }
+  }
+
+  // Apply Modal Handlers
+  const validateApplyForm = () => {
+    const errors: FormErrors = {}
+    
+    if (!validateRequired(applyForm.name)) {
+      errors.name = 'Name is required'
+    }
+    
+    if (!validateRequired(applyForm.email)) {
+      errors.email = 'Email is required'
+    } else if (!validateEmail(applyForm.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    
+    if (!applyForm.guild) {
+      errors.guild = 'Please select a guild'
+    }
+    
+    if (!validateRequired(applyForm.experience)) {
+      errors.experience = 'Please describe your experience'
+    }
+    
+    if (!validateRequired(applyForm.motivation)) {
+      errors.motivation = 'Please tell us your motivation'
+    }
+    
+    setApplyErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleApplySubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateApplyForm()) return
+    
+    setApplySubmitting(true)
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      
+      toast.success('Application submitted!', {
+        description: 'We\'ll review your application and get back to you within 3-5 business days.'
+      })
+      
+      setApplyForm({
+        name: '', email: '', guild: '', experience: '', motivation: '', portfolio: ''
+      })
+      setApplyErrors({})
+      setShowApplyModal(false)
+    } catch (error) {
+      toast.error('Failed to submit application', {
+        description: 'Please try again later.'
+      })
+    } finally {
+      setApplySubmitting(false)
+    }
+  }
+
+  // Feedback Form Handlers
+  const validateFeedbackForm = () => {
+    const errors: FormErrors = {}
+    
+    if (!feedbackForm.category) {
+      errors.category = 'Please select a category'
+    }
+    
+    if (feedbackForm.rating === 0) {
+      errors.rating = 'Please provide a rating'
+    }
+    
+    if (!validateRequired(feedbackForm.message)) {
+      errors.message = 'Please provide your feedback'
+    }
+    
+    setFeedbackErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleFeedbackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateFeedbackForm()) return
+    
+    setFeedbackSubmitting(true)
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      setShowFeedbackConfirm(true)
+      
+      setFeedbackForm({
+        category: '', rating: 0, message: '', file: null
+      })
+      setFeedbackErrors({})
+    } catch (error) {
+      toast.error('Failed to submit feedback', {
+        description: 'Please try again later.'
+      })
+    } finally {
+      setFeedbackSubmitting(false)
+    }
+  }
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        toast.error('File too large', {
+          description: 'Please select a file smaller than 5MB.'
+        })
+        return
+      }
+      setFeedbackForm(prev => ({ ...prev, file }))
+    }
+  }
+
+  // Contact Form Handlers
+  const validateContactForm = () => {
+    const errors: FormErrors = {}
+    
+    if (!contactForm.subject) {
+      errors.subject = 'Please select a subject'
+    }
+    
+    if (!validateRequired(contactForm.message)) {
+      errors.message = 'Please enter your message'
+    }
+    
+    setContactErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateContactForm()) return
+    
+    setContactSubmitting(true)
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      toast.success('Message sent!', {
+        description: 'We\'ll get back to you as soon as possible.'
+      })
+      
+      setContactForm({ subject: '', message: '' })
+      setContactErrors({})
+    } catch (error) {
+      toast.error('Failed to send message', {
+        description: 'Please try again later.'
+      })
+    } finally {
+      setContactSubmitting(false)
+    }
+  }
+
+  return (
+    <footer className="bg-background border-t border-border">
+      <div className="container mx-auto px-6 py-16">
+        {/* Newsletter Section */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <Card className="bg-card border-border">
+            <CardContent className="p-8 text-center">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Mail className="h-6 w-6 text-primary" />
+                <h2 className="text-2xl font-heading font-bold text-foreground">Stay Updated</h2>
+              </div>
+              <p className="text-muted-foreground mb-6 text-lg">
+                Get notified about new events, workshops, and opportunities. Join our community newsletter.
+              </p>
+              <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="bg-input border-border flex-1"
+                  required
+                />
+                <Button
+                  type="submit"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-6"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
+          {/* Join Us Column */}
+          <div className="space-y-6">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <Users className="h-5 w-5 text-primary" />
+                  Join Us
+                </CardTitle>
+                <CardDescription>
+                  Become part of our community and contribute to the future
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <form onSubmit={handleJoinSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="join-name">Name</Label>
+                    <Input
+                      id="join-name"
+                      type="text"
+                      value={joinForm.name}
+                      onChange={(e) => setJoinForm(prev => ({ ...prev, name: e.target.value }))}
+                      className={`bg-input border-border focus:border-primary ${joinErrors.name ? 'border-destructive' : ''}`}
+                      placeholder="Your full name"
+                      aria-describedby={joinErrors.name ? 'join-name-error' : undefined}
+                    />
+                    {joinErrors.name && (
+                      <p id="join-name-error" className="text-sm text-destructive" role="alert">
+                        {joinErrors.name}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="join-email">Email</Label>
+                    <Input
+                      id="join-email"
+                      type="email"
+                      value={joinForm.email}
+                      onChange={(e) => setJoinForm(prev => ({ ...prev, email: e.target.value }))}
+                      className={`bg-input border-border focus:border-primary ${joinErrors.email ? 'border-destructive' : ''}`}
+                      placeholder="your@email.com"
+                      aria-describedby={joinErrors.email ? 'join-email-error' : undefined}
+                    />
+                    {joinErrors.email && (
+                      <p id="join-email-error" className="text-sm text-destructive" role="alert">
+                        {joinErrors.email}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="join-guild">Guild Interest</Label>
+                    <Select 
+                      value={joinForm.guild} 
+                      onValueChange={(value) => setJoinForm(prev => ({ ...prev, guild: value }))}
+                    >
+                      <SelectTrigger 
+                        id="join-guild"
+                        className={`bg-input border-border focus:border-primary ${joinErrors.guild ? 'border-destructive' : ''}`}
+                        aria-describedby={joinErrors.guild ? 'join-guild-error' : undefined}
+                      >
+                        <SelectValue placeholder="Choose a guild" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {GUILDS.map((guild) => (
+                          <SelectItem key={guild.value} value={guild.value}>
+                            {guild.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {joinErrors.guild && (
+                      <p id="join-guild-error" className="text-sm text-destructive" role="alert">
+                        {joinErrors.guild}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="flex gap-3">
+                    <motion.div
+                      className="flex-1 relative"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Button
+                        type="submit"
+                        disabled={joinSubmitting}
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
+                        onClick={(e) => handleButtonClick('join-quick', e)}
+                      >
+                        <motion.span
+                          animate={clickedButtons.includes('join-quick') ? { scale: [1, 1.2, 1] } : {}}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {joinSubmitting ? 'Joining...' : 'Quick Join'}
+                        </motion.span>
+                        
+                        {/* Sparkle effects */}
+                        <AnimatePresence>
+                          {sparklePositions['join-quick'] && (
+                            <>
+                              {sparklePositions['join-quick'].map((pos, i) => (
+                                <motion.div
+                                  key={i}
+                                  className="absolute w-1 h-1 bg-white rounded-full pointer-events-none"
+                                  style={{ left: pos.x, top: pos.y }}
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  animate={{ 
+                                    opacity: [0, 1, 0], 
+                                    scale: [0, 1, 0],
+                                    y: [0, -20],
+                                    rotate: 360
+                                  }}
+                                  exit={{ opacity: 0 }}
+                                  transition={{ duration: 0.8, delay: i * 0.1 }}
+                                />
+                              ))}
+                            </>
+                          )}
+                        </AnimatePresence>
+                      </Button>
+                    </motion.div>
+
+                    <Dialog open={showApplyModal} onOpenChange={setShowApplyModal}>
+                      <DialogTrigger asChild>
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="relative"
+                        >
+                          <Button 
+                            variant="outline" 
+                            className="border-border hover:bg-muted relative overflow-hidden"
+                            onClick={(e) => handleButtonClick('join-apply', e)}
+                          >
+                            <motion.span
+                              className="flex items-center gap-1"
+                              animate={clickedButtons.includes('join-apply') ? { scale: [1, 1.1, 1] } : {}}
+                              transition={{ duration: 0.3 }}
+                            >
+                              Apply
+                              <ChevronRight className="h-4 w-4" />
+                            </motion.span>
+                            
+                            {/* Sparkle effects */}
+                            <AnimatePresence>
+                              {sparklePositions['join-apply'] && (
+                                <>
+                                  {sparklePositions['join-apply'].map((pos, i) => (
+                                    <motion.div
+                                      key={i}
+                                      className="absolute pointer-events-none"
+                                      style={{ left: pos.x, top: pos.y }}
+                                      initial={{ opacity: 0, scale: 0 }}
+                                      animate={{ opacity: 1, scale: 1 }}
+                                      exit={{ opacity: 0 }}
+                                      transition={{ delay: i * 0.1, duration: 0.6 }}
+                                    >
+                                      <Sparkles className="w-3 h-3 text-primary" />
+                                    </motion.div>
+                                  ))}
+                                </>
+                              )}
+                            </AnimatePresence>
+                          </Button>
+                        </motion.div>
+                      </DialogTrigger>
+                      <DialogContent className="bg-popover border-border max-w-2xl max-h-[90vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle>Apply to Join</DialogTitle>
+                          <DialogDescription>
+                            Tell us more about yourself and why you'd like to join our community
+                          </DialogDescription>
+                        </DialogHeader>
+
+                        <form onSubmit={handleApplySubmit} className="space-y-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-2">
+                              <Label htmlFor="apply-name">Name *</Label>
+                              <Input
+                                id="apply-name"
+                                type="text"
+                                value={applyForm.name}
+                                onChange={(e) => setApplyForm(prev => ({ ...prev, name: e.target.value }))}
+                                className={`bg-input border-border focus:border-primary ${applyErrors.name ? 'border-destructive' : ''}`}
+                                placeholder="Your full name"
+                                aria-describedby={applyErrors.name ? 'apply-name-error' : undefined}
+                              />
+                              {applyErrors.name && (
+                                <p id="apply-name-error" className="text-sm text-destructive" role="alert">
+                                  {applyErrors.name}
+                                </p>
+                              )}
+                            </div>
+
+                            <div className="space-y-2">
+                              <Label htmlFor="apply-email">Email *</Label>
+                              <Input
+                                id="apply-email"
+                                type="email"
+                                value={applyForm.email}
+                                onChange={(e) => setApplyForm(prev => ({ ...prev, email: e.target.value }))}
+                                className={`bg-input border-border focus:border-primary ${applyErrors.email ? 'border-destructive' : ''}`}
+                                placeholder="your@email.com"
+                                aria-describedby={applyErrors.email ? 'apply-email-error' : undefined}
+                              />
+                              {applyErrors.email && (
+                                <p id="apply-email-error" className="text-sm text-destructive" role="alert">
+                                  {applyErrors.email}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className="space-y-2">
+                            <Label htmlFor="apply-guild">Guild Interest *</Label>
+                            <Select 
+                              value={applyForm.guild} 
+                              onValueChange={(value) => setApplyForm(prev => ({ ...prev, guild: value }))}
+                            >
+                              <SelectTrigger 
+                                id="apply-guild"
+                                className={`bg-input border-border focus:border-primary ${applyErrors.guild ? 'border-destructive' : ''}`}
+                                aria-describedby={applyErrors.guild ? 'apply-guild-error' : undefined}
+                              >
+                                <SelectValue placeholder="Choose a guild" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                {GUILDS.map((guild) => (
+                                  <SelectItem key={guild.value} value={guild.value}>
+                                    {guild.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            {applyErrors.guild && (
+                              <p id="apply-guild-error" className="text-sm text-destructive" role="alert">
+                                {applyErrors.guild}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="space-y-2">
+                            <Label htmlFor="apply-experience">Experience & Skills *</Label>
+                            <Textarea
+                              id="apply-experience"
+                              value={applyForm.experience}
+                              onChange={(e) => setApplyForm(prev => ({ ...prev, experience: e.target.value }))}
+                              className={`bg-input border-border focus:border-primary ${applyErrors.experience ? 'border-destructive' : ''}`}
+                              placeholder="Tell us about your relevant experience and skills..."
+                              rows={4}
+                              aria-describedby={applyErrors.experience ? 'apply-experience-error' : undefined}
+                            />
+                            {applyErrors.experience && (
+                              <p id="apply-experience-error" className="text-sm text-destructive" role="alert">
+                                {applyErrors.experience}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="space-y-2">
+                            <Label htmlFor="apply-motivation">Why do you want to join? *</Label>
+                            <Textarea
+                              id="apply-motivation"
+                              value={applyForm.motivation}
+                              onChange={(e) => setApplyForm(prev => ({ ...prev, motivation: e.target.value }))}
+                              className={`bg-input border-border focus:border-primary ${applyErrors.motivation ? 'border-destructive' : ''}`}
+                              placeholder="What motivates you to be part of our community?"
+                              rows={4}
+                              aria-describedby={applyErrors.motivation ? 'apply-motivation-error' : undefined}
+                            />
+                            {applyErrors.motivation && (
+                              <p id="apply-motivation-error" className="text-sm text-destructive" role="alert">
+                                {applyErrors.motivation}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="space-y-2">
+                            <Label htmlFor="apply-portfolio">Portfolio/GitHub (Optional)</Label>
+                            <Input
+                              id="apply-portfolio"
+                              type="url"
+                              value={applyForm.portfolio}
+                              onChange={(e) => setApplyForm(prev => ({ ...prev, portfolio: e.target.value }))}
+                              className="bg-input border-border focus:border-primary"
+                              placeholder="https://..."
+                            />
+                          </div>
+
+                          <div className="flex justify-end gap-3">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              onClick={() => setShowApplyModal(false)}
+                              className="border-border hover:bg-muted"
+                            >
+                              Cancel
+                            </Button>
+                            <motion.div
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                            >
+                              <Button
+                                type="submit"
+                                disabled={applySubmitting}
+                                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                              >
+                                {applySubmitting ? 'Submitting...' : 'Submit Application'}
+                              </Button>
+                            </motion.div>
+                          </div>
+                        </form>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Feedback Column */}
+          <div className="space-y-6">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <MessageCircle className="h-5 w-5 text-primary" />
+                  Feedback
+                </CardTitle>
+                <CardDescription>
+                  Help us improve your experience
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleFeedbackSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="feedback-category">Category</Label>
+                    <Select 
+                      value={feedbackForm.category} 
+                      onValueChange={(value) => setFeedbackForm(prev => ({ ...prev, category: value }))}
+                    >
+                      <SelectTrigger 
+                        id="feedback-category"
+                        className={`bg-input border-border focus:border-primary ${feedbackErrors.category ? 'border-destructive' : ''}`}
+                        aria-describedby={feedbackErrors.category ? 'feedback-category-error' : undefined}
+                      >
+                        <SelectValue placeholder="Select category" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {FEEDBACK_CATEGORIES.map((category) => (
+                          <SelectItem key={category.value} value={category.value}>
+                            {category.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {feedbackErrors.category && (
+                      <p id="feedback-category-error" className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.category}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label>Rating</Label>
+                    <div className="flex items-center gap-2">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <motion.button
+                          key={star}
+                          type="button"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={() => setFeedbackForm(prev => ({ ...prev, rating: star }))}
+                          className={`p-1 rounded transition-colors ${
+                            star <= feedbackForm.rating 
+                              ? 'text-accent' 
+                              : 'text-muted-foreground hover:text-accent/70'
+                          }`}
+                          aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
+                        >
+                          <motion.div
+                            animate={star <= feedbackForm.rating ? { rotate: 360 } : {}}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Star className="h-5 w-5 fill-current" />
+                          </motion.div>
+                        </motion.button>
+                      ))}
+                    </div>
+                    {feedbackErrors.rating && (
+                      <p className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.rating}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="feedback-message">Message</Label>
+                    <Textarea
+                      id="feedback-message"
+                      value={feedbackForm.message}
+                      onChange={(e) => setFeedbackForm(prev => ({ ...prev, message: e.target.value }))}
+                      className={`bg-input border-border focus:border-primary ${feedbackErrors.message ? 'border-destructive' : ''}`}
+                      placeholder="Share your thoughts, suggestions, or report issues..."
+                      rows={4}
+                      aria-describedby={feedbackErrors.message ? 'feedback-message-error' : undefined}
+                    />
+                    {feedbackErrors.message && (
+                      <p id="feedback-message-error" className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="feedback-file">Attachment (Optional)</Label>
+                    <div className="relative">
+                      <Input
+                        id="feedback-file"
+                        type="file"
+                        onChange={handleFileUpload}
+                        className="bg-input border-border focus:border-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-primary file:text-primary-foreground"
+                        accept="image/*,.pdf,.doc,.docx"
+                      />
+                      {feedbackForm.file && (
+                        <div className="mt-2 flex items-center gap-2">
+                          <Badge variant="secondary" className="text-xs">
+                            {feedbackForm.file.name}
+                          </Badge>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setFeedbackForm(prev => ({ ...prev, file: null }))}
+                            className="h-6 w-6 p-0"
+                          >
+                            <X className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Max 5MB • Images, PDF, DOC files
+                    </p>
+                  </div>
+
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="relative"
+                  >
+                    <Button
+                      type="submit"
+                      disabled={feedbackSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
+                      onClick={(e) => handleButtonClick('feedback-send', e)}
+                    >
+                      <motion.span
+                        animate={clickedButtons.includes('feedback-send') ? { scale: [1, 1.1, 1] } : {}}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {feedbackSubmitting ? 'Sending...' : 'Send Feedback'}
+                      </motion.span>
+                      
+                      {/* Animated background effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20"
+                        animate={clickedButtons.includes('feedback-send') ? { 
+                          scale: [1, 1.2, 1],
+                          opacity: [0, 0.3, 0]
+                        } : {}}
+                        transition={{ duration: 0.6 }}
+                      />
+                      
+                      {/* Sparkle effects */}
+                      <AnimatePresence>
+                        {sparklePositions['feedback-send'] && (
+                          <>
+                            {sparklePositions['feedback-send'].map((pos, i) => (
+                              <motion.div
+                                key={i}
+                                className="absolute pointer-events-none"
+                                style={{ left: pos.x, top: pos.y }}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1, rotate: 360 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ delay: i * 0.1, duration: 0.6 }}
+                              >
+                                <Heart className="w-3 h-3 text-red-400" />
+                              </motion.div>
+                            ))}
+                          </>
+                        )}
+                      </AnimatePresence>
+                    </Button>
+                  </motion.div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Column */}
+          <div className="space-y-6">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <Mail className="h-5 w-5 text-primary" />
+                  Contact
+                </CardTitle>
+                <CardDescription>
+                  Get in touch with our team
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Contact Info */}
+                <div className="space-y-4">
+                  <motion.div 
+                    className="flex items-start gap-3"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <MapPin className="h-4 w-4 text-muted-foreground mt-1 shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium">Address</p>
+                      <p className="text-sm text-muted-foreground">
+                        123 Innovation Drive<br />
+                        San Francisco, CA 94107
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Mail className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium">Email</p>
+                      <a href="mailto:hello@example.com" className="text-sm text-primary hover:underline">
+                        hello@example.com
+                      </a>
+                    </div>
+                  </motion.div>
+
+                  <motion.div 
+                    className="flex items-center gap-3"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Phone className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium">Phone</p>
+                      <a href="tel:+1-555-0123" className="text-sm text-primary hover:underline">
+                        +1 (555) 012-3456
+                      </a>
+                    </div>
+                  </motion.div>
+
+                  {/* Social Links */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <motion.a
+                        href="https://github.com"
+                        className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
+                        aria-label="GitHub"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Github className="h-4 w-4" />
+                      </motion.a>
+                      <motion.a
+                        href="https://twitter.com"
+                        className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
+                        aria-label="Twitter"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Twitter className="h-4 w-4" />
+                      </motion.a>
+                      <motion.a
+                        href="https://linkedin.com"
+                        className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
+                        aria-label="LinkedIn"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </motion.a>
+                    </div>
+                  </div>
+                </div>
+
+                <Separator className="bg-border" />
+
+                {/* Contact Form */}
+                <form onSubmit={handleContactSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="contact-subject">Subject</Label>
+                    <Select 
+                      value={contactForm.subject} 
+                      onValueChange={(value) => setContactForm(prev => ({ ...prev, subject: value }))}
+                    >
+                      <SelectTrigger 
+                        id="contact-subject"
+                        className={`bg-input border-border focus:border-primary ${contactErrors.subject ? 'border-destructive' : ''}`}
+                        aria-describedby={contactErrors.subject ? 'contact-subject-error' : undefined}
+                      >
+                        <SelectValue placeholder="Select subject" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {CONTACT_SUBJECTS.map((subject) => (
+                          <SelectItem key={subject.value} value={subject.value}>
+                            {subject.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {contactErrors.subject && (
+                      <p id="contact-subject-error" className="text-sm text-destructive" role="alert">
+                        {contactErrors.subject}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="contact-message">Message</Label>
+                    <Textarea
+                      id="contact-message"
+                      value={contactForm.message}
+                      onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
+                      className={`bg-input border-border focus:border-primary ${contactErrors.message ? 'border-destructive' : ''}`}
+                      placeholder="How can we help you?"
+                      rows={4}
+                      aria-describedby={contactErrors.message ? 'contact-message-error' : undefined}
+                    />
+                    {contactErrors.message && (
+                      <p id="contact-message-error" className="text-sm text-destructive" role="alert">
+                        {contactErrors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="relative"
+                  >
+                    <Button
+                      type="submit"
+                      disabled={contactSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
+                      onClick={(e) => handleButtonClick('contact-send', e)}
+                    >
+                      <motion.div
+                        className="flex items-center gap-2"
+                        animate={clickedButtons.includes('contact-send') ? { scale: [1, 1.05, 1] } : {}}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Send className="h-4 w-4" />
+                        {contactSubmitting ? 'Sending...' : 'Send Message'}
+                      </motion.div>
+                      
+                      {/* Lightning effect */}
+                      <AnimatePresence>
+                        {sparklePositions['contact-send'] && (
+                          <>
+                            {sparklePositions['contact-send'].map((pos, i) => (
+                              <motion.div
+                                key={i}
+                                className="absolute pointer-events-none"
+                                style={{ left: pos.x, top: pos.y }}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                              >
+                                <Zap className="w-3 h-3 text-yellow-400" />
+                              </motion.div>
+                            ))}
+                          </>
+                        )}
+                      </AnimatePresence>
+                    </Button>
+                  </motion.div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Footer Links */}
+        <Separator className="bg-border mb-8" />
+        
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+          {/* Legal Links */}
+          <div className="flex flex-wrap items-center gap-6">
+            <motion.a 
+              href="/privacy" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Privacy Policy
+            </motion.a>
+            <motion.a 
+              href="/terms" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Terms of Service
+            </motion.a>
+            <motion.a 
+              href="/cookies" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Cookie Policy
+            </motion.a>
+            <motion.a 
+              href="/accessibility" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Accessibility
+            </motion.a>
+          </div>
+
+          {/* Sitemap Links */}
+          <div className="flex flex-wrap items-center gap-6">
+            <motion.a 
+              href="/" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Home
+            </motion.a>
+            <motion.a 
+              href="/about" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              About
+            </motion.a>
+            <motion.a 
+              href="/events" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Events
+            </motion.a>
+            <motion.a 
+              href="/guilds" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Guilds
+            </motion.a>
+            <motion.a 
+              href="/resources" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              whileHover={{ scale: 1.05 }}
+            >
+              Resources
+            </motion.a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-sm text-muted-foreground">
+            © 2024 Community Platform. All rights reserved.
+          </div>
+        </div>
+      </div>
+
+      {/* Feedback Confirmation Dialog */}
+      <Dialog open={showFeedbackConfirm} onOpenChange={setShowFeedbackConfirm}>
+        <DialogContent className="bg-popover border-border">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <MessageCircle className="h-5 w-5 text-primary" />
+              Feedback Received
+            </DialogTitle>
+            <DialogDescription>
+              Thank you for your feedback! We review all submissions and use them to improve our platform.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end">
+            <Button
+              onClick={() => {
+                setShowFeedbackConfirm(false)
+                toast.success('Feedback submitted successfully!')
+              }}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </footer>
+  )
+}
