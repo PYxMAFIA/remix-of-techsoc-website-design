@@ -175,7 +175,7 @@ export default function HeroBanner() {
   return (
     <section className="w-full bg-background py-20 lg:py-32">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ">
           {/* Main Content */}
           <div className="lg:col-span-7 space-y-8">
             {/* Headlines */}
@@ -193,7 +193,7 @@ export default function HeroBanner() {
                     transition={{ duration: 0.8, delay: 0.1 }}
                     className="inline-block"
                   >
-                    College
+                    Round
                   </motion.span>{' '}
                   <motion.span
                     initial={{ y: 100 }}
@@ -201,7 +201,7 @@ export default function HeroBanner() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="inline-block"
                   >
-                    Tech
+                    Table
                   </motion.span>{' '}
                   <motion.span
                     initial={{ y: 100 }}
@@ -209,7 +209,7 @@ export default function HeroBanner() {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="inline-block text-primary"
                   >
-                    Society
+                    DTU
                   </motion.span>
                 </h1>
               </motion.div>
@@ -270,7 +270,7 @@ export default function HeroBanner() {
             >
               <StatCard
                 icon={<Layers className="h-5 w-5" />}
-                value="5"
+                value="4"
                 label="Active Guilds"
                 index={0}
               />

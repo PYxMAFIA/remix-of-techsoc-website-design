@@ -14,7 +14,6 @@ interface Partner {
   id: string
   name: string
   logo: string
-  tier: "platinum" | "gold" | "silver" | "bronze"
   description: string
   website: string
 }
@@ -24,7 +23,6 @@ const mockPartners: Partner[] = [
     id: "1",
     name: "TechCorp",
     logo: "/api/placeholder/120/60",
-    tier: "platinum",
     description: "Leading technology solutions",
     website: "https://techcorp.com"
   },
@@ -32,7 +30,6 @@ const mockPartners: Partner[] = [
     id: "2", 
     name: "InnovateLab",
     logo: "/api/placeholder/120/60",
-    tier: "gold",
     description: "Innovation and research",
     website: "https://innovatelab.com"
   },
@@ -40,7 +37,6 @@ const mockPartners: Partner[] = [
     id: "3",
     name: "DataFlow",
     logo: "/api/placeholder/120/60",
-    tier: "silver",
     description: "Data analytics platform",
     website: "https://dataflow.com"
   },
@@ -48,7 +44,6 @@ const mockPartners: Partner[] = [
     id: "4",
     name: "CloudSync",
     logo: "/api/placeholder/120/60",
-    tier: "bronze",
     description: "Cloud infrastructure",
     website: "https://cloudsync.com"
   },
@@ -56,7 +51,6 @@ const mockPartners: Partner[] = [
     id: "5",
     name: "DevTools Inc",
     logo: "/api/placeholder/120/60",
-    tier: "gold",
     description: "Developer productivity tools",
     website: "https://devtools.com"
   },
@@ -64,7 +58,6 @@ const mockPartners: Partner[] = [
     id: "6",
     name: "StartupHub",
     logo: "/api/placeholder/120/60",
-    tier: "silver",
     description: "Supporting startups",
     website: "https://startuphub.com"
   },
@@ -72,7 +65,6 @@ const mockPartners: Partner[] = [
     id: "7",
     name: "AI Solutions",
     logo: "/api/placeholder/120/60",
-    tier: "gold",
     description: "Artificial intelligence platform",
     website: "https://aisolutions.com"
   },
@@ -80,7 +72,6 @@ const mockPartners: Partner[] = [
     id: "8",
     name: "CyberShield",
     logo: "/api/placeholder/120/60",
-    tier: "silver",
     description: "Cybersecurity solutions",
     website: "https://cybershield.com"
   }
@@ -191,9 +182,6 @@ export default function PartnersSection() {
                       animate={{ opacity: 1, y: 0 }}
                       className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center"
                     >
-                      <Badge variant="secondary" className="text-xs">
-                        {partner.tier}
-                      </Badge>
                     </motion.div>
                   )}
                 </motion.div>
@@ -234,96 +222,7 @@ export default function PartnersSection() {
           </div>
         </div>
 
-        {/* Stay Updated Grid */}
-        <div className="bg-card border border-border rounded-lg p-8 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-heading font-semibold mb-2">Stay Updated</h3>
-            <p className="text-muted-foreground">
-              Get the latest news, updates, and announcements from our community
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Newsletter Signup */}
-            <div className="lg:col-span-1">
-              <Card className="bg-background border-border h-full">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Mail className="h-5 w-5 text-primary" />
-                    Newsletter
-                  </CardTitle>
-                  <CardDescription>
-                    Weekly updates delivered to your inbox
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleEmailSubmit} className="space-y-4">
-                    <div>
-                      <Label htmlFor="newsletter-email" className="sr-only">Email</Label>
-                      <Input
-                        id="newsletter-email"
-                        type="email"
-                        placeholder="your@email.com"
-                        value={emailForm.email}
-                        onChange={(e) => setEmailForm({ email: e.target.value })}
-                        className="bg-input border-border"
-                      />
-                    </div>
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting} 
-                      className="w-full"
-                    >
-                      <Bell className="h-4 w-4 mr-2" />
-                      {isSubmitting ? "Subscribing..." : "Subscribe"}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Recent Updates */}
-            <div className="lg:col-span-2">
-              <Card className="bg-background border-border h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg">Recent Updates</CardTitle>
-                  <CardDescription>
-                    Latest news and announcements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {updates.map((update, index) => (
-                      <motion.div
-                        key={update.id}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-start gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                      >
-                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2" />
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-medium text-sm">{update.title}</h4>
-                          <p className="text-xs text-muted-foreground mb-1">
-                            {update.description}
-                          </p>
-                          <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-xs">
-                              {update.type}
-                            </Badge>
-                            <span className="text-xs text-muted-foreground">
-                              {new Date(update.date).toLocaleDateString()}
-                            </span>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   )

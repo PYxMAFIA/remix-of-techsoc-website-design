@@ -428,11 +428,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants, prefersRed
             alt={project.author.name}
             className="w-8 h-8 rounded-full"
           />
-          <div>
-            <p className="text-sm font-medium">{project.author.name}</p>
-            <p className="text-xs text-muted-foreground">{project.author.role}</p>
           </div>
-        </div>
 
         {/* Metrics */}
         <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">

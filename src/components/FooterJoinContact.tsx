@@ -89,7 +89,7 @@ export default function FooterJoinContact() {
   const [applySubmitting, setApplySubmitting] = useState(false)
 
   const [feedbackForm, setFeedbackForm] = useState({
-    category: '', rating: 0, message: '', file: null as File | null
+    category: '', rating: 0, message: ''
   })
   const [feedbackErrors, setFeedbackErrors] = useState<FormErrors>({})
   const [feedbackSubmitting, setFeedbackSubmitting] = useState(false)
@@ -141,7 +141,52 @@ export default function FooterJoinContact() {
     }, 1000)
   }
 
-  // Join Us Form Handlers
+  // Feedback Form Handlers
+  const validateFeedbackForm = () => {
+    const errors: FormErrors = {}
+    
+    if (!feedbackForm.category) {
+      errors.category = 'Please select a category'
+    }
+    
+    if (feedbackForm.rating === 0) {
+      errors.rating = 'Please provide a rating'
+    }
+    
+    if (!validateRequired(feedbackForm.message)) {
+      errors.message = 'Please provide your feedback'
+    }
+    
+    setFeedbackErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleFeedbackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateFeedbackForm()) return
+    
+    setFeedbackSubmitting(true)
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      setShowFeedbackConfirm(true)
+      
+      setFeedbackForm({
+        category: '', rating: 0, message: ''
+      })
+      setFeedbackErrors({})
+    } catch (error) {
+      toast.error('Failed to submit feedback', {
+        description: 'Please try again later.'
+      })
+    } finally {
+      setFeedbackSubmitting(false)
+    }
+  }
+
+    // Join Us Form Handlers
   const validateJoinForm = () => {
     const errors: FormErrors = {}
     
@@ -246,64 +291,6 @@ export default function FooterJoinContact() {
     }
   }
 
-  // Feedback Form Handlers
-  const validateFeedbackForm = () => {
-    const errors: FormErrors = {}
-    
-    if (!feedbackForm.category) {
-      errors.category = 'Please select a category'
-    }
-    
-    if (feedbackForm.rating === 0) {
-      errors.rating = 'Please provide a rating'
-    }
-    
-    if (!validateRequired(feedbackForm.message)) {
-      errors.message = 'Please provide your feedback'
-    }
-    
-    setFeedbackErrors(errors)
-    return Object.keys(errors).length === 0
-  }
-
-  const handleFeedbackSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!validateFeedbackForm()) return
-    
-    setFeedbackSubmitting(true)
-    
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      setShowFeedbackConfirm(true)
-      
-      setFeedbackForm({
-        category: '', rating: 0, message: '', file: null
-      })
-      setFeedbackErrors({})
-    } catch (error) {
-      toast.error('Failed to submit feedback', {
-        description: 'Please try again later.'
-      })
-    } finally {
-      setFeedbackSubmitting(false)
-    }
-  }
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        toast.error('File too large', {
-          description: 'Please select a file smaller than 5MB.'
-        })
-        return
-      }
-      setFeedbackForm(prev => ({ ...prev, file }))
-    }
-  }
-
   // Contact Form Handlers
   const validateContactForm = () => {
     const errors: FormErrors = {}
@@ -381,9 +368,158 @@ export default function FooterJoinContact() {
         </div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
-          {/* Join Us Column */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center">
+          {/* Feedback Column */}
           <div className="space-y-6">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <MessageCircle className="h-5 w-5 text-primary" />
+                  Feedback
+                </CardTitle>
+                <CardDescription>
+                  Help us improve your experience
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleFeedbackSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="feedback-category">Category</Label>
+                    <Select 
+                      value={feedbackForm.category} 
+                      onValueChange={(value) => setFeedbackForm(prev => ({ ...prev, category: value }))}
+                    >
+                      <SelectTrigger 
+                        id="feedback-category"
+                        className={`bg-input border-border focus:border-primary ${feedbackErrors.category ? 'border-destructive' : ''}`}
+                        aria-describedby={feedbackErrors.category ? 'feedback-category-error' : undefined}
+                      >
+                        <SelectValue placeholder="Select category" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {FEEDBACK_CATEGORIES.map((category) => (
+                          <SelectItem key={category.value} value={category.value}>
+                            {category.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {feedbackErrors.category && (
+                      <p id="feedback-category-error" className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.category}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label>Rating</Label>
+                    <div className="flex items-center gap-2">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <motion.button
+                          key={star}
+                          type="button"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={() => setFeedbackForm(prev => ({ ...prev, rating: star }))}
+                          className={`p-1 rounded transition-colors ${
+                            star <= feedbackForm.rating 
+                              ? 'text-accent' 
+                              : 'text-muted-foreground hover:text-accent/70'
+                          }`}
+                          aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
+                        >
+                          <motion.div
+                            animate={star <= feedbackForm.rating ? { rotate: 360 } : {}}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Star className="h-5 w-5 fill-current" />
+                          </motion.div>
+                        </motion.button>
+                      ))}
+                    </div>
+                    {feedbackErrors.rating && (
+                      <p className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.rating}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="feedback-message">Message</Label>
+                    <Textarea
+                      id="feedback-message"
+                      value={feedbackForm.message}
+                      onChange={(e) => setFeedbackForm(prev => ({ ...prev, message: e.target.value }))}
+                      className={`bg-input border-border focus:border-primary ${feedbackErrors.message ? 'border-destructive' : ''}`}
+                      placeholder="Share your thoughts, suggestions, or report issues..."
+                      rows={4}
+                      aria-describedby={feedbackErrors.message ? 'feedback-message-error' : undefined}
+                    />
+                    {feedbackErrors.message && (
+                      <p id="feedback-message-error" className="text-sm text-destructive" role="alert">
+                        {feedbackErrors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="relative"
+                  >
+                    <Button
+                      type="submit"
+                      disabled={feedbackSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
+                      onClick={(e) => handleButtonClick('feedback-send', e)}
+                    >
+                      <motion.span
+                        animate={clickedButtons.includes('feedback-send') ? { scale: [1, 1.1, 1] } : {}}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {feedbackSubmitting ? 'Sending...' : 'Send Feedback'}
+                      </motion.span>
+                      
+                      {/* Animated background effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20"
+                        animate={clickedButtons.includes('feedback-send') ? { 
+                          scale: [1, 1.2, 1],
+                          opacity: [0, 0.3, 0]
+                        } : {}}
+                        transition={{ duration: 0.6 }}
+                      />
+                      
+                      {/* Sparkle effects */}
+                      <AnimatePresence>
+                        {sparklePositions['feedback-send'] && (
+                          <>
+                            {sparklePositions['feedback-send'].map((pos, i) => (
+                              <motion.div
+                                key={i}
+                                className="absolute pointer-events-none"
+                                style={{ left: pos.x, top: pos.y }}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1, rotate: 360 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ delay: i * 0.1, duration: 0.6 }}
+                              >
+                                <Heart className="w-3 h-3 text-red-400" />
+                              </motion.div>
+                            ))}
+                          </>
+                        )}
+                      </AnimatePresence>
+                    </Button>
+                  </motion.div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          
+          {/* Join Us Column */}
+          <div className="space-y-6 lg:col-start-2">
             <Card className="bg-card border-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
@@ -698,186 +834,6 @@ export default function FooterJoinContact() {
                       </DialogContent>
                     </Dialog>
                   </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Feedback Column */}
-          <div className="space-y-6">
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-xl">
-                  <MessageCircle className="h-5 w-5 text-primary" />
-                  Feedback
-                </CardTitle>
-                <CardDescription>
-                  Help us improve your experience
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleFeedbackSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="feedback-category">Category</Label>
-                    <Select 
-                      value={feedbackForm.category} 
-                      onValueChange={(value) => setFeedbackForm(prev => ({ ...prev, category: value }))}
-                    >
-                      <SelectTrigger 
-                        id="feedback-category"
-                        className={`bg-input border-border focus:border-primary ${feedbackErrors.category ? 'border-destructive' : ''}`}
-                        aria-describedby={feedbackErrors.category ? 'feedback-category-error' : undefined}
-                      >
-                        <SelectValue placeholder="Select category" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {FEEDBACK_CATEGORIES.map((category) => (
-                          <SelectItem key={category.value} value={category.value}>
-                            {category.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {feedbackErrors.category && (
-                      <p id="feedback-category-error" className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.category}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label>Rating</Label>
-                    <div className="flex items-center gap-2">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <motion.button
-                          key={star}
-                          type="button"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => setFeedbackForm(prev => ({ ...prev, rating: star }))}
-                          className={`p-1 rounded transition-colors ${
-                            star <= feedbackForm.rating 
-                              ? 'text-accent' 
-                              : 'text-muted-foreground hover:text-accent/70'
-                          }`}
-                          aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
-                        >
-                          <motion.div
-                            animate={star <= feedbackForm.rating ? { rotate: 360 } : {}}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <Star className="h-5 w-5 fill-current" />
-                          </motion.div>
-                        </motion.button>
-                      ))}
-                    </div>
-                    {feedbackErrors.rating && (
-                      <p className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.rating}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="feedback-message">Message</Label>
-                    <Textarea
-                      id="feedback-message"
-                      value={feedbackForm.message}
-                      onChange={(e) => setFeedbackForm(prev => ({ ...prev, message: e.target.value }))}
-                      className={`bg-input border-border focus:border-primary ${feedbackErrors.message ? 'border-destructive' : ''}`}
-                      placeholder="Share your thoughts, suggestions, or report issues..."
-                      rows={4}
-                      aria-describedby={feedbackErrors.message ? 'feedback-message-error' : undefined}
-                    />
-                    {feedbackErrors.message && (
-                      <p id="feedback-message-error" className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.message}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="feedback-file">Attachment (Optional)</Label>
-                    <div className="relative">
-                      <Input
-                        id="feedback-file"
-                        type="file"
-                        onChange={handleFileUpload}
-                        className="bg-input border-border focus:border-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-primary file:text-primary-foreground"
-                        accept="image/*,.pdf,.doc,.docx"
-                      />
-                      {feedbackForm.file && (
-                        <div className="mt-2 flex items-center gap-2">
-                          <Badge variant="secondary" className="text-xs">
-                            {feedbackForm.file.name}
-                          </Badge>
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => setFeedbackForm(prev => ({ ...prev, file: null }))}
-                            className="h-6 w-6 p-0"
-                          >
-                            <X className="h-3 w-3" />
-                          </Button>
-                        </div>
-                      )}
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      Max 5MB • Images, PDF, DOC files
-                    </p>
-                  </div>
-
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="relative"
-                  >
-                    <Button
-                      type="submit"
-                      disabled={feedbackSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
-                      onClick={(e) => handleButtonClick('feedback-send', e)}
-                    >
-                      <motion.span
-                        animate={clickedButtons.includes('feedback-send') ? { scale: [1, 1.1, 1] } : {}}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {feedbackSubmitting ? 'Sending...' : 'Send Feedback'}
-                      </motion.span>
-                      
-                      {/* Animated background effect */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20"
-                        animate={clickedButtons.includes('feedback-send') ? { 
-                          scale: [1, 1.2, 1],
-                          opacity: [0, 0.3, 0]
-                        } : {}}
-                        transition={{ duration: 0.6 }}
-                      />
-                      
-                      {/* Sparkle effects */}
-                      <AnimatePresence>
-                        {sparklePositions['feedback-send'] && (
-                          <>
-                            {sparklePositions['feedback-send'].map((pos, i) => (
-                              <motion.div
-                                key={i}
-                                className="absolute pointer-events-none"
-                                style={{ left: pos.x, top: pos.y }}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1, rotate: 360 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ delay: i * 0.1, duration: 0.6 }}
-                              >
-                                <Heart className="w-3 h-3 text-red-400" />
-                              </motion.div>
-                            ))}
-                          </>
-                        )}
-                      </AnimatePresence>
-                    </Button>
-                  </motion.div>
                 </form>
               </CardContent>
             </Card>

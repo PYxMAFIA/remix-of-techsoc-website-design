@@ -144,3 +144,28 @@ a { color: var(--color-primary); text-decoration: none; }
 nextjs-portal {
   display: none !important;
 }
+
+.high-contrast {
+  /* Core Colors */
+  --color-background: #e5e5e5;   /* Soft gray background */
+  --color-foreground: #111111;   /* Dark gray text */
+
+  /* Cards & Surfaces */
+  --color-card: #f0f0f0;         /* Slightly lighter than background */
+  --color-card-foreground: #111111;
+
+  /* Primary Accent */
+  --color-primary: #1d4ed8;      /* Muted deep blue */
+  --color-primary-foreground: #ffffff;
+
+  /* Muted / Secondary */
+  --color-muted: #d4d4d4;
+  --color-muted-foreground: #222222;
+
+  /* Borders & Dividers */
+  --color-border: #cfcfcf;
+
+  /* Apply globally */
+  background: var(--color-background);
+  color: var(--color-foreground);
+}

@@ -23,7 +23,7 @@ interface Guild {
   category: string;
   memberCount: number;
   activeProjects: number;
-  leadership: Array<{
+  mentors: Array<{
     name: string;
     role: string;
     avatar: string;
@@ -40,14 +40,14 @@ interface Guild {
 const mockGuilds: Guild[] = [
   {
     id: "1",
-    name: "Code Crafters",
+    name: "DSA",
     tagline: "Building the future through innovative software development",
     description: "A community of passionate developers working on cutting-edge projects, from web applications to mobile apps and everything in between. We focus on modern technologies and best practices.",
     logo: "💻",
     category: "Development",
     memberCount: 127,
     activeProjects: 8,
-    leadership: [
+    mentors: [
       { name: "Alex Chen", role: "Guild Leader", avatar: "/avatars/alex.jpg" },
       { name: "Sarah Kim", role: "Tech Lead", avatar: "/avatars/sarah.jpg" }
     ],
@@ -67,7 +67,7 @@ const mockGuilds: Guild[] = [
     category: "Design",
     memberCount: 89,
     activeProjects: 12,
-    leadership: [
+    mentors: [
       { name: "Maria Rodriguez", role: "Creative Director", avatar: "/avatars/maria.jpg" },
       { name: "James Wilson", role: "UX Lead", avatar: "/avatars/james.jpg" }
     ],
@@ -79,51 +79,33 @@ const mockGuilds: Guild[] = [
   },
   {
     id: "3",
-    name: "Robotics Lab",
-    tagline: "Engineering intelligent machines for tomorrow",
-    description: "We design and build autonomous robots, from simple automation to complex AI-driven systems. Join us to explore the intersection of hardware and software.",
-    logo: "🤖",
-    category: "Robotics",
+    name: "Finance Guild",
+    tagline: "Empowering financial literacy and innovation",
+    description: "We provide resources and support for individuals looking to improve their financial knowledge and skills. Join us for workshops, discussions, and networking opportunities.",
+    logo: "💰",
+    category: "Finance",
     memberCount: 45,
     activeProjects: 6,
-    leadership: [
+    mentors: [
       { name: "Dr. Michael Chang", role: "Lab Director", avatar: "/avatars/michael.jpg" }
     ],
     upcomingEvents: [
-      { title: "Robot Competition Prep", date: "2024-01-22", description: "Preparing for the regional robotics competition" }
+      { title: "Financial Literacy Workshop", date: "2024-01-22", description: "Preparing for the regional financial literacy competition" }
     ],
     gallery: ["/gallery/6.jpg", "/gallery/7.jpg", "/gallery/8.jpg"],
     isFollowed: false
   },
+  
   {
     id: "4",
-    name: "AI Research",
-    tagline: "Advancing artificial intelligence and machine learning",
-    description: "Our AI guild explores machine learning, neural networks, and artificial intelligence applications. We work on research projects and practical implementations.",
-    logo: "🧠",
-    category: "AI",
-    memberCount: 78,
-    activeProjects: 5,
-    leadership: [
-      { name: "Dr. Lisa Park", role: "Research Lead", avatar: "/avatars/lisa.jpg" },
-      { name: "David Thompson", role: "ML Engineer", avatar: "/avatars/david.jpg" }
-    ],
-    upcomingEvents: [
-      { title: "Neural Networks Deep Dive", date: "2024-01-25", description: "Advanced neural network architectures" }
-    ],
-    gallery: ["/gallery/9.jpg", "/gallery/10.jpg"],
-    isFollowed: false
-  },
-  {
-    id: "5",
-    name: "Web Pioneers",
+    name: "Web Development",
     tagline: "Pushing the boundaries of web technology",
     description: "We focus on modern web development, from progressive web apps to advanced web APIs. Our projects showcase the latest in web technology.",
     logo: "🌐",
     category: "Web",
     memberCount: 156,
     activeProjects: 11,
-    leadership: [
+    mentors: [
       { name: "Emma Foster", role: "Frontend Lead", avatar: "/avatars/emma.jpg" },
       { name: "Ryan Clark", role: "Backend Lead", avatar: "/avatars/ryan.jpg" }
     ],
@@ -133,27 +115,9 @@ const mockGuilds: Guild[] = [
     gallery: ["/gallery/11.jpg", "/gallery/12.jpg", "/gallery/13.jpg"],
     isFollowed: true
   },
-  {
-    id: "6",
-    name: "Game Developers",
-    tagline: "Creating immersive gaming experiences",
-    description: "From indie games to complex simulations, our game development guild covers all aspects of game creation including programming, art, and game design.",
-    logo: "🎮",
-    category: "Gaming",
-    memberCount: 134,
-    activeProjects: 9,
-    leadership: [
-      { name: "Tyler Brooks", role: "Game Director", avatar: "/avatars/tyler.jpg" }
-    ],
-    upcomingEvents: [
-      { title: "Game Jam Preparation", date: "2024-01-30", description: "Getting ready for the monthly game jam" }
-    ],
-    gallery: ["/gallery/14.jpg", "/gallery/15.jpg"],
-    isFollowed: false
-  }
 ];
 
-const categories = ["All", "Development", "Design", "Robotics", "AI", "Web", "Gaming"];
+const categories = ["All", "Development", "Design", "Finance", "AI", "Web"];
 const sortOptions = [
   { value: "name", label: "Name" },
   { value: "members", label: "Most Members" },
@@ -314,7 +278,7 @@ export default function GuildsSection() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-6 md:grid-cols-1 lg:grid-cols-2"
       >
         {filteredAndSortedGuilds.map((guild) => (
           <motion.div
@@ -413,9 +377,9 @@ export default function GuildsSection() {
                             </div>
 
                             <div>
-                              <h4 className="font-semibold mb-3">Leadership</h4>
+                              <h4 className="font-semibold mb-3">Mentors</h4>
                               <div className="space-y-3">
-                                {selectedGuild.leadership.map((leader, index) => (
+                                {selectedGuild.mentors.map((leader, index) => (
                                   <div key={index} className="flex items-center gap-3">
                                     <Avatar className="h-8 w-8">
                                       <AvatarImage src={leader.avatar} alt={leader.name} />

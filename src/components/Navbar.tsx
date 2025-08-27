@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -56,10 +58,17 @@ export default function Navbar() {
   };
 
   const handleThemeToggle = () => {
-    setIsThemeHigh(!isThemeHigh);
-    if (typeof document !== "undefined") {
-      document.documentElement.classList.toggle("high-contrast", !isThemeHigh);
-    }
+    setIsThemeHigh((prev) => {
+      const newValue = !prev;
+      if (typeof document !== "undefined") {
+        if (newValue) {
+          document.documentElement.classList.add("high-contrast");
+        } else {
+          document.documentElement.classList.remove("high-contrast");
+        }
+      }
+      return newValue;
+    });
   };
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
@@ -78,28 +87,31 @@ export default function Navbar() {
     setIsLoginOpen(false);
   };
 
-  const motionProps = prefersReducedMotion 
-    ? {} 
+  const motionProps = prefersReducedMotion
+    ? {}
     : {
-        initial: { opacity: 0, y: -10 },
-        animate: { opacity: 1, y: 0 },
-        whileHover: { scale: 1.02, y: -1 },
-        transition: { duration: 0.2, ease: "easeOut" },
-      };
+      initial: { opacity: 0, y: -10 },
+      animate: { opacity: 1, y: 0 },
+      whileHover: { scale: 1.02, y: -1 },
+      transition: { duration: 0.2, ease: "easeOut" },
+    };
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">TS</span>
+          <Link href="/">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8bg-primary rounded-lg flex items-center justify-center">
+                {/* <span className="text-primary-foreground font-bold text-sm">RT</span> */}
+                <Image src="/logo.png" alt="Logo" width={32} height={32} />
+              </div>
+              <span className="font-heading font-semibold text-lg hidden sm:block">
+                RoundTable
+              </span>
             </div>
-            <span className="font-heading font-semibold text-lg hidden sm:block">
-              Tech Society
-            </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1 bg-muted/50 rounded-full p-1">
@@ -144,84 +156,6 @@ export default function Navbar() {
                 />
               </motion.div>
             </div>
-
-            {/* Profile/Login */}
-            <Dialog open={isLoginOpen} onOpenChange={setIsLoginOpen}>
-              <DialogTrigger asChild>
-                <Button variant="ghost" size="sm" className="hidden sm:flex">
-                  <User className="w-4 h-4 mr-1" />
-                  <span className="hidden lg:inline">Sign In</span>
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>Welcome to Tech Society</DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4">
-                  <form onSubmit={handleLogin} className="space-y-3">
-                    <div className="space-y-2">
-                      <Label htmlFor="login-email">Email</Label>
-                      <Input
-                        id="login-email"
-                        name="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="login-password">Password</Label>
-                      <Input
-                        id="login-password"
-                        name="password"
-                        type="password"
-                        placeholder="••••••••"
-                        required
-                      />
-                    </div>
-                    <Button type="submit" className="w-full">
-                      Sign In
-                    </Button>
-                  </form>
-                  
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <span className="w-full border-t" />
-                    </div>
-                    <div className="relative flex justify-center text-xs uppercase">
-                      <span className="bg-popover px-2 text-muted-foreground">
-                        Or create account
-                      </span>
-                    </div>
-                  </div>
-
-                  <form onSubmit={handleSignup} className="space-y-3">
-                    <div className="space-y-2">
-                      <Label htmlFor="signup-email">Email</Label>
-                      <Input
-                        id="signup-email"
-                        name="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="signup-name">Full Name</Label>
-                      <Input
-                        id="signup-name"
-                        name="name"
-                        placeholder="John Doe"
-                        required
-                      />
-                    </div>
-                    <Button type="submit" variant="outline" className="w-full">
-                      Create Account
-                    </Button>
-                  </form>
-                </div>
-              </DialogContent>
-            </Dialog>
 
             {/* Mobile Menu Button */}
             <Button
@@ -280,14 +214,6 @@ export default function Navbar() {
                   >
                     {isThemeHigh ? <Moon className="w-4 h-4 mr-2" /> : <Sun className="w-4 h-4 mr-2" />}
                     {isThemeHigh ? "Premium Black" : "High-Contrast White"}
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    onClick={() => setIsLoginOpen(true)}
-                    className="w-full justify-start"
-                  >
-                    <User className="w-4 h-4 mr-2" />
-                    Sign In / Sign Up
                   </Button>
                 </div>
 

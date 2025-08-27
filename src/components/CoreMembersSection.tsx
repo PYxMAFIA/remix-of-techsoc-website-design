@@ -48,7 +48,7 @@ const mockMembers: CoreMember[] = [
     twitter: "https://twitter.com/sarahchen",
     joinedDate: "2022-01-15",
     featured: true,
-    level: "President"
+    level: "President",
   },
   {
     id: "2",
@@ -164,15 +164,6 @@ const mockMembers: CoreMember[] = [
     featured: false,
     level: "Coordinator"
   }
-]
-
-const timelineEvents = [
-  { date: "2022-01-15", event: "Sarah Chen joins as President", member: "Sarah Chen" },
-  { date: "2022-02-28", event: "David Kim joins as Secretary", member: "David Kim" },
-  { date: "2022-03-20", event: "Marcus Rodriguez joins as Vice President", member: "Marcus Rodriguez" },
-  { date: "2022-04-05", event: "James Thompson joins as Partnership Coordinator", member: "James Thompson" },
-  { date: "2022-05-15", event: "Elena Vasquez joins as Treasurer", member: "Elena Vasquez" },
-  { date: "2022-06-10", event: "Amara Okafor joins as Events Lead", member: "Amara Okafor" }
 ]
 
 export default function CoreMembersSection() {
@@ -356,38 +347,6 @@ export default function CoreMembersSection() {
             </motion.div>
           )}
 
-          {/* Core Team Timeline */}
-          <div className="bg-card border border-border rounded-lg p-6">
-            <div className="flex items-center gap-2 mb-6">
-              <Clock className="h-5 w-5 text-primary" />
-              <h3 className="text-xl font-heading font-semibold">Core Team Timeline</h3>
-            </div>
-            <div className="space-y-4">
-              {timelineEvents.map((event, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-4"
-                  {...motionProps}
-                  style={reducedMotion ? {} : { transitionDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex-shrink-0 w-3 h-3 bg-primary rounded-full mt-1" />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-                      <span className="text-sm font-medium text-foreground">{event.event}</span>
-                      <span className="text-xs text-muted-foreground">
-                        {new Date(event.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
           {/* Member Detail Dialog */}
           <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
             <DialogContent className="max-w-2xl bg-card border-border">
@@ -408,8 +367,8 @@ export default function CoreMembersSection() {
                       </div>
                     </div>
                   </DialogHeader>
-                  
-                  <div className="space-y-6 mt-6">
+
+                  <div className="rounded-2xl space-y-6 mt-6 p-4 bg-muted">
                     {/* Bio */}
                     <div>
                       <h4 className="font-semibold mb-2">About</h4>
@@ -419,9 +378,14 @@ export default function CoreMembersSection() {
                     {/* Responsibilities */}
                     <div>
                       <h4 className="font-semibold mb-2">Key Responsibilities</h4>
-                      <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <ul className="list-none space-y-2 bg-muted/40 rounded-lg p-4">
                         {selectedMember.responsibilities.map((resp, index) => (
-                          <li key={index}>{resp}</li>
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                            <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-primary/10 text-primary">
+                              <Star className="h-4 w-4" />
+                            </span>
+                            <span className="text-base">{resp}</span>
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -462,38 +426,6 @@ export default function CoreMembersSection() {
                             </a>
                           </Button>
                         )}
-                      </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="border-t border-border pt-6">
-                      <h4 className="font-semibold mb-4">Send a Message</h4>
-                      <div className="space-y-4">
-                        <div>
-                          <Label htmlFor="subject">Subject</Label>
-                          <Input
-                            id="subject"
-                            value={messageForm.subject}
-                            onChange={(e) => setMessageForm(prev => ({ ...prev, subject: e.target.value }))}
-                            placeholder="Message subject..."
-                            className="bg-background border-border"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="message">Message</Label>
-                          <Textarea
-                            id="message"
-                            value={messageForm.message}
-                            onChange={(e) => setMessageForm(prev => ({ ...prev, message: e.target.value }))}
-                            placeholder="Your message..."
-                            rows={4}
-                            className="bg-background border-border"
-                          />
-                        </div>
-                        <Button onClick={handleSendMessage} className="w-full">
-                          <Send className="h-4 w-4 mr-2" />
-                          Send Message
-                        </Button>
                       </div>
                     </div>
                   </div>
