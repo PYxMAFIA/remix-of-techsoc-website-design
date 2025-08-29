@@ -90,10 +90,10 @@ export default function Navbar() {
   const motionProps = prefersReducedMotion
     ? {}
     : {
-      initial: { opacity: 0, y: -10 },
-      animate: { opacity: 1, y: 0 },
-      whileHover: { scale: 1.02, y: -1 },
-      transition: { duration: 0.2, ease: "easeOut" },
+  initial: { opacity: 0, y: -10 },
+  animate: { opacity: 1, y: 0 },
+  whileHover: { scale: 1.02, y: -1 },
+  transition: { duration: 0.2 },
     };
 
   return (

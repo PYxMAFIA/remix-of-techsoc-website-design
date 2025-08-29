@@ -210,9 +210,9 @@ export default function CoreMembersSection() {
   const motionProps = reducedMotion 
     ? {} 
     : {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.3, ease: "easeOut" }
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.3 }
       }
 
   return (
@@ -466,8 +466,8 @@ function MemberCard({
       onMouseEnter={() => !reducedMotion && setHoveredCard(member.id)}
       onMouseLeave={() => !reducedMotion && setHoveredCard(null)}
       onClick={() => onSelect(member)}
-      whileHover={reducedMotion ? {} : { y: -4 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+  whileHover={reducedMotion ? {} : { y: -4 }}
+  transition={{ duration: 0.2 }}
     >
       {featured && (
         <div className="absolute top-3 right-3 z-10">
