@@ -64,3 +64,23 @@ Deploy easily on [Vercel](https://vercel.com/new?utm_medium=default-template&fil
 
 ## Credits
 Inspired by the DTU tech community. See `/src/components/CoreMembersSection.tsx` for team info.
+
+## Deploy on Render
+
+Instructions for deploying the frontend to Render as a Web Service.
+
+- Build Command:
+```bash
+npm ci && npm run build
+```
+
+- Start Command:
+```bash
+npm run start
+```
+
+Environment variables to set on Render (if applicable):
+- `NODE_ENV=production`
+- `NEXT_PUBLIC_API_BASE=https://your-api.example.com` (optional — leave blank if app uses hardcoded data or in-app API routes)
+
+Render will provide a `PORT` environment variable; `next start` uses it automatically.
