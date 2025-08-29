@@ -105,4 +105,8 @@
         "tw-animate-css": "^1.3.6",
         "typescript": "^5"
     }
+    ,
+    "engines": {
+        "node": ">=18.0.0"
+    }
 }

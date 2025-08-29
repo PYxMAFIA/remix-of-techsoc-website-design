@@ -84,3 +84,5 @@ Environment variables to set on Render (if applicable):
 - `NEXT_PUBLIC_API_BASE=https://your-api.example.com` (optional — leave blank if app uses hardcoded data or in-app API routes)
 
 Render will provide a `PORT` environment variable; `next start` uses it automatically.
+
+Important: Ensure Render runs the build step before starting. If you see "Could not find a production build" in logs, set the Build Command exactly as above and confirm the Build Succeeded step in Render's dashboard. Also set the Node version to 18.x in Render settings or rely on the `engines.node` field in `package.json` (already added).
