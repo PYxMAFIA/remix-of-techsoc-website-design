@@ -207,8 +207,7 @@ export default function GuildsSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: shouldReduceMotion ? 0 : 0.5,
-        ease: "easeOut",
+  duration: shouldReduceMotion ? 0 : 0.5,
       },
     },
   };
