@@ -282,7 +282,7 @@ export default function HeroBanner() {
               />
               <StatCard
                 icon={<Users className="h-5 w-5" />}
-                value="240+"
+                value="150+"
                 label="Members"
                 index={2}
               />

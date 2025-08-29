@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Building2, Heart, Star, Zap, ExternalLink, Bell, Mail } from "lucide-react"
 import { toast } from "sonner"
 
+
 interface Partner {
   id: string
   name: string
@@ -145,7 +146,7 @@ export default function PartnersSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-heading font-bold mb-4">Our Partners</h2>
+          <h2 className="text-4xl font-heading font-bold mb-4">Our Sponsor</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Collaborating with industry leaders to create opportunities and drive innovation in our community.
           </p>

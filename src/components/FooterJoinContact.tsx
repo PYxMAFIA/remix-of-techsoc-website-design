@@ -38,11 +38,10 @@ interface FormErrors {
 }
 
 const GUILDS = [
-  { value: 'developers', label: 'Developers Guild' },
-  { value: 'designers', label: 'Designers Guild' },
-  { value: 'researchers', label: 'Researchers Guild' },
-  { value: 'community', label: 'Community Guild' },
-  { value: 'content', label: 'Content Guild' }
+  { value: 'developers', label: 'DSA Guild' },
+  { value: 'designers', label: 'Web Development Guild' },
+  { value: 'researchers', label: 'Finance Guild' },
+  { value: 'community', label: 'Design Guild' },
 ]
 
 const FEEDBACK_CATEGORIES = [
@@ -335,191 +334,10 @@ export default function FooterJoinContact() {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-16">
-        {/* Newsletter Section */}
-        <div className="max-w-2xl mx-auto mb-16">
-          <Card className="bg-card border-border">
-            <CardContent className="p-8 text-center">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Mail className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-heading font-bold text-foreground">Stay Updated</h2>
-              </div>
-              <p className="text-muted-foreground mb-6 text-lg">
-                Get notified about new events, workshops, and opportunities. Join our community newsletter.
-              </p>
-              <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-input border-border flex-1"
-                  required
-                />
-                <Button
-                  type="submit"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-6"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center">
-          {/* Feedback Column */}
-          <div className="space-y-6">
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-xl">
-                  <MessageCircle className="h-5 w-5 text-primary" />
-                  Feedback
-                </CardTitle>
-                <CardDescription>
-                  Help us improve your experience
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleFeedbackSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="feedback-category">Category</Label>
-                    <Select 
-                      value={feedbackForm.category} 
-                      onValueChange={(value) => setFeedbackForm(prev => ({ ...prev, category: value }))}
-                    >
-                      <SelectTrigger 
-                        id="feedback-category"
-                        className={`bg-input border-border focus:border-primary ${feedbackErrors.category ? 'border-destructive' : ''}`}
-                        aria-describedby={feedbackErrors.category ? 'feedback-category-error' : undefined}
-                      >
-                        <SelectValue placeholder="Select category" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {FEEDBACK_CATEGORIES.map((category) => (
-                          <SelectItem key={category.value} value={category.value}>
-                            {category.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {feedbackErrors.category && (
-                      <p id="feedback-category-error" className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.category}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label>Rating</Label>
-                    <div className="flex items-center gap-2">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <motion.button
-                          key={star}
-                          type="button"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => setFeedbackForm(prev => ({ ...prev, rating: star }))}
-                          className={`p-1 rounded transition-colors ${
-                            star <= feedbackForm.rating 
-                              ? 'text-accent' 
-                              : 'text-muted-foreground hover:text-accent/70'
-                          }`}
-                          aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
-                        >
-                          <motion.div
-                            animate={star <= feedbackForm.rating ? { rotate: 360 } : {}}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <Star className="h-5 w-5 fill-current" />
-                          </motion.div>
-                        </motion.button>
-                      ))}
-                    </div>
-                    {feedbackErrors.rating && (
-                      <p className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.rating}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="feedback-message">Message</Label>
-                    <Textarea
-                      id="feedback-message"
-                      value={feedbackForm.message}
-                      onChange={(e) => setFeedbackForm(prev => ({ ...prev, message: e.target.value }))}
-                      className={`bg-input border-border focus:border-primary ${feedbackErrors.message ? 'border-destructive' : ''}`}
-                      placeholder="Share your thoughts, suggestions, or report issues..."
-                      rows={4}
-                      aria-describedby={feedbackErrors.message ? 'feedback-message-error' : undefined}
-                    />
-                    {feedbackErrors.message && (
-                      <p id="feedback-message-error" className="text-sm text-destructive" role="alert">
-                        {feedbackErrors.message}
-                      </p>
-                    )}
-                  </div>
-
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="relative"
-                  >
-                    <Button
-                      type="submit"
-                      disabled={feedbackSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden"
-                      onClick={(e) => handleButtonClick('feedback-send', e)}
-                    >
-                      <motion.span
-                        animate={clickedButtons.includes('feedback-send') ? { scale: [1, 1.1, 1] } : {}}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {feedbackSubmitting ? 'Sending...' : 'Send Feedback'}
-                      </motion.span>
-                      
-                      {/* Animated background effect */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20"
-                        animate={clickedButtons.includes('feedback-send') ? { 
-                          scale: [1, 1.2, 1],
-                          opacity: [0, 0.3, 0]
-                        } : {}}
-                        transition={{ duration: 0.6 }}
-                      />
-                      
-                      {/* Sparkle effects */}
-                      <AnimatePresence>
-                        {sparklePositions['feedback-send'] && (
-                          <>
-                            {sparklePositions['feedback-send'].map((pos, i) => (
-                              <motion.div
-                                key={i}
-                                className="absolute pointer-events-none"
-                                style={{ left: pos.x, top: pos.y }}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1, rotate: 360 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ delay: i * 0.1, duration: 0.6 }}
-                              >
-                                <Heart className="w-3 h-3 text-red-400" />
-                              </motion.div>
-                            ))}
-                          </>
-                        )}
-                      </AnimatePresence>
-                    </Button>
-                  </motion.div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          
           {/* Join Us Column */}
-          <div className="space-y-6 lg:col-start-2">
+          <div className="space-y-6 lg:col-start-1">
             <Card className="bg-card border-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
@@ -1110,32 +928,6 @@ export default function FooterJoinContact() {
           </div>
         </div>
       </div>
-
-      {/* Feedback Confirmation Dialog */}
-      <Dialog open={showFeedbackConfirm} onOpenChange={setShowFeedbackConfirm}>
-        <DialogContent className="bg-popover border-border">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <MessageCircle className="h-5 w-5 text-primary" />
-              Feedback Received
-            </DialogTitle>
-            <DialogDescription>
-              Thank you for your feedback! We review all submissions and use them to improve our platform.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex justify-end">
-            <Button
-              onClick={() => {
-                setShowFeedbackConfirm(false)
-                toast.success('Feedback submitted successfully!')
-              }}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Close
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </footer>
   )
 }

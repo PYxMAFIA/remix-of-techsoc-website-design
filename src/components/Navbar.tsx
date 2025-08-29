@@ -107,7 +107,7 @@ export default function Navbar() {
                 {/* <span className="text-primary-foreground font-bold text-sm">RT</span> */}
                 <Image src="/logo.png" alt="Logo" width={32} height={32} />
               </div>
-              <span className="font-heading font-semibold text-lg hidden sm:block">
+              <span className="font-heading font-semibold text-white text-lg hidden sm:block">
                 RoundTable
               </span>
             </div>
@@ -141,21 +141,7 @@ export default function Navbar() {
             </Button>
 
             {/* Search */}
-            <div className="relative hidden md:block">
-              <motion.div
-                animate={{ width: isSearchFocused ? 240 : 180 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
-                className="relative"
-              >
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input
-                  placeholder="Search..."
-                  className="pl-10 h-9 bg-muted/50 border-muted focus:border-ring transition-colors"
-                  onFocus={() => setIsSearchFocused(true)}
-                  onBlur={() => setIsSearchFocused(false)}
-                />
-              </motion.div>
-            </div>
+           
 
             {/* Mobile Menu Button */}
             <Button
