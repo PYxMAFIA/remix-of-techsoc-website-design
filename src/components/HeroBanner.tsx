@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent } from '@/components/ui/card'
 import { toast } from 'sonner'
+import Image from 'next/image'
 
 interface StatCardProps {
   icon: React.ReactNode
@@ -145,25 +146,6 @@ const EventCarousel: React.FC = () => {
 }
 
 export default function HeroBanner() {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-
-    setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    toast.success('Subscribed successfully!', {
-      description: 'You\'ll receive updates about upcoming events and opportunities.'
-    })
-    
-    setEmail('')
-    setIsSubmitting(false)
-  }
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -173,8 +155,12 @@ export default function HeroBanner() {
   }
 
   return (
-    <section className="w-full bg-background py-20 lg:py-32">
-      <div className="container mx-auto px-6">
+    <section className="w-full bg-background py-20 lg:py-32 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image src="/background.jpg" alt="Hero Image" fill className="object-cover opacity-35" />
+      </div>
+  <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ">
           {/* Main Content */}
           <div className="lg:col-span-7 space-y-8">

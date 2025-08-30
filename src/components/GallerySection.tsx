@@ -22,7 +22,6 @@ interface MediaItem {
   thumbnail: string
   title: string
   caption?: string
-  photographer?: string
   category: string
   aspectRatio: number
 }
@@ -35,69 +34,186 @@ const MOCK_MEDIA: MediaItem[] = [
   {
     id: '1',
     type: 'photo',
-    url: '/api/placeholder/800/600',
-    thumbnail: '/api/placeholder/400/300',
+    url: '/glimpses/1-min.jpg',
+    thumbnail: '/glimpses/1-min.jpg',
     title: 'Campus Event 2024',
     caption: 'Students gathering at the main quad for orientation week',
-    photographer: 'Sarah Chen',
     category: 'Events',
     aspectRatio: 4/3
   },
   {
     id: '2',
     type: 'poster',
-    url: '/api/placeholder/600/800',
-    thumbnail: '/api/placeholder/300/400',
-    title: 'Tech Conference Poster',
-    caption: 'Annual technology conference promotional material',
-    photographer: 'Design Team',
+    url: '/glimpses/2-min.jpg',
+    thumbnail: '/glimpses/2-min.jpg',
+    title: 'Speaker Spotlight',
+    caption: 'Spotlight on our keynote speaker',
     category: 'Marketing',
     aspectRatio: 3/4
   },
   {
     id: '3',
-    type: 'video',
-    url: '/api/placeholder/1200/675',
-    thumbnail: '/api/placeholder/600/338',
-    title: 'Welcome Video',
-    caption: 'Introduction video for new members',
-    photographer: 'Media Team',
-    category: 'Videos',
-    aspectRatio: 16/9
-  },
-  {
-    id: '4',
     type: 'photo',
-    url: '/api/placeholder/600/900',
-    thumbnail: '/api/placeholder/300/450',
-    title: 'Portrait Session',
-    caption: 'Professional headshots for team members',
-    photographer: 'Mike Johnson',
+    url: '/glimpses/3-min.jpg',
+    thumbnail: '/glimpses/3-min.jpg',
+    title: 'Photo session',
+    caption: 'Exclusive photo session for rt members',
     category: 'Portraits',
     aspectRatio: 2/3
   },
   {
-    id: '5',
+    id: '4',
     type: 'photo',
-    url: '/api/placeholder/900/600',
-    thumbnail: '/api/placeholder/450/300',
+    url: '/glimpses/4-min.jpg',
+    thumbnail: '/glimpses/4-min.jpg',
     title: 'Workshop Day',
-    caption: 'Hands-on learning session in the lab',
-    photographer: 'Alex Kim',
+    caption: 'Hands-on learning session in the project',
     category: 'Events',
-    aspectRatio: 3/2
+    aspectRatio: 4/3
+  },
+  {
+    id: '5',
+    type: 'poster',
+    url: '/glimpses/5-min.jpg',
+    thumbnail: '/glimpses/5-min.jpg',
+    title: 'event',
+    caption: 'event photo',
+    category: 'Marketing',
+    aspectRatio: 4/3
   },
   {
     id: '6',
-    type: 'poster',
-    url: '/api/placeholder/800/1200',
-    thumbnail: '/api/placeholder/400/600',
-    title: 'Annual Gala Invitation',
-    caption: 'Elegant design for our yearly celebration',
-    photographer: 'Creative Studio',
-    category: 'Marketing',
-    aspectRatio: 2/3
-  }
+    type: 'photo',
+    url: '/glimpses/6-min.jpg',
+    thumbnail: '/glimpses/6-min.jpg',
+    title: 'Workshop Day',
+    caption: 'Hands-on learning session in the project',
+    category: 'Events',
+    aspectRatio: 4/3
+  },
+    {
+    id: '7',
+    type: 'photo',
+    url: '/glimpses/7-min.jpg',
+    thumbnail: '/glimpses/7-min.jpg',
+    title: 'Workshop Day',
+    caption: 'Hands-on learning session in the project',
+    category: 'Events',
+    aspectRatio: 4/3
+  },
+    {
+    id: '8',
+    type: 'photo',
+    url: '/glimpses/8-min.jpg',
+    thumbnail: '/glimpses/8-min.jpg',
+    title: 'Workshop Day',
+    caption: 'Hands-on learning session in the project',
+    category: 'Events',
+    aspectRatio: 4/3
+  },
+
+    {
+      id: '9',
+      type: 'photo',
+      url: '/glimpses/9-min.jpg',
+      thumbnail: '/glimpses/9-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Hands-on learning session in the project',
+      category: 'Events',
+      aspectRatio: 4/3
+    }
+    ,
+    {
+      id: '10',
+      type: 'photo',
+      url: '/glimpses/10-min.jpg',
+      thumbnail: '/glimpses/10-min.jpg',
+      title: 'Speaker',
+      caption: 'Speaker at the event',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '11',
+      type: 'photo',
+      url: '/glimpses/11-min.jpg',
+      thumbnail: '/glimpses/11-min.jpg',
+      title: 'Group photo',
+      caption: 'Group photo of all member',
+      category: 'photo',
+      aspectRatio: 4/3
+    },
+    {
+      id: '12',
+      type: 'photo',
+      url: '/glimpses/12-min.jpg',
+      thumbnail: '/glimpses/12-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Hands-on learning session in the project',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '13',
+      type: 'photo',
+      url: '/glimpses/13-min.jpg',
+      thumbnail: '/glimpses/13-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Hands-on learning session in the project',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '14',
+      type: 'photo',
+      url: '/glimpses/14-min.jpg',
+      thumbnail: '/glimpses/14-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Winning moment captured',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '15',
+      type: 'photo',
+      url: '/glimpses/15-min.jpg',
+      thumbnail: '/glimpses/15-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Winning moment captured',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '16',
+      type: 'photo',
+      url: '/glimpses/16-min.jpg',
+      thumbnail: '/glimpses/16-min.jpg',
+      title: 'Workshop Day',
+      caption: 'hands-on learning session in the project',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '17',
+      type: 'photo',
+      url: '/glimpses/17-min.jpg',
+      thumbnail: '/glimpses/17-min.jpg',
+      title: 'Workshop Day',
+      caption: 'Winning moment captured',
+      category: 'Events',
+      aspectRatio: 4/3
+    },
+    {
+      id: '18',
+      type: 'photo',
+      url: '/glimpses/18-min.jpg',
+      thumbnail: '/glimpses/18-min.jpg',
+      title: 'Workshop Day',
+      caption: 'hands-on learning session in the project',
+      category: 'Events',
+      aspectRatio: 4/3
+    }
+
 ]
 
 const FILTER_OPTIONS = [
@@ -122,7 +238,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
     title: '',
     caption: '',
     category: 'Events',
-    photographer: ''
   })
 
   // Check for reduced motion preference
@@ -261,7 +376,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
       thumbnail: URL.createObjectURL(uploadForm.file),
       title: uploadForm.title,
       caption: uploadForm.caption,
-      photographer: uploadForm.photographer || 'Anonymous',
       category: uploadForm.category,
       aspectRatio: 4/3 // Default aspect ratio
     }
@@ -272,7 +386,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
       title: '',
       caption: '',
       category: 'Events',
-      photographer: ''
     })
     setShowUploadDialog(false)
     
@@ -507,16 +620,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
                       >
                         {item.title}
                       </motion.h3>
-                      {item.photographer && (
-                        <motion.p 
-                          className="text-white/70 text-xs mt-1"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: index * 0.05 + 0.1 }}
-                        >
-                          by {item.photographer}
-                        </motion.p>
-                      )}
                     </motion.div>
                   </CardContent>
                 </Card>
@@ -655,7 +758,7 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
               </div>
 
               {/* Enhanced Caption */}
-              {showCaptions && (selectedMedia.caption || selectedMedia.photographer) && (
+              {showCaptions && (selectedMedia.caption) && (
                 <motion.div 
                   className="bg-black/80 p-4 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
@@ -676,16 +779,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
                       transition={{ delay: 0.5 }}
                     >
                       {selectedMedia.caption}
-                    </motion.p>
-                  )}
-                  {selectedMedia.photographer && (
-                    <motion.p 
-                      className="text-white/60 text-xs"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.6 }}
-                    >
-                      Photo by {selectedMedia.photographer}
                     </motion.p>
                   )}
                 </motion.div>
@@ -744,17 +837,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
                 placeholder="Add a caption..."
                 className="mt-1"
                 rows={3}
-              />
-            </div>
-            
-            <div>
-              <Label htmlFor="photographer">Photographer</Label>
-              <Input
-                id="photographer"
-                value={uploadForm.photographer}
-                onChange={(e) => setUploadForm(prev => ({ ...prev, photographer: e.target.value }))}
-                placeholder="Photographer name"
-                className="mt-1"
               />
             </div>
             

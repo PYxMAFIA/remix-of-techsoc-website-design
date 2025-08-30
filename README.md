@@ -1,88 +1,36 @@
-
-# Round Table DTU Website
-
-A modern, community-driven website for Round Table DTU, built with Next.js, TypeScript, and Tailwind CSS. This platform connects developers, designers, and innovators at DTU, showcasing events, guilds, projects, sponsors, and more.
-
-## Features
-- **Hero Banner**: Engaging introduction and quick navigation to events and guilds.
-- **Events**: Discover and register for workshops, hackathons, and talks.
-- **Guilds**: Join specialized groups (Web Dev, AI/ML, Cybersecurity, Design, Robotics, Gaming) and connect with peers.
-- **Projects**: Explore and submit open-source, web, mobile, AI/ML, and game projects by community members.
-- **Sponsors**: View and connect with our partners supporting innovation and growth.
-- **Testimonials**: Read stories from alumni and current members about their experiences.
-- **Contact & Join**: Apply to join, share your motivation, and connect via social links.
-
-## Tech Stack
-- **Next.js** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion** (animations)
-- **Lucide Icons**
-- **Sonner** (toast notifications)
-- **Bun, npm, pnpm, or yarn** (supported)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-1. **Install dependencies**
-	```bash
-	bun install
-	# or
-	npm install
-	# or
-	yarn install
-	# or
-	pnpm install
-	```
+First, run the development server:
 
-2. **Run the development server**
-	```bash
-	bun dev
-	# or
-	npm run dev
-	# or
-	yarn dev
-	# or
-	pnpm dev
-	```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Project Structure
-- `src/components/` — UI components for sections (HeroBanner, EventsSection, GuildsSection, ProjectsSection, SponsorsSection, TestimonialsSection, FooterJoinContact, etc.)
-- `src/app/` — App entry, layout, global styles
-- `public/` — Static assets (images, SVGs)
-- `backend/` — (Optional) Backend logic or API routes
-
-## Contributing
-Pull requests and issues are welcome! Please follow conventional commit messages and ensure your code passes linting and builds.
-
-## License
-MIT
-
-## Deploy
-Deploy easily on [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
-
-## Credits
-Inspired by the DTU tech community. See `/src/components/CoreMembersSection.tsx` for team info.
-
-## Deploy on Render
-
-Instructions for deploying the frontend to Render as a Web Service.
-
-- Build Command:
 ```bash
-npm ci && npm run build
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-- Start Command:
-```bash
-npm run start
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Environment variables to set on Render (if applicable):
-- `NODE_ENV=production`
-- `NEXT_PUBLIC_API_BASE=https://your-api.example.com` (optional — leave blank if app uses hardcoded data or in-app API routes)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Render will provide a `PORT` environment variable; `next start` uses it automatically.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Important: Ensure Render runs the build step before starting. If you see "Could not find a production build" in logs, set the Build Command exactly as above and confirm the Build Succeeded step in Render's dashboard. Also set the Node version to 18.x in Render settings or rely on the `engines.node` field in `package.json` (already added).
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -158,7 +158,7 @@ function ChartTooltipContent(props: any) {
     labelKey,
   ])
 
-  if (!active || !payload?.length) {
+  if (!active || !(payload && (payload as any[]).length)) {
     return null
   }
 
@@ -173,10 +173,10 @@ function ChartTooltipContent(props: any) {
     >
       {!nestLabel ? tooltipLabel : null}
       <div className="grid gap-1.5">
-  {(payload as any[]).map((item: any, index: number) => {
+        {(payload as any[]).map((item: any, index: number) => {
           const key = `${nameKey || item.name || item.dataKey || "value"}`
-          const itemConfig = getPayloadConfigFromPayload(config, item, key)
-          const indicatorColor = color || item.payload.fill || item.color
+          const itemConfig = getPayloadConfigFromPayload(config, item, key as string)
+          const indicatorColor = color || item.payload?.fill || item.color
 
           return (
             <div
@@ -186,7 +186,7 @@ function ChartTooltipContent(props: any) {
                 indicator === "dot" && "items-center"
               )}
             >
-                    {formatter && item?.value !== undefined && item.name ? (
+              {formatter && item?.value !== undefined && item.name ? (
                 formatter(item.value, item.name, item, index, item.payload)
               ) : (
                 <>
@@ -250,9 +250,7 @@ function ChartLegendContent(props: any) {
 
   const items = (payload as any[]) || []
 
-  if (!items.length) {
-    return null
-  }
+  if (!items.length) return null
 
   return (
     <div

@@ -13,8 +13,6 @@ interface Testimonial {
   role: string;
   quote: string;
   photo: string;
-  graduationYear: number;
-  currentCompany?: string;
 }
 
 const mockTestimonials: Testimonial[] = [
@@ -24,8 +22,6 @@ const mockTestimonials: Testimonial[] = [
     role: "Former President",
     quote: "Being part of this tech society was transformative. The projects we built, the hackathons we won, and the lifelong connections I made here shaped my entire career trajectory.",
     photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2022,
-    currentCompany: "Google"
   },
   {
     id: "2",
@@ -33,8 +29,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Alumni",
     quote: "The collaborative environment here taught me more about software engineering than any textbook could. From React to AI/ML, we explored cutting-edge technologies together.",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2021,
-    currentCompany: "Meta"
+
   },
   {
     id: "3",
@@ -42,8 +37,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Former VP Engineering",
     quote: "Leading technical workshops and mentoring new members gave me invaluable leadership experience. This society is where I discovered my passion for developer advocacy.",
     photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2023,
-    currentCompany: "Stripe"
+
   },
   {
     id: "4",
@@ -51,8 +45,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Alumni",
     quote: "The 24-hour hackathons were legendary! Nothing beats the rush of building something amazing with your friends. Those late nights debugging taught me perseverance.",
     photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2020,
-    currentCompany: "Tesla"
+
   },
   {
     id: "5",
@@ -60,8 +53,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Former Secretary",
     quote: "From organizing tech talks to coordinating industry partnerships, this society gave me incredible project management skills that I use every day in my startup.",
     photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2022,
-    currentCompany: "Founder, TechFlow"
+
   },
   {
     id: "6",
@@ -69,8 +61,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Alumni",
     quote: "The open-source projects we contributed to gave me real-world experience that made my resume stand out. Recruiters were impressed by our GitHub contributions.",
     photo: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2021,
-    currentCompany: "Microsoft"
+
   },
   {
     id: "7",
@@ -78,8 +69,6 @@ const mockTestimonials: Testimonial[] = [
     role: "Former Treasurer",
     quote: "The mentorship I received here was incredible. Senior members genuinely cared about our growth and helped us navigate both technical challenges and career decisions.",
     photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2023,
-    currentCompany: "Amazon"
   },
   {
     id: "8",
@@ -87,8 +76,7 @@ const mockTestimonials: Testimonial[] = [
     role: "Alumni",
     quote: "This society isn't just about coding - it's about building the future together. The entrepreneurial spirit here inspired me to start my own tech company.",
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    graduationYear: 2020,
-    currentCompany: "Founder, CloudSync"
+
   }
 ];
 
@@ -144,7 +132,7 @@ export const TestimonialsSection = () => {
             transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
             className="text-4xl md:text-5xl font-heading font-bold mb-4"
           >
-            What Our Alumni Say
+            What Our Member Say
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -198,14 +186,6 @@ export const TestimonialsSection = () => {
                         <div className="font-semibold text-lg">
                           {currentTestimonial.name}
                         </div>
-                        <div className="text-muted-foreground">
-                          {currentTestimonial.role} • Class of {currentTestimonial.graduationYear}
-                        </div>
-                        {currentTestimonial.currentCompany && (
-                          <div className="text-sm text-primary">
-                            Now at {currentTestimonial.currentCompany}
-                          </div>
-                        )}
                       </div>
                     </div>
                   </div>

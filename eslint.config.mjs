@@ -8,7 +8,7 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.config({
     extends: ['next'],
-    plugins: ['import', '@typescript-eslint'],
+    plugins: ['import'],
   }),
   {
     rules: {

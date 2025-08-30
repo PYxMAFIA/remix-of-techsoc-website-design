@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'
 import { Building2, Heart, Star, Zap, ExternalLink, Bell, Mail } from "lucide-react"
 import { toast } from "sonner"
 
@@ -22,60 +23,82 @@ interface Partner {
 const mockPartners: Partner[] = [
   {
     id: "1",
-    name: "TechCorp",
-    logo: "/api/placeholder/120/60",
+    name: "KodeKloud",
+    logo: "/sponsor2/KodeKloud.svg",
     description: "Leading technology solutions",
-    website: "https://techcorp.com"
+    website: "https://kodekloud.com"
   },
   {
     id: "2", 
-    name: "InnovateLab",
-    logo: "/api/placeholder/120/60",
-    description: "Innovation and research",
-    website: "https://innovatelab.com"
+    name: "Code Ninjas",
+    logo: "/sponsor2/code-ninjas.svg",
+    description: "Future coders start here",
+    website: "https://www.codingninjas.com/"
   },
   {
     id: "3",
-    name: "DataFlow",
-    logo: "/api/placeholder/120/60",
-    description: "Data analytics platform",
-    website: "https://dataflow.com"
+    name: "elearnmarket",
+    logo: "/sponsor2/elearnmarkets.svg",
+    description: "Finance education made simple",
+    website: "https://www.elearnmarkets.com/"
   },
   {
     id: "4",
-    name: "CloudSync",
-    logo: "/api/placeholder/120/60",
-    description: "Cloud infrastructure",
-    website: "https://cloudsync.com"
+    name: "Motorola",
+    logo: "/sponsor2/motorola-logo.webp",
+    description: "Smartphones that spark innovation",
+    website: "https://www.motorola.in/"
   },
+  
   {
     id: "5",
-    name: "DevTools Inc",
-    logo: "/api/placeholder/120/60",
-    description: "Developer productivity tools",
-    website: "https://devtools.com"
+    name: "gfg",
+    logo: "/sponsor2/gfg.png",
+    description: "Your coding learning hub",
+    website: "https://www.geeksforgeeks.org/"
   },
   {
     id: "6",
-    name: "StartupHub",
-    logo: "/api/placeholder/120/60",
-    description: "Supporting startups",
-    website: "https://startuphub.com"
+    name: "Fresca Juices",
+    logo: "/sponsor2/fresca.webp",
+    description: "Drink the Fruit",
+    website: "https://www.frescajuices.com/"
   },
   {
     id: "7",
-    name: "AI Solutions",
-    logo: "/api/placeholder/120/60",
-    description: "Artificial intelligence platform",
-    website: "https://aisolutions.com"
+    name: "InterviewBuddy",
+    logo: "/sponsor2/interview.png",
+    description: "Mock Interviews, Real Results",
+    website: "https://interviewbuddy.net/"
   },
   {
     id: "8",
-    name: "CyberShield",
-    logo: "/api/placeholder/120/60",
-    description: "Cybersecurity solutions",
-    website: "https://cybershield.com"
-  }
+    name: "Converge",
+    logo: "/sponsor2/CTS.webp",
+    description: "Empowering Technology, Empowering People",
+    website: "https://convergetp.com/"
+  },
+  {
+    id: "4",
+    name: "Jnuobi",
+    logo: "/sponsor2/jnuobi.png",
+    description: "Gadgets for the Go-Getters",
+    website: ""
+  },
+  {
+    id: "10",
+    name: "Sybgen",
+    logo: "/sponsor2/SYBGEN-1.png",
+    description: "Certifying Cyber Skills Today",
+    website: "https://sybgen.com/"
+  },
+  {
+    id: "11",
+    name: "mentro",
+    logo: "/sponsor2/mentro.svg",
+    description: "Mentors Match. Interviews Mastered",
+    website: "https://mentro.tech/"
+  },
 ]
 
 const updates = [
@@ -111,6 +134,7 @@ const updates = [
 
 export default function PartnersSection() {
   const [currentPartnerIndex, setCurrentPartnerIndex] = useState(0)
+  const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null)
   const [emailForm, setEmailForm] = useState({ email: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const shouldReduceMotion = useReducedMotion()
@@ -156,7 +180,7 @@ export default function PartnersSection() {
         <div className="mb-16">
           <div className="relative max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-              {mockPartners.map((partner, index) => (
+        {mockPartners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
                   className="relative"
@@ -168,12 +192,12 @@ export default function PartnersSection() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group">
+          <Card className="bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group" onClick={() => setSelectedPartner(partner)}>
                     <CardContent className="p-4 flex items-center justify-center h-20">
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        className="max-w-full max-h-full object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+            className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                       />
                     </CardContent>
                   </Card>
@@ -188,6 +212,33 @@ export default function PartnersSection() {
                 </motion.div>
               ))}
             </div>
+
+            {/* Sponsor detail dialog */}
+            <Dialog open={!!selectedPartner} onOpenChange={(open) => { if (!open) setSelectedPartner(null) }}>
+              <DialogContent className="max-w-lg">
+                {selectedPartner && (
+                  <div className="space-y-4">
+                    <DialogHeader>
+                      <DialogTitle>{selectedPartner.name}</DialogTitle>
+                      <DialogDescription>{selectedPartner.description}</DialogDescription>
+                    </DialogHeader>
+
+                    <div className="flex items-center justify-center p-4">
+                      <img src={selectedPartner.logo} alt={`${selectedPartner.name} logo`} className="max-w-full max-h-40 object-contain" />
+                    </div>
+
+                    <div className="flex justify-end gap-2">
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={selectedPartner.website || '#'} target="_blank" rel="noopener noreferrer">
+                          Visit Website
+                        </a>
+                      </Button>
+                      <Button size="sm" onClick={() => setSelectedPartner(null)}>Close</Button>
+                    </div>
+                  </div>
+                )}
+              </DialogContent>
+            </Dialog>
 
             {/* Featured Partner Details */}
             <AnimatePresence mode="wait">

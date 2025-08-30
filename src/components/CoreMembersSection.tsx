@@ -185,7 +185,7 @@ export default function CoreMembersSection() {
     }
   }, [])
 
-  const categories = ["All", "Senior Council", "Junior Council"]
+  const categories = ["All"]
 
   const filteredMembers = mockMembers.filter(member => {
     const matchesSearch = member.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -210,9 +210,9 @@ export default function CoreMembersSection() {
   const motionProps = reducedMotion 
     ? {} 
     : {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.3 }
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.3, ease: "easeOut" }
       }
 
   return (
@@ -241,37 +241,6 @@ export default function CoreMembersSection() {
             </motion.p>
           </div>
 
-          {/* Search and Filters */}
-          <motion.div
-            initial={{ opacity: 0, y: reducedMotion ? 0 : 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: reducedMotion ? 0 : 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
-          >
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                placeholder="Search members by name..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-card border-border"
-              />
-            </div>
-            <div className="flex gap-2">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                  className={selectedCategory === category ? "bg-primary text-primary-foreground" : ""}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
-          </motion.div>
 
           {/* Senior Council Section */}
           {(selectedCategory === "All" || selectedCategory === "Senior Council") && seniorCouncil.length > 0 && (
@@ -289,43 +258,6 @@ export default function CoreMembersSection() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {seniorCouncil.map((member, index) => (
-                  <motion.div
-                    key={member.id}
-                    initial={{ opacity: 0, y: reducedMotion ? 0 : 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: reducedMotion ? 0 : 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <MemberCard
-                      member={member}
-                      onSelect={setSelectedMember}
-                      hoveredCard={hoveredCard}
-                      setHoveredCard={setHoveredCard}
-                      reducedMotion={reducedMotion}
-                      featured={member.featured}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Junior Council Section */}
-          {(selectedCategory === "All" || selectedCategory === "Junior Council") && juniorCouncil.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: reducedMotion ? 0 : 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: reducedMotion ? 0 : 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <Users className="h-6 w-6 text-primary" />
-                <h3 className="text-2xl font-heading font-semibold">Junior Council</h3>
-                <div className="h-px bg-border flex-1 ml-4" />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {juniorCouncil.map((member, index) => (
                   <motion.div
                     key={member.id}
                     initial={{ opacity: 0, y: reducedMotion ? 0 : 20 }}
@@ -466,8 +398,8 @@ function MemberCard({
       onMouseEnter={() => !reducedMotion && setHoveredCard(member.id)}
       onMouseLeave={() => !reducedMotion && setHoveredCard(null)}
       onClick={() => onSelect(member)}
-  whileHover={reducedMotion ? {} : { y: -4 }}
-  transition={{ duration: 0.2 }}
+      whileHover={reducedMotion ? {} : { y: -4 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
     >
       {featured && (
         <div className="absolute top-3 right-3 z-10">
