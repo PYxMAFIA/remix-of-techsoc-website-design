@@ -1036,7 +1036,7 @@ const StatCard = ({ icon, value, label, index })=>{
     _s();
     const [isFlipped, setIsFlipped] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:30:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:37:4",
         "data-orchids-name": "motion.div",
         initial: {
             opacity: 0,
@@ -1050,80 +1050,88 @@ const StatCard = ({ icon, value, label, index })=>{
             duration: 0.6,
             delay: 0.4 + index * 0.1
         },
-        className: "perspective-1000",
+        className: "relative",
         onMouseEnter: ()=>setIsFlipped(true),
         onMouseLeave: ()=>setIsFlipped(false),
+        style: {
+            perspective: '1000px'
+        },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            "data-orchids-id": "src\\components\\HeroBanner.tsx:38:6",
+            "data-orchids-id": "src\\components\\HeroBanner.tsx:46:6",
             "data-orchids-name": "div",
-            className: "relative w-full h-24 preserve-3d transition-transform duration-500",
+            className: "relative w-full h-24 transition-transform duration-500",
             style: {
+                transformStyle: 'preserve-3d',
                 transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:42:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:54:8",
                     "data-orchids-name": "Card",
-                    className: "absolute inset-0 backface-hidden bg-card border-border",
+                    className: "absolute inset-0 bg-card border-border",
+                    style: {
+                        backfaceVisibility: 'hidden'
+                    },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:43:10",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:58:10",
                         "data-orchids-name": "CardContent",
                         className: "flex flex-col items-center justify-center h-full p-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:44:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:59:12",
                                 "data-orchids-name": "div",
                                 className: "text-primary mb-1",
                                 children: icon
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 44,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:45:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:60:12",
                                 "data-orchids-name": "div",
                                 className: "text-2xl font-bold font-heading text-foreground",
                                 children: value
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 45,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:46:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:63:12",
                                 "data-orchids-name": "div",
                                 className: "text-xs text-muted-foreground text-center",
                                 children: label
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 46,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 43,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 42,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:51:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:70:8",
                     "data-orchids-name": "Card",
-                    className: "absolute inset-0 backface-hidden bg-primary border-primary",
+                    className: "absolute inset-0 bg-primary border-primary",
                     style: {
-                        transform: 'rotateY(180deg)'
+                        transform: 'rotateY(180deg)',
+                        backfaceVisibility: 'hidden'
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:54:10",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:77:10",
                         "data-orchids-name": "CardContent",
                         className: "flex items-center justify-center h-full p-4",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:55:12",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:78:12",
                             "data-orchids-name": "div",
                             className: "text-primary-foreground text-sm font-medium text-center",
                             children: [
@@ -1133,28 +1141,28 @@ const StatCard = ({ icon, value, label, index })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 55,
+                            lineNumber: 78,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 54,
+                        lineNumber: 77,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 51,
+                    lineNumber: 70,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/HeroBanner.tsx",
-            lineNumber: 38,
+            lineNumber: 46,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 30,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 };
@@ -1165,22 +1173,22 @@ const EventCarousel = ()=>{
     const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const events = [
         {
-            id: '1',
-            title: 'React Workshop',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 15'
+            id: "1",
+            title: "React Workshop",
+            image: "/api/placeholder/200/120",
+            date: "Dec 15"
         },
         {
-            id: '2',
-            title: 'AI Hackathon',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 20'
+            id: "2",
+            title: "AI Hackathon",
+            image: "/api/placeholder/200/120",
+            date: "Dec 20"
         },
         {
-            id: '3',
-            title: 'Cybersec Talk',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 22'
+            id: "3",
+            title: "Cybersec Talk",
+            image: "/api/placeholder/200/120",
+            date: "Dec 22"
         }
     ];
     const nextSlide = ()=>{
@@ -1198,7 +1206,7 @@ const EventCarousel = ()=>{
         }
     }["EventCarousel.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:90:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:128:4",
         "data-orchids-name": "motion.div",
         initial: {
             opacity: 0,
@@ -1215,146 +1223,146 @@ const EventCarousel = ()=>{
         className: "relative w-full max-w-sm",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:96:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:134:6",
                 "data-orchids-name": "div",
                 className: "relative overflow-hidden rounded-lg bg-card border border-border",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:97:8",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:135:8",
                         "data-orchids-name": "div",
                         className: "flex transition-transform duration-300 ease-in-out",
                         style: {
                             transform: `translateX(-${currentIndex * 100}%)`
                         },
                         children: events.map((event)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:102:12@events",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:140:12@events",
                                 "data-orchids-name": "div",
                                 className: "w-full flex-shrink-0",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:103:14@events",
+                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:141:14@events",
                                         "data-orchids-name": "div",
                                         className: "aspect-video bg-muted flex items-center justify-center text-muted-foreground text-sm",
                                         children: event.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:106:14@events",
+                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:144:14@events",
                                         "data-orchids-name": "div",
                                         className: "p-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:107:16@events",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:145:16@events",
                                                 "data-orchids-name": "h4",
                                                 className: "font-medium text-foreground text-sm mb-1",
                                                 children: event.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 145,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:108:16@events",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:148:16@events",
                                                 "data-orchids-name": "p",
                                                 className: "text-xs text-muted-foreground",
                                                 children: event.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 148,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, event.id, true, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 102,
+                                lineNumber: 140,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 97,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:114:8@prevSlide",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:154:8@prevSlide",
                         "data-orchids-name": "Button",
                         variant: "ghost",
                         size: "sm",
                         className: "absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-background/80 hover:bg-background",
                         onClick: prevSlide,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:120:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:160:10",
                             "data-orchids-name": "ChevronLeft",
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 120,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 114,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:123:8@nextSlide",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:163:8@nextSlide",
                         "data-orchids-name": "Button",
                         variant: "ghost",
                         size: "sm",
                         className: "absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-background/80 hover:bg-background",
                         onClick: nextSlide,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:129:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:169:10",
                             "data-orchids-name": "ChevronRight",
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 129,
+                            lineNumber: 169,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 123,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 96,
+                lineNumber: 134,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:133:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:173:6",
                 "data-orchids-name": "div",
                 className: "flex justify-center mt-3 gap-2",
                 children: events.map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         "data-map-index": index,
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:135:10@events",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:175:10@events",
                         "data-orchids-name": "button",
-                        className: `w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-primary' : 'bg-muted'}`,
+                        className: `w-2 h-2 rounded-full transition-colors ${index === currentIndex ? "bg-primary" : "bg-muted"}`,
                         onClick: ()=>setCurrentIndex(index)
                     }, index, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 135,
+                        lineNumber: 175,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 133,
+                lineNumber: 173,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 90,
+        lineNumber: 128,
         columnNumber: 5
     }, this);
 };
@@ -1365,21 +1373,21 @@ function HeroBanner() {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
-                behavior: 'smooth'
+                behavior: "smooth"
             });
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:158:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:197:4",
         "data-orchids-name": "section",
         className: "w-full bg-background py-20 lg:py-32 relative overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:160:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:199:6",
                 "data-orchids-name": "div",
                 className: "absolute inset-0 w-full h-full z-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:161:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:200:8",
                     "data-orchids-name": "img",
                     src: "/background.jpg",
                     alt: "Hero Image",
@@ -1387,35 +1395,35 @@ function HeroBanner() {
                     className: "object-cover opacity-35"
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 161,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 160,
+                lineNumber: 199,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:163:2",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:207:6",
                 "data-orchids-name": "div",
                 className: "container mx-auto px-6 relative z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:164:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:208:8",
                     "data-orchids-name": "div",
                     className: "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:166:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:210:10",
                             "data-orchids-name": "div",
                             className: "lg:col-span-7 space-y-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:168:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:212:12",
                                     "data-orchids-name": "div",
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:169:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:213:14",
                                             "data-orchids-name": "motion.div",
                                             initial: {
                                                 opacity: 0,
@@ -1430,12 +1438,12 @@ function HeroBanner() {
                                             },
                                             className: "overflow-hidden",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:175:16",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:219:16",
                                                 "data-orchids-name": "h1",
                                                 className: "text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:176:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:220:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1451,12 +1459,12 @@ function HeroBanner() {
                                                         children: "Round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 220,
                                                         columnNumber: 19
                                                     }, this),
-                                                    ' ',
+                                                    " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:184:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:228:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1472,12 +1480,12 @@ function HeroBanner() {
                                                         children: "Table"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 228,
                                                         columnNumber: 19
                                                     }, this),
-                                                    ' ',
+                                                    " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:192:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:236:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1493,22 +1501,22 @@ function HeroBanner() {
                                                         children: "DTU"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 236,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 175,
+                                                lineNumber: 219,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 213,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:203:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:247:14",
                                             "data-orchids-name": "motion.p",
                                             initial: {
                                                 opacity: 0,
@@ -1526,11 +1534,11 @@ function HeroBanner() {
                                             children: "Build. Learn. Ship."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 247,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:212:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:256:14",
                                             "data-orchids-name": "motion.p",
                                             initial: {
                                                 opacity: 0,
@@ -1548,17 +1556,17 @@ function HeroBanner() {
                                             children: "Join our vibrant community of developers, designers, and innovators. Collaborate on real projects, learn cutting-edge technologies, and build your network with like-minded peers."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 256,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 212,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:225:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:269:12",
                                     "data-orchids-name": "motion.div",
                                     initial: {
                                         opacity: 0,
@@ -1575,49 +1583,49 @@ function HeroBanner() {
                                     className: "flex flex-col sm:flex-row gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:231:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:275:14",
                                             "data-orchids-name": "Button",
                                             size: "lg",
                                             className: "bg-foreground text-background hover:bg-foreground/90 font-medium px-8 py-6 text-lg border border-foreground",
-                                            onClick: ()=>scrollToSection('events'),
+                                            onClick: ()=>scrollToSection("events"),
                                             children: [
                                                 "Explore Events",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:237:16",
+                                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:281:16",
                                                     "data-orchids-name": "ChevronRight",
                                                     className: "ml-2 h-5 w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 281,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 231,
+                                            lineNumber: 275,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:240:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:284:14",
                                             "data-orchids-name": "Button",
                                             variant: "outline",
                                             size: "lg",
                                             className: "bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background font-medium px-8 py-6 text-lg",
-                                            onClick: ()=>scrollToSection('guilds'),
+                                            onClick: ()=>scrollToSection("guilds"),
                                             children: "Join a Guild"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 240,
+                                            lineNumber: 284,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 269,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:251:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:295:12",
                                     "data-orchids-name": "motion.div",
                                     initial: {
                                         opacity: 0,
@@ -1634,15 +1642,15 @@ function HeroBanner() {
                                     className: "grid grid-cols-3 gap-4 pt-8",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:257:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:301:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:258:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:302:22",
                                                 "data-orchids-name": "Layers",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 258,
+                                                lineNumber: 302,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "4",
@@ -1650,19 +1658,19 @@ function HeroBanner() {
                                             index: 0
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 257,
+                                            lineNumber: 301,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:263:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:307:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:264:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:308:22",
                                                 "data-orchids-name": "Calendar",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 264,
+                                                lineNumber: 308,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "12",
@@ -1670,19 +1678,19 @@ function HeroBanner() {
                                             index: 1
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 307,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:269:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:313:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:270:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:314:22",
                                                 "data-orchids-name": "Users",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 270,
+                                                lineNumber: 314,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "150+",
@@ -1690,45 +1698,45 @@ function HeroBanner() {
                                             index: 2
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 313,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 251,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 166,
+                            lineNumber: 210,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:279:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:323:10",
                             "data-orchids-name": "div",
                             className: "lg:col-span-5 space-y-8"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 279,
+                            lineNumber: 323,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 164,
+                    lineNumber: 208,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 163,
-                columnNumber: 3
+                lineNumber: 207,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 158,
+        lineNumber: 197,
         columnNumber: 5
     }, this);
 }
@@ -5151,7 +5159,7 @@ const mockPartners = [
         website: "https://convergetp.com/"
     },
     {
-        id: "4",
+        id: "9",
         name: "Jnuobi",
         logo: "/sponsor2/jnuobi.png",
         description: "Gadgets for the Go-Getters",
@@ -5261,7 +5269,7 @@ function PartnersSection() {
                             "data-orchids-id": "src\\components\\SponsorsSection.tsx:173:10",
                             "data-orchids-name": "h2",
                             className: "text-4xl font-heading font-bold mb-4",
-                            children: "Our Sponsor"
+                            children: "Our Sponsors"
                         }, void 0, false, {
                             fileName: "[project]/src/components/SponsorsSection.tsx",
                             lineNumber: 173,
@@ -5286,7 +5294,7 @@ function PartnersSection() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     "data-orchids-id": "src\\components\\SponsorsSection.tsx:180:8",
                     "data-orchids-name": "div",
-                    className: "mb-16",
+                    className: "",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         "data-orchids-id": "src\\components\\SponsorsSection.tsx:181:10",
                         "data-orchids-name": "div",
@@ -5316,7 +5324,7 @@ function PartnersSection() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                                 "data-map-index": index,
-                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:195:10@mockPartners",
+                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:195:18@mockPartners",
                                                 "data-orchids-name": "Card",
                                                 className: "bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group",
                                                 onClick: ()=>setSelectedPartner(partner),
@@ -5345,7 +5353,7 @@ function PartnersSection() {
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/SponsorsSection.tsx",
                                                 lineNumber: 195,
-                                                columnNumber: 11
+                                                columnNumber: 19
                                             }, this),
                                             index === currentPartnerIndex && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                                 "data-map-index": index,
@@ -5533,34 +5541,54 @@ function PartnersSection() {
                                             "data-orchids-name": "CardContent",
                                             className: "p-6",
                                             children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:256:20",
+                                                    "data-orchids-name": "div",
+                                                    className: "flex items-center justify-center mb-4",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:257:22",
+                                                        "data-orchids-name": "img",
+                                                        src: mockPartners[currentPartnerIndex].logo,
+                                                        alt: `${mockPartners[currentPartnerIndex].name} logo`,
+                                                        className: "max-h-16 object-contain"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/SponsorsSection.tsx",
+                                                        lineNumber: 257,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/SponsorsSection.tsx",
+                                                    lineNumber: 256,
+                                                    columnNumber: 21
+                                                }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:255:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:263:20",
                                                     "data-orchids-name": "h3",
                                                     className: "text-xl font-semibold mb-2",
                                                     children: mockPartners[currentPartnerIndex].name
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 255,
+                                                    lineNumber: 263,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:258:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:266:20",
                                                     "data-orchids-name": "p",
                                                     className: "text-muted-foreground mb-4",
                                                     children: mockPartners[currentPartnerIndex].description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 258,
+                                                    lineNumber: 266,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:261:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:269:20",
                                                     "data-orchids-name": "Button",
                                                     variant: "outline",
                                                     size: "sm",
                                                     asChild: true,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:262:22",
+                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:270:22",
                                                         "data-orchids-name": "a",
                                                         href: mockPartners[currentPartnerIndex].website,
                                                         target: "_blank",
@@ -5568,23 +5596,23 @@ function PartnersSection() {
                                                         children: [
                                                             "Visit Website ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
-                                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:267:38",
+                                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:275:38",
                                                                 "data-orchids-name": "ExternalLink",
                                                                 className: "ml-2 h-3 w-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                                lineNumber: 267,
+                                                                lineNumber: 275,
                                                                 columnNumber: 39
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 270,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 269,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
@@ -9962,16 +9990,16 @@ function FooterJoinContact() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     "data-orchids-id": "src\\components\\FooterJoinContact.tsx:338:8",
                     "data-orchids-name": "div",
-                    className: "grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center",
+                    className: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 justify-center max-w-6xl mx-auto lg:items-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             "data-orchids-id": "src\\components\\FooterJoinContact.tsx:340:10",
                             "data-orchids-name": "div",
-                            className: "space-y-6 lg:col-start-1",
+                            className: "space-y-6 flex",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                 "data-orchids-id": "src\\components\\FooterJoinContact.tsx:341:12",
                                 "data-orchids-name": "Card",
-                                className: "bg-card border-border",
+                                className: "bg-card border-border flex-1 flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
                                         "data-orchids-id": "src\\components\\FooterJoinContact.tsx:342:14",
@@ -10016,7 +10044,7 @@ function FooterJoinContact() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
                                         "data-orchids-id": "src\\components\\FooterJoinContact.tsx:351:14",
                                         "data-orchids-name": "CardContent",
-                                        className: "space-y-6",
+                                        className: "space-y-6 flex-1",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                             "data-orchids-id": "src\\components\\FooterJoinContact.tsx:352:16@handleJoinSubmit",
                                             "data-orchids-name": "form",
@@ -10907,11 +10935,11 @@ function FooterJoinContact() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             "data-orchids-id": "src\\components\\FooterJoinContact.tsx:661:10",
                             "data-orchids-name": "div",
-                            className: "space-y-6",
+                            className: "space-y-6 flex",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                 "data-orchids-id": "src\\components\\FooterJoinContact.tsx:662:12",
                                 "data-orchids-name": "Card",
-                                className: "bg-card border-border",
+                                className: "bg-card border-border flex-1 flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
                                         "data-orchids-id": "src\\components\\FooterJoinContact.tsx:663:14",
@@ -10956,7 +10984,7 @@ function FooterJoinContact() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
                                         "data-orchids-id": "src\\components\\FooterJoinContact.tsx:672:14",
                                         "data-orchids-name": "CardContent",
-                                        className: "space-y-6",
+                                        className: "space-y-6 flex-1 flex flex-col",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 "data-orchids-id": "src\\components\\FooterJoinContact.tsx:674:16",
