@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/a9aa4_next_dist_8a6c5c26._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_app_favicon_ico_mjs_8f933436._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_app_globals_750c4742.css",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_9a9bc8f0._.js",
+      "static/chunks/a9aa4_next_dist_463ceafd._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_app_layout_tsx_3aae12c7._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_app_global-error_tsx_8d6a2c9d._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_src_app_global-error_tsx_cb17c870._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_14202430._.js",
+      "static/chunks/a9aa4_next_dist_compiled_a288872b._.js",
+      "static/chunks/a9aa4_next_dist_client_d767f543._.js",
+      "static/chunks/a9aa4_next_dist_4e600e15._.js",
+      "static/chunks/a9aa4_@swc_helpers_cjs_5c7c8d3f._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_e69f0d32._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_bc3b5567._.js"
+    ]
+  }
+}

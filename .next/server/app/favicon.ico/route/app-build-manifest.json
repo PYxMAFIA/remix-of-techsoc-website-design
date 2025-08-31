@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "/favicon.ico/route": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_14202430._.js",
+      "static/chunks/a9aa4_next_dist_compiled_a288872b._.js",
+      "static/chunks/a9aa4_next_dist_client_d767f543._.js",
+      "static/chunks/a9aa4_next_dist_4e600e15._.js",
+      "static/chunks/a9aa4_@swc_helpers_cjs_5c7c8d3f._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_e69f0d32._.js",
+      "static/chunks/rt_remix-of-techsoc-website-design_bc3b5567._.js"
+    ]
+  }
+}
