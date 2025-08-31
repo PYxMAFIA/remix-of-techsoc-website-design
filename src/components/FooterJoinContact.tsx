@@ -335,10 +335,10 @@ export default function FooterJoinContact() {
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 justify-center max-w-6xl mx-auto lg:items-start">
           {/* Join Us Column */}
-          <div className="space-y-6 lg:col-start-1">
-            <Card className="bg-card border-border">
+          <div className="space-y-6 flex">
+            <Card className="bg-card border-border flex-1 flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Users className="h-5 w-5 text-primary" />
@@ -348,7 +348,7 @@ export default function FooterJoinContact() {
                   Become part of our community and contribute to the future
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1">
                 <form onSubmit={handleJoinSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="join-name">Name</Label>
@@ -658,8 +658,8 @@ export default function FooterJoinContact() {
           </div>
 
           {/* Contact Column */}
-          <div className="space-y-6">
-            <Card className="bg-card border-border">
+          <div className="space-y-6 flex">
+            <Card className="bg-card border-border flex-1 flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Mail className="h-5 w-5 text-primary" />
@@ -669,7 +669,7 @@ export default function FooterJoinContact() {
                   Get in touch with our team
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1 flex flex-col">
                 {/* Contact Info */}
                 <div className="space-y-4">
                   <motion.div 
