@@ -44,20 +44,11 @@ const GUILDS = [
   { value: 'community', label: 'Design Guild' },
 ]
 
-const FEEDBACK_CATEGORIES = [
-  { value: 'website', label: 'Website Experience' },
-  { value: 'events', label: 'Events' },
-  { value: 'community', label: 'Community' },
-  { value: 'content', label: 'Content & Resources' },
-  { value: 'technical', label: 'Technical Issues' },
-  { value: 'other', label: 'Other' }
-]
-
 const CONTACT_SUBJECTS = [
   { value: 'general', label: 'General Inquiry' },
+  { value: 'sponsorship', label: 'Sponsorship' },
   { value: 'partnership', label: 'Partnership' },
   { value: 'media', label: 'Media & Press' },
-  { value: 'support', label: 'Support' },
   { value: 'feedback', label: 'Feedback' }
 ]
 
@@ -71,10 +62,6 @@ const validateRequired = (value: string): boolean => {
 }
 
 export default function FooterJoinContact() {
-  // Newsletter state
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
   // Form states
   const [joinForm, setJoinForm] = useState({ name: '', email: '', guild: '' })
   const [joinErrors, setJoinErrors] = useState<FormErrors>({})
@@ -87,12 +74,6 @@ export default function FooterJoinContact() {
   const [applyErrors, setApplyErrors] = useState<FormErrors>({})
   const [applySubmitting, setApplySubmitting] = useState(false)
 
-  const [feedbackForm, setFeedbackForm] = useState({
-    category: '', rating: 0, message: ''
-  })
-  const [feedbackErrors, setFeedbackErrors] = useState<FormErrors>({})
-  const [feedbackSubmitting, setFeedbackSubmitting] = useState(false)
-  const [showFeedbackConfirm, setShowFeedbackConfirm] = useState(false)
 
   const [contactForm, setContactForm] = useState({ subject: '', message: '' })
   const [contactErrors, setContactErrors] = useState<FormErrors>({})
@@ -100,25 +81,8 @@ export default function FooterJoinContact() {
 
   // Animation states
   const [clickedButtons, setClickedButtons] = useState<string[]>([])
-  const [sparklePositions, setSparklePositions] = useState<{[key: string]: {x: number, y: number}[]}>({})
+  const [sparklePositions, setSparklePositions] = useState<{ [key: string]: { x: number, y: number }[] }>({})
 
-  // Newsletter handler
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-
-    setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    toast.success('Subscribed successfully!', {
-      description: 'You\'ll receive updates about upcoming events and opportunities.'
-    })
-    
-    setEmail('')
-    setIsSubmitting(false)
-  }
 
   const handleButtonClick = (buttonId: string, event: React.MouseEvent) => {
     const rect = event.currentTarget.getBoundingClientRect()
@@ -126,10 +90,10 @@ export default function FooterJoinContact() {
       x: Math.random() * rect.width,
       y: Math.random() * rect.height
     }))
-    
+
     setSparklePositions(prev => ({ ...prev, [buttonId]: sparkles }))
     setClickedButtons(prev => [...prev, buttonId])
-    
+
     setTimeout(() => {
       setClickedButtons(prev => prev.filter(id => id !== buttonId))
       setSparklePositions(prev => {
@@ -140,89 +104,61 @@ export default function FooterJoinContact() {
     }, 1000)
   }
 
-  // Feedback Form Handlers
-  const validateFeedbackForm = () => {
-    const errors: FormErrors = {}
-    
-    if (!feedbackForm.category) {
-      errors.category = 'Please select a category'
-    }
-    
-    if (feedbackForm.rating === 0) {
-      errors.rating = 'Please provide a rating'
-    }
-    
-    if (!validateRequired(feedbackForm.message)) {
-      errors.message = 'Please provide your feedback'
-    }
-    
-    setFeedbackErrors(errors)
-    return Object.keys(errors).length === 0
-  }
-
-  const handleFeedbackSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!validateFeedbackForm()) return
-    
-    setFeedbackSubmitting(true)
-    
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      setShowFeedbackConfirm(true)
-      
-      setFeedbackForm({
-        category: '', rating: 0, message: ''
-      })
-      setFeedbackErrors({})
-    } catch (error) {
-      toast.error('Failed to submit feedback', {
-        description: 'Please try again later.'
-      })
-    } finally {
-      setFeedbackSubmitting(false)
-    }
-  }
-
-    // Join Us Form Handlers
+  // Join Us Form Handlers
   const validateJoinForm = () => {
     const errors: FormErrors = {}
-    
+
     if (!validateRequired(joinForm.name)) {
       errors.name = 'Name is required'
     }
-    
+
     if (!validateRequired(joinForm.email)) {
       errors.email = 'Email is required'
     } else if (!validateEmail(joinForm.email)) {
       errors.email = 'Please enter a valid email address'
     }
-    
+
     if (!joinForm.guild) {
       errors.guild = 'Please select a guild'
     }
-    
+
     setJoinErrors(errors)
     return Object.keys(errors).length === 0
   }
 
   const handleJoinSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateJoinForm()) return
-    
+
     setJoinSubmitting(true)
-    
+
     try {
       await new Promise(resolve => setTimeout(resolve, 1500))
-      
+
       toast.success('Welcome to the guild!', {
         description: 'We\'ll be in touch soon with next steps.'
       })
-      
+
+      // Build WhatsApp message dynamically
+      const { name, email, guild } = joinForm
+      const message = `Hello, my name is ${name}.
+I would like to join the ${guild} guild.
+Please guide me through the next steps.`
+
+      // Encode message for URL (preserves spaces & line breaks)
+      const encodedMessage = encodeURIComponent(message)
+
+      // WhatsApp link (⚠️ remove + sign, wa.me does not support it)
+      const whatsappLink = `https://wa.me/918441867211/?text=${encodedMessage}`
+
+      // Reset form
       setJoinForm({ name: '', email: '', guild: '' })
       setJoinErrors({})
+
+      // Redirect to WhatsApp
+      window.location.href = whatsappLink
+
     } catch (error) {
       toast.error('Something went wrong', {
         description: 'Please try again later.'
@@ -232,50 +168,52 @@ export default function FooterJoinContact() {
     }
   }
 
+
+
   // Apply Modal Handlers
   const validateApplyForm = () => {
     const errors: FormErrors = {}
-    
+
     if (!validateRequired(applyForm.name)) {
       errors.name = 'Name is required'
     }
-    
+
     if (!validateRequired(applyForm.email)) {
       errors.email = 'Email is required'
     } else if (!validateEmail(applyForm.email)) {
       errors.email = 'Please enter a valid email address'
     }
-    
+
     if (!applyForm.guild) {
       errors.guild = 'Please select a guild'
     }
-    
+
     if (!validateRequired(applyForm.experience)) {
       errors.experience = 'Please describe your experience'
     }
-    
+
     if (!validateRequired(applyForm.motivation)) {
       errors.motivation = 'Please tell us your motivation'
     }
-    
+
     setApplyErrors(errors)
     return Object.keys(errors).length === 0
   }
 
   const handleApplySubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateApplyForm()) return
-    
+
     setApplySubmitting(true)
-    
+
     try {
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       toast.success('Application submitted!', {
         description: 'We\'ll review your application and get back to you within 3-5 business days.'
       })
-      
+
       setApplyForm({
         name: '', email: '', guild: '', experience: '', motivation: '', portfolio: ''
       })
@@ -293,35 +231,50 @@ export default function FooterJoinContact() {
   // Contact Form Handlers
   const validateContactForm = () => {
     const errors: FormErrors = {}
-    
+
     if (!contactForm.subject) {
       errors.subject = 'Please select a subject'
     }
-    
+
     if (!validateRequired(contactForm.message)) {
       errors.message = 'Please enter your message'
     }
-    
+
     setContactErrors(errors)
     return Object.keys(errors).length === 0
   }
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateContactForm()) return
-    
+
     setContactSubmitting(true)
-    
+
     try {
       await new Promise(resolve => setTimeout(resolve, 1500))
-      
+
       toast.success('Message sent!', {
         description: 'We\'ll get back to you as soon as possible.'
       })
-      
+
+      // Build WhatsApp message dynamically
+      const { subject, message } = contactForm
+
+      const whatsappMessage = `New Inquiry Received\n\nCategory: ${subject}\n\nMessage:\n${message}\n`
+
+      const encodedMessage = encodeURIComponent(whatsappMessage)
+
+      const whatsappLink = `https://wa.me/918130939274?text=${encodedMessage}`
+
+
+      // Reset form
       setContactForm({ subject: '', message: '' })
       setContactErrors({})
+
+      // Redirect to WhatsApp
+      window.location.href = whatsappLink
+
     } catch (error) {
       toast.error('Failed to send message', {
         description: 'Please try again later.'
@@ -331,14 +284,15 @@ export default function FooterJoinContact() {
     }
   }
 
+
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 justify-center max-w-6xl mx-auto lg:items-start">
           {/* Join Us Column */}
-          <div className="space-y-6 lg:col-start-1">
-            <Card className="bg-card border-border">
+          <div className="space-y-6 flex">
+            <Card className="bg-card border-border flex-1 flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Users className="h-5 w-5 text-primary" />
@@ -348,7 +302,7 @@ export default function FooterJoinContact() {
                   Become part of our community and contribute to the future
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1">
                 <form onSubmit={handleJoinSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="join-name">Name</Label>
@@ -388,11 +342,11 @@ export default function FooterJoinContact() {
 
                   <div className="space-y-2">
                     <Label htmlFor="join-guild">Guild Interest</Label>
-                    <Select 
-                      value={joinForm.guild} 
+                    <Select
+                      value={joinForm.guild}
                       onValueChange={(value) => setJoinForm(prev => ({ ...prev, guild: value }))}
                     >
-                      <SelectTrigger 
+                      <SelectTrigger
                         id="join-guild"
                         className={`bg-input border-border focus:border-primary ${joinErrors.guild ? 'border-destructive' : ''}`}
                         aria-describedby={joinErrors.guild ? 'join-guild-error' : undefined}
@@ -432,7 +386,7 @@ export default function FooterJoinContact() {
                         >
                           {joinSubmitting ? 'Joining...' : 'Quick Join'}
                         </motion.span>
-                        
+
                         {/* Sparkle effects */}
                         <AnimatePresence>
                           {sparklePositions['join-quick'] && (
@@ -443,8 +397,8 @@ export default function FooterJoinContact() {
                                   className="absolute w-1 h-1 bg-white rounded-full pointer-events-none"
                                   style={{ left: pos.x, top: pos.y }}
                                   initial={{ opacity: 0, scale: 0 }}
-                                  animate={{ 
-                                    opacity: [0, 1, 0], 
+                                  animate={{
+                                    opacity: [0, 1, 0],
                                     scale: [0, 1, 0],
                                     y: [0, -20],
                                     rotate: 360
@@ -466,8 +420,8 @@ export default function FooterJoinContact() {
                           whileTap={{ scale: 0.98 }}
                           className="relative"
                         >
-                          <Button 
-                            variant="outline" 
+                          <Button
+                            variant="outline"
                             className="border-border hover:bg-muted relative overflow-hidden"
                             onClick={(e) => handleButtonClick('join-apply', e)}
                           >
@@ -479,7 +433,7 @@ export default function FooterJoinContact() {
                               Apply
                               <ChevronRight className="h-4 w-4" />
                             </motion.span>
-                            
+
                             {/* Sparkle effects */}
                             <AnimatePresence>
                               {sparklePositions['join-apply'] && (
@@ -552,11 +506,11 @@ export default function FooterJoinContact() {
 
                           <div className="space-y-2">
                             <Label htmlFor="apply-guild">Guild Interest *</Label>
-                            <Select 
-                              value={applyForm.guild} 
+                            <Select
+                              value={applyForm.guild}
                               onValueChange={(value) => setApplyForm(prev => ({ ...prev, guild: value }))}
                             >
-                              <SelectTrigger 
+                              <SelectTrigger
                                 id="apply-guild"
                                 className={`bg-input border-border focus:border-primary ${applyErrors.guild ? 'border-destructive' : ''}`}
                                 aria-describedby={applyErrors.guild ? 'apply-guild-error' : undefined}
@@ -658,8 +612,8 @@ export default function FooterJoinContact() {
           </div>
 
           {/* Contact Column */}
-          <div className="space-y-6">
-            <Card className="bg-card border-border">
+          <div className="space-y-6 flex">
+            <Card className="bg-card border-border flex-1 flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Mail className="h-5 w-5 text-primary" />
@@ -669,10 +623,10 @@ export default function FooterJoinContact() {
                   Get in touch with our team
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1 flex flex-col">
                 {/* Contact Info */}
                 <div className="space-y-4">
-                  <motion.div 
+                  <motion.div
                     className="flex items-start gap-3"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
@@ -687,7 +641,7 @@ export default function FooterJoinContact() {
                     </div>
                   </motion.div>
 
-                  <motion.div 
+                  <motion.div
                     className="flex items-center gap-3"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
@@ -701,7 +655,7 @@ export default function FooterJoinContact() {
                     </div>
                   </motion.div>
 
-                  <motion.div 
+                  <motion.div
                     className="flex items-center gap-3"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
@@ -709,8 +663,8 @@ export default function FooterJoinContact() {
                     <Phone className="h-4 w-4 text-muted-foreground shrink-0" />
                     <div>
                       <p className="text-sm font-medium">Phone</p>
-                      <a href="tel:+1-555-0123" className="text-sm text-primary hover:underline">
-                        +1 (555) 012-3456
+                      <a href="tel:+91-8441867211" className="text-sm text-primary hover:underline">
+                        +91 8441867211
                       </a>
                     </div>
                   </motion.div>
@@ -755,11 +709,11 @@ export default function FooterJoinContact() {
                 <form onSubmit={handleContactSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="contact-subject">Subject</Label>
-                    <Select 
-                      value={contactForm.subject} 
+                    <Select
+                      value={contactForm.subject}
                       onValueChange={(value) => setContactForm(prev => ({ ...prev, subject: value }))}
                     >
-                      <SelectTrigger 
+                      <SelectTrigger
                         id="contact-subject"
                         className={`bg-input border-border focus:border-primary ${contactErrors.subject ? 'border-destructive' : ''}`}
                         aria-describedby={contactErrors.subject ? 'contact-subject-error' : undefined}
@@ -818,7 +772,7 @@ export default function FooterJoinContact() {
                         <Send className="h-4 w-4" />
                         {contactSubmitting ? 'Sending...' : 'Send Message'}
                       </motion.div>
-                      
+
                       {/* Lightning effect */}
                       <AnimatePresence>
                         {sparklePositions['contact-send'] && (
@@ -849,82 +803,71 @@ export default function FooterJoinContact() {
 
         {/* Footer Links */}
         <Separator className="bg-border mb-8" />
-        
+
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
           {/* Legal Links */}
           <div className="flex flex-wrap items-center gap-6">
-            <motion.a 
-              href="/privacy" 
+            <motion.p
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Privacy Policy
-            </motion.a>
-            <motion.a 
-              href="/terms" 
+            </motion.p>
+            <motion.p
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Terms of Service
-            </motion.a>
-            <motion.a 
-              href="/cookies" 
+            </motion.p>
+            <motion.p
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Cookie Policy
-            </motion.a>
-            <motion.a 
-              href="/accessibility" 
+            </motion.p>
+            <motion.p
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Accessibility
-            </motion.a>
+            </motion.p>
           </div>
 
           {/* Sitemap Links */}
           <div className="flex flex-wrap items-center gap-6">
-            <motion.a 
-              href="/" 
+            <motion.a
+              href="/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Home
             </motion.a>
-            <motion.a 
-              href="/about" 
+            <motion.a
+              href="#members"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               About
             </motion.a>
-            <motion.a 
-              href="/events" 
+            <motion.a
+              href="#events"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Events
             </motion.a>
-            <motion.a 
-              href="/guilds" 
+            <motion.a
+              href="#guilds"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               Guilds
             </motion.a>
-            <motion.a 
-              href="/resources" 
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              Resources
-            </motion.a>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
-            © 2024 Community Platform. All rights reserved.
+            © 2025 Community Platform. All rights reserved.
           </div>
         </div>
       </div>

@@ -79,7 +79,7 @@ const mockPartners: Partner[] = [
     website: "https://convergetp.com/"
   },
   {
-    id: "4",
+    id: "9",
     name: "Jnuobi",
     logo: "/sponsor2/jnuobi.png",
     description: "Gadgets for the Go-Getters",
@@ -166,21 +166,21 @@ export default function PartnersSection() {
   }
 
   return (
-    <section className="py-16 bg-background">
+    <section id="sponsors" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-heading font-bold mb-4">Our Sponsor</h2>
+          <h2 className="text-4xl font-heading font-bold mb-4">Our Sponsors</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Collaborating with industry leaders to create opportunities and drive innovation in our community.
           </p>
         </div>
 
         {/* Rotating Partners Showcase */}
-        <div className="mb-16">
+        <div className="">
           <div className="relative max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-        {mockPartners.map((partner, index) => (
+              {mockPartners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
                   className="relative"
@@ -192,12 +192,12 @@ export default function PartnersSection() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-          <Card className="bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group" onClick={() => setSelectedPartner(partner)}>
+                  <Card className="bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group" onClick={() => setSelectedPartner(partner)}>
                     <CardContent className="p-4 flex items-center justify-center h-20">
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-            className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                       />
                     </CardContent>
                   </Card>
@@ -252,6 +252,14 @@ export default function PartnersSection() {
               >
                 <Card className="bg-card border-border max-w-md mx-auto">
                   <CardContent className="p-6">
+                    {/* Fixed: Display the actual logo image instead of the file path */}
+                    <div className="flex items-center justify-center mb-4">
+                      <img
+                        src={mockPartners[currentPartnerIndex].logo}
+                        alt={`${mockPartners[currentPartnerIndex].name} logo`}
+                        className="max-h-16 object-contain"
+                      />
+                    </div>
                     <h3 className="text-xl font-semibold mb-2">
                       {mockPartners[currentPartnerIndex].name}
                     </h3>
@@ -273,8 +281,6 @@ export default function PartnersSection() {
             </AnimatePresence>
           </div>
         </div>
-
-        
       </div>
     </section>
   )

@@ -71,22 +71,6 @@ export default function Navbar() {
     });
   };
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email");
-    toast.success(`Welcome back, ${email}! Successfully signed in.`);
-    setIsLoginOpen(false);
-  };
-
-  const handleSignup = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email");
-    toast.success(`Account created for ${email}! Welcome to Tech Society.`);
-    setIsLoginOpen(false);
-  };
-
   const motionProps = prefersReducedMotion
     ? {}
     : {

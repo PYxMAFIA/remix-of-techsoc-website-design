@@ -1,26 +1,33 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { ChevronRight, Users, Calendar, Layers, Mail, ChevronLeft } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Card, CardContent } from '@/components/ui/card'
-import { toast } from 'sonner'
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  ChevronRight,
+  Users,
+  Calendar,
+  Layers,
+  Mail,
+  ChevronLeft,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import { toast } from "sonner";
+import Image from "next/image";
 
 interface StatCardProps {
-  icon: React.ReactNode
-  value: string
-  label: string
-  index: number
+  icon: React.ReactNode;
+  value: string;
+  label: string;
+  index: number;
 }
 
 interface EventPreview {
-  id: string
-  title: string
-  image: string
-  date: string
+  id: string;
+  title: string;
+  image: string;
+  date: string;
 }
 
 const StatCard: React.FC<StatCardProps> = ({ icon, value, label, index }) => {
@@ -31,29 +38,45 @@ const StatCard: React.FC<StatCardProps> = ({ icon, value, label, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-      className="perspective-1000"
+      className="relative"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      style={{ perspective: '1000px' }}
     >
-      <div className="relative w-full h-24 preserve-3d transition-transform duration-500" style={{
-        transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-      }}>
+      <div
+        className="relative w-full h-24 transition-transform duration-500"
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+        }}
+      >
         {/* Front */}
-        <Card className="absolute inset-0 backface-hidden bg-card border-border">
+        <Card
+          className="absolute inset-0 bg-card border-border"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
           <CardContent className="flex flex-col items-center justify-center h-full p-4">
             <div className="text-primary mb-1">{icon}</div>
-            <div className="text-2xl font-bold font-heading text-foreground">{value}</div>
-            <div className="text-xs text-muted-foreground text-center">{label}</div>
+            <div className="text-2xl font-bold font-heading text-foreground">
+              {value}
+            </div>
+            <div className="text-xs text-muted-foreground text-center">
+              {label}
+            </div>
           </CardContent>
         </Card>
-        
+
         {/* Back */}
-        <Card className="absolute inset-0 backface-hidden bg-primary border-primary" style={{
-          transform: 'rotateY(180deg)'
-        }}>
+        <Card
+          className="absolute inset-0 bg-primary border-primary"
+          style={{
+            transform: 'rotateY(180deg)',
+            backfaceVisibility: 'hidden',
+          }}
+        >
           <CardContent className="flex items-center justify-center h-full p-4">
             <div className="text-primary-foreground text-sm font-medium text-center">
-              {label === 'Active Guilds' && 'Web Dev, AI/ML, Cybersecurity'}
+              {label === 'Active Guilds' && 'Web Dev, DSA, Finance, Design'}
               {label === 'Live Events' && 'Workshops & Hackathons'}
               {label === 'Members' && 'Growing Community'}
             </div>
@@ -65,26 +88,41 @@ const StatCard: React.FC<StatCardProps> = ({ icon, value, label, index }) => {
 }
 
 const EventCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const events: EventPreview[] = [
-    { id: '1', title: 'React Workshop', image: '/api/placeholder/200/120', date: 'Dec 15' },
-    { id: '2', title: 'AI Hackathon', image: '/api/placeholder/200/120', date: 'Dec 20' },
-    { id: '3', title: 'Cybersec Talk', image: '/api/placeholder/200/120', date: 'Dec 22' }
-  ]
+    {
+      id: "1",
+      title: "React Workshop",
+      image: "/api/placeholder/200/120",
+      date: "Dec 15",
+    },
+    {
+      id: "2",
+      title: "AI Hackathon",
+      image: "/api/placeholder/200/120",
+      date: "Dec 20",
+    },
+    {
+      id: "3",
+      title: "Cybersec Talk",
+      image: "/api/placeholder/200/120",
+      date: "Dec 22",
+    },
+  ];
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % events.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % events.length);
+  };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + events.length) % events.length)
-  }
+    setCurrentIndex((prev) => (prev - 1 + events.length) % events.length);
+  };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000)
-    return () => clearInterval(interval)
-  }, [])
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.div
@@ -94,7 +132,7 @@ const EventCarousel: React.FC = () => {
       className="relative w-full max-w-sm"
     >
       <div className="relative overflow-hidden rounded-lg bg-card border border-border">
-        <div 
+        <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
@@ -104,13 +142,15 @@ const EventCarousel: React.FC = () => {
                 {event.title}
               </div>
               <div className="p-3">
-                <h4 className="font-medium text-foreground text-sm mb-1">{event.title}</h4>
+                <h4 className="font-medium text-foreground text-sm mb-1">
+                  {event.title}
+                </h4>
                 <p className="text-xs text-muted-foreground">{event.date}</p>
               </div>
             </div>
           ))}
         </div>
-        
+
         <Button
           variant="ghost"
           size="sm"
@@ -119,7 +159,7 @@ const EventCarousel: React.FC = () => {
         >
           <ChevronLeft className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant="ghost"
           size="sm"
@@ -129,38 +169,42 @@ const EventCarousel: React.FC = () => {
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
-      
+
       <div className="flex justify-center mt-3 gap-2">
         {events.map((_, index) => (
           <button
             key={index}
             className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-primary' : 'bg-muted'
+              index === currentIndex ? "bg-primary" : "bg-muted"
             }`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 export default function HeroBanner() {
-
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="w-full bg-background py-20 lg:py-32 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <Image src="/background.jpg" alt="Hero Image" fill className="object-cover opacity-35" />
+        <Image
+          src="/background.jpg"
+          alt="Hero Image"
+          fill
+          className="object-cover opacity-35"
+        />
       </div>
-  <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ">
           {/* Main Content */}
           <div className="lg:col-span-7 space-y-8">
@@ -180,7 +224,7 @@ export default function HeroBanner() {
                     className="inline-block"
                   >
                     Round
-                  </motion.span>{' '}
+                  </motion.span>{" "}
                   <motion.span
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
@@ -188,7 +232,7 @@ export default function HeroBanner() {
                     className="inline-block"
                   >
                     Table
-                  </motion.span>{' '}
+                  </motion.span>{" "}
                   <motion.span
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
@@ -215,9 +259,9 @@ export default function HeroBanner() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
               >
-                Join our vibrant community of developers, designers, and innovators. 
-                Collaborate on real projects, learn cutting-edge technologies, and build 
-                your network with like-minded peers.
+                Join our vibrant community of developers, designers, and
+                innovators. Collaborate on real projects, learn cutting-edge
+                technologies, and build your network with like-minded peers.
               </motion.p>
             </div>
 
@@ -231,17 +275,17 @@ export default function HeroBanner() {
               <Button
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 font-medium px-8 py-6 text-lg border border-foreground"
-                onClick={() => scrollToSection('events')}
+                onClick={() => scrollToSection("events")}
               >
                 Explore Events
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
-              
+
               <Button
                 variant="outline"
                 size="lg"
                 className="bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background font-medium px-8 py-6 text-lg"
-                onClick={() => scrollToSection('guilds')}
+                onClick={() => scrollToSection("guilds")}
               >
                 Join a Guild
               </Button>
@@ -282,5 +326,5 @@ export default function HeroBanner() {
         </div>
       </div>
     </section>
-  )
+  );
 }

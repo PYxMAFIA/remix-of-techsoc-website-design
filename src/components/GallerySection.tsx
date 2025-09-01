@@ -115,10 +115,10 @@ const MOCK_MEDIA: MediaItem[] = [
     {
       id: '9',
       type: 'photo',
-      url: '/glimpses/9-min.jpg',
-      thumbnail: '/glimpses/9-min.jpg',
-      title: 'Workshop Day',
-      caption: 'Hands-on learning session in the project',
+      url: '/glimpses/23 copy.jpg',
+      thumbnail: '/glimpses/23 copy.jpg',
+      title: 'Senior Guidance session',
+      caption: 'Senior Guidance session photo',
       category: 'Events',
       aspectRatio: 4/3
     }
@@ -126,10 +126,10 @@ const MOCK_MEDIA: MediaItem[] = [
     {
       id: '10',
       type: 'photo',
-      url: '/glimpses/10-min.jpg',
-      thumbnail: '/glimpses/10-min.jpg',
-      title: 'Speaker',
-      caption: 'Speaker at the event',
+      url: '/glimpses/29.jpg',
+      thumbnail: '/glimpses/29.jpg',
+      title: 'Hackathon',
+      caption: 'Hackathon event',
       category: 'Events',
       aspectRatio: 4/3
     },
@@ -459,33 +459,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
             )
           })}
         </div>
-        
-        <motion.div
-          initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <Button
-            onClick={() => setShowUploadDialog(true)}
-            className="shrink-0 relative overflow-hidden group"
-          >
-            <motion.div 
-              className="flex items-center gap-2"
-              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-              whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
-            >
-              <Upload className="w-4 h-4" />
-              Upload Media
-            </motion.div>
-            {!prefersReducedMotion && (
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100"
-                transition={{ duration: 0.3 }}
-              />
-            )}
-          </Button>
-        </motion.div>
       </motion.div>
 
       {/* Masonry Grid with Enhanced Animations */}

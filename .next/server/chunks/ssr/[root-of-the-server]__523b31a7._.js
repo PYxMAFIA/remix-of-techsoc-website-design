@@ -325,11 +325,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/twitter.js [app-ssr] (ecmascript) <export default as Twitter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/dialog.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/sonner/dist/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -416,20 +414,6 @@ function Navbar() {
             return newValue;
         });
     };
-    const handleLogin = (e)=>{
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const email = formData.get("email");
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success(`Welcome back, ${email}! Successfully signed in.`);
-        setIsLoginOpen(false);
-    };
-    const handleSignup = (e)=>{
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const email = formData.get("email");
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success(`Account created for ${email}! Welcome to Tech Society.`);
-        setIsLoginOpen(false);
-    };
     const motionProps = prefersReducedMotion ? {} : {
         initial: {
             opacity: 0,
@@ -448,34 +432,34 @@ function Navbar() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        "data-orchids-id": "src\\components\\Navbar.tsx:100:4",
+        "data-orchids-id": "src\\components\\Navbar.tsx:84:4",
         "data-orchids-name": "nav",
         className: "sticky top-0 z-50 w-full bg-card/95 backdrop-blur-sm border-b border-border",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\Navbar.tsx:101:6",
+                "data-orchids-id": "src\\components\\Navbar.tsx:85:6",
                 "data-orchids-name": "div",
                 className: "container mx-auto px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    "data-orchids-id": "src\\components\\Navbar.tsx:102:8",
+                    "data-orchids-id": "src\\components\\Navbar.tsx:86:8",
                     "data-orchids-name": "div",
                     className: "flex items-center justify-between h-16",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            "data-orchids-id": "src\\components\\Navbar.tsx:104:10",
+                            "data-orchids-id": "src\\components\\Navbar.tsx:88:10",
                             "data-orchids-name": "Link",
                             href: "/",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\Navbar.tsx:105:12",
+                                "data-orchids-id": "src\\components\\Navbar.tsx:89:12",
                                 "data-orchids-name": "div",
                                 className: "flex items-center space-x-2",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:106:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:90:14",
                                         "data-orchids-name": "div",
                                         className: "w-8 h-8bg-primary rounded-lg flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            "data-orchids-id": "src\\components\\Navbar.tsx:108:16",
+                                            "data-orchids-id": "src\\components\\Navbar.tsx:92:16",
                                             "data-orchids-name": "img",
                                             src: "/logo.png",
                                             alt: "Logo",
@@ -483,41 +467,41 @@ function Navbar() {
                                             height: 32
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Navbar.tsx",
-                                            lineNumber: 108,
+                                            lineNumber: 92,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 90,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:110:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:94:14",
                                         "data-orchids-name": "span",
                                         className: "font-heading font-semibold text-white text-lg hidden sm:block",
                                         children: "RoundTable"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 94,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.tsx",
-                                lineNumber: 105,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.tsx",
-                            lineNumber: 104,
+                            lineNumber: 88,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\Navbar.tsx:117:10",
+                            "data-orchids-id": "src\\components\\Navbar.tsx:101:10",
                             "data-orchids-name": "div",
                             className: "hidden lg:flex items-center space-x-1 bg-muted/50 rounded-full p-1",
                             children: navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                    "data-orchids-id": "src\\components\\Navbar.tsx:119:14@navLinks",
+                                    "data-orchids-id": "src\\components\\Navbar.tsx:103:14@navLinks",
                                     "data-orchids-name": "motion.button",
                                     onClick: ()=>handleNavClick(link.href),
                                     className: "px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -525,21 +509,21 @@ function Navbar() {
                                     children: link.name
                                 }, link.name, false, {
                                     fileName: "[project]/src/components/Navbar.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 103,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Navbar.tsx",
-                            lineNumber: 117,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\Navbar.tsx:131:10",
+                            "data-orchids-id": "src\\components\\Navbar.tsx:115:10",
                             "data-orchids-name": "div",
                             className: "flex items-center space-x-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    "data-orchids-id": "src\\components\\Navbar.tsx:133:12@handleThemeToggle",
+                                    "data-orchids-id": "src\\components\\Navbar.tsx:117:12@handleThemeToggle",
                                     "data-orchids-name": "Button",
                                     variant: "ghost",
                                     size: "sm",
@@ -547,29 +531,29 @@ function Navbar() {
                                     className: "hidden sm:flex",
                                     "aria-label": isThemeHigh ? "Switch to Premium Black" : "Switch to High-Contrast White",
                                     children: isThemeHigh ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:140:29",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:124:29",
                                         "data-orchids-name": "Moon",
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 124,
                                         columnNumber: 30
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:140:60",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:124:60",
                                         "data-orchids-name": "Sun",
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 124,
                                         columnNumber: 137
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Navbar.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 117,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    "data-orchids-id": "src\\components\\Navbar.tsx:147:12",
+                                    "data-orchids-id": "src\\components\\Navbar.tsx:131:12",
                                     "data-orchids-name": "Button",
                                     variant: "ghost",
                                     size: "sm",
@@ -577,270 +561,270 @@ function Navbar() {
                                     className: "lg:hidden",
                                     "aria-label": "Open mobile menu",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:154:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:138:14",
                                         "data-orchids-name": "Menu",
                                         className: "w-5 h-5"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Navbar.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 131,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Navbar.tsx",
-                            lineNumber: 131,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Navbar.tsx",
-                    lineNumber: 102,
+                    lineNumber: 86,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.tsx",
-                lineNumber: 101,
+                lineNumber: 85,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
-                "data-orchids-id": "src\\components\\Navbar.tsx:161:6",
+                "data-orchids-id": "src\\components\\Navbar.tsx:145:6",
                 "data-orchids-name": "Dialog",
                 open: isMobileMenuOpen,
                 onOpenChange: setIsMobileMenuOpen,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
-                    "data-orchids-id": "src\\components\\Navbar.tsx:162:8",
+                    "data-orchids-id": "src\\components\\Navbar.tsx:146:8",
                     "data-orchids-name": "DialogContent",
                     className: "sm:max-w-full h-full max-h-full p-0 border-0",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        "data-orchids-id": "src\\components\\Navbar.tsx:163:10",
+                        "data-orchids-id": "src\\components\\Navbar.tsx:147:10",
                         "data-orchids-name": "div",
                         className: "flex flex-col h-full bg-card",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\Navbar.tsx:164:12",
+                                "data-orchids-id": "src\\components\\Navbar.tsx:148:12",
                                 "data-orchids-name": "div",
                                 className: "flex items-center justify-between p-4 border-b border-border",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:165:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:149:14",
                                         "data-orchids-name": "div",
                                         className: "flex items-center space-x-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                "data-orchids-id": "src\\components\\Navbar.tsx:166:16",
+                                                "data-orchids-id": "src\\components\\Navbar.tsx:150:16",
                                                 "data-orchids-name": "div",
                                                 className: "w-8 h-8 bg-primary rounded-lg flex items-center justify-center",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    "data-orchids-id": "src\\components\\Navbar.tsx:167:18",
+                                                    "data-orchids-id": "src\\components\\Navbar.tsx:151:18",
                                                     "data-orchids-name": "span",
                                                     className: "text-primary-foreground font-bold text-sm",
                                                     children: "TS"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Navbar.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 151,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 150,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                "data-orchids-id": "src\\components\\Navbar.tsx:169:16",
+                                                "data-orchids-id": "src\\components\\Navbar.tsx:153:16",
                                                 "data-orchids-name": "span",
                                                 className: "font-heading font-semibold text-lg",
                                                 children: "Tech Society"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 153,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 149,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:171:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:155:14",
                                         "data-orchids-name": "Button",
                                         variant: "ghost",
                                         size: "sm",
                                         onClick: ()=>setIsMobileMenuOpen(false),
                                         "aria-label": "Close mobile menu",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            "data-orchids-id": "src\\components\\Navbar.tsx:177:16",
+                                            "data-orchids-id": "src\\components\\Navbar.tsx:161:16",
                                             "data-orchids-name": "X",
                                             className: "w-5 h-5"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Navbar.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 161,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 155,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.tsx",
-                                lineNumber: 164,
+                                lineNumber: 148,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\Navbar.tsx:181:12",
+                                "data-orchids-id": "src\\components\\Navbar.tsx:165:12",
                                 "data-orchids-name": "div",
                                 className: "flex-1 overflow-y-auto",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:182:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:166:14",
                                         "data-orchids-name": "div",
                                         className: "p-4 space-y-2",
                                         children: navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                "data-orchids-id": "src\\components\\Navbar.tsx:184:18@navLinks",
+                                                "data-orchids-id": "src\\components\\Navbar.tsx:168:18@navLinks",
                                                 "data-orchids-name": "button",
                                                 onClick: ()=>handleNavClick(link.href),
                                                 className: "block w-full text-left px-4 py-3 text-lg font-medium text-foreground hover:bg-muted/50 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                                                 children: link.name
                                             }, link.name, false, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 168,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 182,
+                                        lineNumber: 166,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\Navbar.tsx:194:14",
+                                        "data-orchids-id": "src\\components\\Navbar.tsx:178:14",
                                         "data-orchids-name": "div",
                                         className: "border-t border-border p-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                "data-orchids-id": "src\\components\\Navbar.tsx:195:16",
+                                                "data-orchids-id": "src\\components\\Navbar.tsx:179:16",
                                                 "data-orchids-name": "div",
                                                 className: "space-y-2 mb-4",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                    "data-orchids-id": "src\\components\\Navbar.tsx:196:18@handleThemeToggle",
+                                                    "data-orchids-id": "src\\components\\Navbar.tsx:180:18@handleThemeToggle",
                                                     "data-orchids-name": "Button",
                                                     variant: "ghost",
                                                     onClick: handleThemeToggle,
                                                     className: "w-full justify-start",
                                                     children: [
                                                         isThemeHigh ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                                            "data-orchids-id": "src\\components\\Navbar.tsx:201:35",
+                                                            "data-orchids-id": "src\\components\\Navbar.tsx:185:35",
                                                             "data-orchids-name": "Moon",
                                                             className: "w-4 h-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Navbar.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 185,
                                                             columnNumber: 36
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                                            "data-orchids-id": "src\\components\\Navbar.tsx:201:71",
+                                                            "data-orchids-id": "src\\components\\Navbar.tsx:185:71",
                                                             "data-orchids-name": "Sun",
                                                             className: "w-4 h-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Navbar.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 185,
                                                             columnNumber: 148
                                                         }, this),
                                                         isThemeHigh ? "Premium Black" : "High-Contrast White"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Navbar.tsx",
-                                                    lineNumber: 196,
+                                                    lineNumber: 180,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 195,
+                                                lineNumber: 179,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                "data-orchids-id": "src\\components\\Navbar.tsx:206:16",
+                                                "data-orchids-id": "src\\components\\Navbar.tsx:190:16",
                                                 "data-orchids-name": "div",
                                                 className: "space-y-1",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        "data-orchids-id": "src\\components\\Navbar.tsx:207:18",
+                                                        "data-orchids-id": "src\\components\\Navbar.tsx:191:18",
                                                         "data-orchids-name": "p",
                                                         className: "text-sm font-medium text-muted-foreground px-4 py-2",
                                                         children: "Connect with us"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Navbar.tsx",
-                                                        lineNumber: 207,
+                                                        lineNumber: 191,
                                                         columnNumber: 19
                                                     }, this),
                                                     socialLinks.map((link)=>{
                                                         const Icon = link.icon;
                                                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                            "data-orchids-id": "src\\components\\Navbar.tsx:213:22@socialLinks",
+                                                            "data-orchids-id": "src\\components\\Navbar.tsx:197:22@socialLinks",
                                                             "data-orchids-name": "button",
                                                             onClick: ()=>handleNavClick(link.href),
                                                             className: "flex items-center w-full px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                                                    "data-orchids-id": "src\\components\\Navbar.tsx:218:24@socialLinks",
+                                                                    "data-orchids-id": "src\\components\\Navbar.tsx:202:24@socialLinks",
                                                                     "data-orchids-name": "Icon",
                                                                     className: "w-4 h-4 mr-3"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Navbar.tsx",
-                                                                    lineNumber: 218,
+                                                                    lineNumber: 202,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 link.name
                                                             ]
                                                         }, link.name, true, {
                                                             fileName: "[project]/src/components/Navbar.tsx",
-                                                            lineNumber: 213,
+                                                            lineNumber: 197,
                                                             columnNumber: 23
                                                         }, this);
                                                     })
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 206,
+                                                lineNumber: 190,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 178,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.tsx",
-                                lineNumber: 181,
+                                lineNumber: 165,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Navbar.tsx",
-                        lineNumber: 163,
+                        lineNumber: 147,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.tsx",
-                    lineNumber: 162,
+                    lineNumber: 146,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.tsx",
-                lineNumber: 161,
+                lineNumber: 145,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Navbar.tsx",
-        lineNumber: 100,
+        lineNumber: 84,
         columnNumber: 5
     }, this);
 }
@@ -986,7 +970,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 const StatCard = ({ icon, value, label, index })=>{
     const [isFlipped, setIsFlipped] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:30:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:37:4",
         "data-orchids-name": "motion.div",
         initial: {
             opacity: 0,
@@ -1000,111 +984,119 @@ const StatCard = ({ icon, value, label, index })=>{
             duration: 0.6,
             delay: 0.4 + index * 0.1
         },
-        className: "perspective-1000",
+        className: "relative",
         onMouseEnter: ()=>setIsFlipped(true),
         onMouseLeave: ()=>setIsFlipped(false),
+        style: {
+            perspective: '1000px'
+        },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            "data-orchids-id": "src\\components\\HeroBanner.tsx:38:6",
+            "data-orchids-id": "src\\components\\HeroBanner.tsx:46:6",
             "data-orchids-name": "div",
-            className: "relative w-full h-24 preserve-3d transition-transform duration-500",
+            className: "relative w-full h-24 transition-transform duration-500",
             style: {
+                transformStyle: 'preserve-3d',
                 transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:42:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:54:8",
                     "data-orchids-name": "Card",
-                    className: "absolute inset-0 backface-hidden bg-card border-border",
+                    className: "absolute inset-0 bg-card border-border",
+                    style: {
+                        backfaceVisibility: 'hidden'
+                    },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:43:10",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:58:10",
                         "data-orchids-name": "CardContent",
                         className: "flex flex-col items-center justify-center h-full p-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:44:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:59:12",
                                 "data-orchids-name": "div",
                                 className: "text-primary mb-1",
                                 children: icon
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 44,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:45:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:60:12",
                                 "data-orchids-name": "div",
                                 className: "text-2xl font-bold font-heading text-foreground",
                                 children: value
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 45,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:46:12",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:63:12",
                                 "data-orchids-name": "div",
                                 className: "text-xs text-muted-foreground text-center",
                                 children: label
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 46,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 43,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 42,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:51:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:70:8",
                     "data-orchids-name": "Card",
-                    className: "absolute inset-0 backface-hidden bg-primary border-primary",
+                    className: "absolute inset-0 bg-primary border-primary",
                     style: {
-                        transform: 'rotateY(180deg)'
+                        transform: 'rotateY(180deg)',
+                        backfaceVisibility: 'hidden'
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:54:10",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:77:10",
                         "data-orchids-name": "CardContent",
                         className: "flex items-center justify-center h-full p-4",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:55:12",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:78:12",
                             "data-orchids-name": "div",
                             className: "text-primary-foreground text-sm font-medium text-center",
                             children: [
-                                label === 'Active Guilds' && 'Web Dev, AI/ML, Cybersecurity',
+                                label === 'Active Guilds' && 'Web Dev, DSA, Finance, Design',
                                 label === 'Live Events' && 'Workshops & Hackathons',
                                 label === 'Members' && 'Growing Community'
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 55,
+                            lineNumber: 78,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 54,
+                        lineNumber: 77,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 51,
+                    lineNumber: 70,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/HeroBanner.tsx",
-            lineNumber: 38,
+            lineNumber: 46,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 30,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 };
@@ -1112,22 +1104,22 @@ const EventCarousel = ()=>{
     const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const events = [
         {
-            id: '1',
-            title: 'React Workshop',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 15'
+            id: "1",
+            title: "React Workshop",
+            image: "/api/placeholder/200/120",
+            date: "Dec 15"
         },
         {
-            id: '2',
-            title: 'AI Hackathon',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 20'
+            id: "2",
+            title: "AI Hackathon",
+            image: "/api/placeholder/200/120",
+            date: "Dec 20"
         },
         {
-            id: '3',
-            title: 'Cybersec Talk',
-            image: '/api/placeholder/200/120',
-            date: 'Dec 22'
+            id: "3",
+            title: "Cybersec Talk",
+            image: "/api/placeholder/200/120",
+            date: "Dec 22"
         }
     ];
     const nextSlide = ()=>{
@@ -1141,7 +1133,7 @@ const EventCarousel = ()=>{
         return ()=>clearInterval(interval);
     }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:90:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:128:4",
         "data-orchids-name": "motion.div",
         initial: {
             opacity: 0,
@@ -1158,146 +1150,146 @@ const EventCarousel = ()=>{
         className: "relative w-full max-w-sm",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:96:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:134:6",
                 "data-orchids-name": "div",
                 className: "relative overflow-hidden rounded-lg bg-card border border-border",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:97:8",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:135:8",
                         "data-orchids-name": "div",
                         className: "flex transition-transform duration-300 ease-in-out",
                         style: {
                             transform: `translateX(-${currentIndex * 100}%)`
                         },
                         children: events.map((event)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                "data-orchids-id": "src\\components\\HeroBanner.tsx:102:12@events",
+                                "data-orchids-id": "src\\components\\HeroBanner.tsx:140:12@events",
                                 "data-orchids-name": "div",
                                 className: "w-full flex-shrink-0",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:103:14@events",
+                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:141:14@events",
                                         "data-orchids-name": "div",
                                         className: "aspect-video bg-muted flex items-center justify-center text-muted-foreground text-sm",
                                         children: event.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:106:14@events",
+                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:144:14@events",
                                         "data-orchids-name": "div",
                                         className: "p-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:107:16@events",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:145:16@events",
                                                 "data-orchids-name": "h4",
                                                 className: "font-medium text-foreground text-sm mb-1",
                                                 children: event.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 145,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:108:16@events",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:148:16@events",
                                                 "data-orchids-name": "p",
                                                 className: "text-xs text-muted-foreground",
                                                 children: event.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 148,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, event.id, true, {
                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                lineNumber: 102,
+                                lineNumber: 140,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 97,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:114:8@prevSlide",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:154:8@prevSlide",
                         "data-orchids-name": "Button",
                         variant: "ghost",
                         size: "sm",
                         className: "absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-background/80 hover:bg-background",
                         onClick: prevSlide,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:120:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:160:10",
                             "data-orchids-name": "ChevronLeft",
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 120,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 114,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:123:8@nextSlide",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:163:8@nextSlide",
                         "data-orchids-name": "Button",
                         variant: "ghost",
                         size: "sm",
                         className: "absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 bg-background/80 hover:bg-background",
                         onClick: nextSlide,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:129:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:169:10",
                             "data-orchids-name": "ChevronRight",
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 129,
+                            lineNumber: 169,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 123,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 96,
+                lineNumber: 134,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:133:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:173:6",
                 "data-orchids-name": "div",
                 className: "flex justify-center mt-3 gap-2",
                 children: events.map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         "data-map-index": index,
-                        "data-orchids-id": "src\\components\\HeroBanner.tsx:135:10@events",
+                        "data-orchids-id": "src\\components\\HeroBanner.tsx:175:10@events",
                         "data-orchids-name": "button",
-                        className: `w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-primary' : 'bg-muted'}`,
+                        className: `w-2 h-2 rounded-full transition-colors ${index === currentIndex ? "bg-primary" : "bg-muted"}`,
                         onClick: ()=>setCurrentIndex(index)
                     }, index, false, {
                         fileName: "[project]/src/components/HeroBanner.tsx",
-                        lineNumber: 135,
+                        lineNumber: 175,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 133,
+                lineNumber: 173,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 90,
+        lineNumber: 128,
         columnNumber: 5
     }, this);
 };
@@ -1306,21 +1298,21 @@ function HeroBanner() {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
-                behavior: 'smooth'
+                behavior: "smooth"
             });
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        "data-orchids-id": "src\\components\\HeroBanner.tsx:158:4",
+        "data-orchids-id": "src\\components\\HeroBanner.tsx:197:4",
         "data-orchids-name": "section",
         className: "w-full bg-background py-20 lg:py-32 relative overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:160:6",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:199:6",
                 "data-orchids-name": "div",
                 className: "absolute inset-0 w-full h-full z-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:161:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:200:8",
                     "data-orchids-name": "img",
                     src: "/background.jpg",
                     alt: "Hero Image",
@@ -1328,35 +1320,35 @@ function HeroBanner() {
                     className: "object-cover opacity-35"
                 }, void 0, false, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 161,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 160,
+                lineNumber: 199,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                "data-orchids-id": "src\\components\\HeroBanner.tsx:163:2",
+                "data-orchids-id": "src\\components\\HeroBanner.tsx:207:6",
                 "data-orchids-name": "div",
                 className: "container mx-auto px-6 relative z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    "data-orchids-id": "src\\components\\HeroBanner.tsx:164:8",
+                    "data-orchids-id": "src\\components\\HeroBanner.tsx:208:8",
                     "data-orchids-name": "div",
                     className: "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:166:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:210:10",
                             "data-orchids-name": "div",
                             className: "lg:col-span-7 space-y-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:168:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:212:12",
                                     "data-orchids-name": "div",
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:169:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:213:14",
                                             "data-orchids-name": "motion.div",
                                             initial: {
                                                 opacity: 0,
@@ -1371,12 +1363,12 @@ function HeroBanner() {
                                             },
                                             className: "overflow-hidden",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:175:16",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:219:16",
                                                 "data-orchids-name": "h1",
                                                 className: "text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:176:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:220:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1392,12 +1384,12 @@ function HeroBanner() {
                                                         children: "Round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 220,
                                                         columnNumber: 19
                                                     }, this),
-                                                    ' ',
+                                                    " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:184:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:228:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1413,12 +1405,12 @@ function HeroBanner() {
                                                         children: "Table"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 228,
                                                         columnNumber: 19
                                                     }, this),
-                                                    ' ',
+                                                    " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:192:18",
+                                                        "data-orchids-id": "src\\components\\HeroBanner.tsx:236:18",
                                                         "data-orchids-name": "motion.span",
                                                         initial: {
                                                             y: 100
@@ -1434,22 +1426,22 @@ function HeroBanner() {
                                                         children: "DTU"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/HeroBanner.tsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 236,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 175,
+                                                lineNumber: 219,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 213,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:203:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:247:14",
                                             "data-orchids-name": "motion.p",
                                             initial: {
                                                 opacity: 0,
@@ -1467,11 +1459,11 @@ function HeroBanner() {
                                             children: "Build. Learn. Ship."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 247,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:212:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:256:14",
                                             "data-orchids-name": "motion.p",
                                             initial: {
                                                 opacity: 0,
@@ -1489,17 +1481,17 @@ function HeroBanner() {
                                             children: "Join our vibrant community of developers, designers, and innovators. Collaborate on real projects, learn cutting-edge technologies, and build your network with like-minded peers."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 256,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 212,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:225:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:269:12",
                                     "data-orchids-name": "motion.div",
                                     initial: {
                                         opacity: 0,
@@ -1516,49 +1508,49 @@ function HeroBanner() {
                                     className: "flex flex-col sm:flex-row gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:231:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:275:14",
                                             "data-orchids-name": "Button",
                                             size: "lg",
                                             className: "bg-foreground text-background hover:bg-foreground/90 font-medium px-8 py-6 text-lg border border-foreground",
-                                            onClick: ()=>scrollToSection('events'),
+                                            onClick: ()=>scrollToSection("events"),
                                             children: [
                                                 "Explore Events",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:237:16",
+                                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:281:16",
                                                     "data-orchids-name": "ChevronRight",
                                                     className: "ml-2 h-5 w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 281,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 231,
+                                            lineNumber: 275,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:240:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:284:14",
                                             "data-orchids-name": "Button",
                                             variant: "outline",
                                             size: "lg",
                                             className: "bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background font-medium px-8 py-6 text-lg",
-                                            onClick: ()=>scrollToSection('guilds'),
+                                            onClick: ()=>scrollToSection("guilds"),
                                             children: "Join a Guild"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 240,
+                                            lineNumber: 284,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 269,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:251:12",
+                                    "data-orchids-id": "src\\components\\HeroBanner.tsx:295:12",
                                     "data-orchids-name": "motion.div",
                                     initial: {
                                         opacity: 0,
@@ -1575,15 +1567,15 @@ function HeroBanner() {
                                     className: "grid grid-cols-3 gap-4 pt-8",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:257:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:301:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:258:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:302:22",
                                                 "data-orchids-name": "Layers",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 258,
+                                                lineNumber: 302,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "4",
@@ -1591,19 +1583,19 @@ function HeroBanner() {
                                             index: 0
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 257,
+                                            lineNumber: 301,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:263:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:307:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:264:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:308:22",
                                                 "data-orchids-name": "Calendar",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 264,
+                                                lineNumber: 308,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "12",
@@ -1611,19 +1603,19 @@ function HeroBanner() {
                                             index: 1
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 307,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
-                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:269:14",
+                                            "data-orchids-id": "src\\components\\HeroBanner.tsx:313:14",
                                             "data-orchids-name": "StatCard",
                                             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
-                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:270:22",
+                                                "data-orchids-id": "src\\components\\HeroBanner.tsx:314:22",
                                                 "data-orchids-name": "Users",
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HeroBanner.tsx",
-                                                lineNumber: 270,
+                                                lineNumber: 314,
                                                 columnNumber: 23
                                             }, void 0),
                                             value: "150+",
@@ -1631,45 +1623,45 @@ function HeroBanner() {
                                             index: 2
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/HeroBanner.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 313,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/HeroBanner.tsx",
-                                    lineNumber: 251,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 166,
+                            lineNumber: 210,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\HeroBanner.tsx:279:10",
+                            "data-orchids-id": "src\\components\\HeroBanner.tsx:323:10",
                             "data-orchids-name": "div",
                             className: "lg:col-span-5 space-y-8"
                         }, void 0, false, {
                             fileName: "[project]/src/components/HeroBanner.tsx",
-                            lineNumber: 279,
+                            lineNumber: 323,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/HeroBanner.tsx",
-                    lineNumber: 164,
+                    lineNumber: 208,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/HeroBanner.tsx",
-                lineNumber: 163,
-                columnNumber: 3
+                lineNumber: 207,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HeroBanner.tsx",
-        lineNumber: 158,
+        lineNumber: 197,
         columnNumber: 5
     }, this);
 }
@@ -5009,7 +5001,7 @@ const mockPartners = [
         website: "https://convergetp.com/"
     },
     {
-        id: "4",
+        id: "9",
         name: "Jnuobi",
         logo: "/sponsor2/jnuobi.png",
         description: "Gadgets for the Go-Getters",
@@ -5095,6 +5087,7 @@ function PartnersSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         "data-orchids-id": "src\\components\\SponsorsSection.tsx:169:4",
         "data-orchids-name": "section",
+        id: "sponsors",
         className: "py-16 bg-background",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             "data-orchids-id": "src\\components\\SponsorsSection.tsx:170:6",
@@ -5110,7 +5103,7 @@ function PartnersSection() {
                             "data-orchids-id": "src\\components\\SponsorsSection.tsx:173:10",
                             "data-orchids-name": "h2",
                             className: "text-4xl font-heading font-bold mb-4",
-                            children: "Our Sponsor"
+                            children: "Our Sponsors"
                         }, void 0, false, {
                             fileName: "[project]/src/components/SponsorsSection.tsx",
                             lineNumber: 173,
@@ -5135,7 +5128,7 @@ function PartnersSection() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     "data-orchids-id": "src\\components\\SponsorsSection.tsx:180:8",
                     "data-orchids-name": "div",
-                    className: "mb-16",
+                    className: "",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         "data-orchids-id": "src\\components\\SponsorsSection.tsx:181:10",
                         "data-orchids-name": "div",
@@ -5165,7 +5158,7 @@ function PartnersSection() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
                                                 "data-map-index": index,
-                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:195:10@mockPartners",
+                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:195:18@mockPartners",
                                                 "data-orchids-name": "Card",
                                                 className: "bg-card hover:bg-muted/50 transition-all duration-300 cursor-pointer group",
                                                 onClick: ()=>setSelectedPartner(partner),
@@ -5194,7 +5187,7 @@ function PartnersSection() {
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/SponsorsSection.tsx",
                                                 lineNumber: 195,
-                                                columnNumber: 11
+                                                columnNumber: 19
                                             }, this),
                                             index === currentPartnerIndex && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                                 "data-map-index": index,
@@ -5382,34 +5375,54 @@ function PartnersSection() {
                                             "data-orchids-name": "CardContent",
                                             className: "p-6",
                                             children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:256:20",
+                                                    "data-orchids-name": "div",
+                                                    className: "flex items-center justify-center mb-4",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:257:22",
+                                                        "data-orchids-name": "img",
+                                                        src: mockPartners[currentPartnerIndex].logo,
+                                                        alt: `${mockPartners[currentPartnerIndex].name} logo`,
+                                                        className: "max-h-16 object-contain"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/SponsorsSection.tsx",
+                                                        lineNumber: 257,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/SponsorsSection.tsx",
+                                                    lineNumber: 256,
+                                                    columnNumber: 21
+                                                }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:255:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:263:20",
                                                     "data-orchids-name": "h3",
                                                     className: "text-xl font-semibold mb-2",
                                                     children: mockPartners[currentPartnerIndex].name
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 255,
+                                                    lineNumber: 263,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:258:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:266:20",
                                                     "data-orchids-name": "p",
                                                     className: "text-muted-foreground mb-4",
                                                     children: mockPartners[currentPartnerIndex].description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 258,
+                                                    lineNumber: 266,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:261:20",
+                                                    "data-orchids-id": "src\\components\\SponsorsSection.tsx:269:20",
                                                     "data-orchids-name": "Button",
                                                     variant: "outline",
                                                     size: "sm",
                                                     asChild: true,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:262:22",
+                                                        "data-orchids-id": "src\\components\\SponsorsSection.tsx:270:22",
                                                         "data-orchids-name": "a",
                                                         href: mockPartners[currentPartnerIndex].website,
                                                         target: "_blank",
@@ -5417,23 +5430,23 @@ function PartnersSection() {
                                                         children: [
                                                             "Visit Website ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
-                                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:267:38",
+                                                                "data-orchids-id": "src\\components\\SponsorsSection.tsx:275:38",
                                                                 "data-orchids-name": "ExternalLink",
                                                                 className: "ml-2 h-3 w-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                                lineNumber: 267,
+                                                                lineNumber: 275,
                                                                 columnNumber: 39
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 270,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/SponsorsSection.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 269,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
@@ -7584,7 +7597,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$share$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Share2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/share-2.js [app-ssr] (ecmascript) <export default as Share2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-ssr] (ecmascript) <export default as ChevronLeft>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-ssr] (ecmascript) <export default as ChevronRight>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/upload.js [app-ssr] (ecmascript) <export default as Upload>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PlayCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-play.js [app-ssr] (ecmascript) <export default as PlayCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$pause$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PauseCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-pause.js [app-ssr] (ecmascript) <export default as PauseCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye.js [app-ssr] (ecmascript) <export default as Eye>");
@@ -7690,20 +7702,20 @@ const MOCK_MEDIA = [
     {
         id: '9',
         type: 'photo',
-        url: '/glimpses/9-min.jpg',
-        thumbnail: '/glimpses/9-min.jpg',
-        title: 'Workshop Day',
-        caption: 'Hands-on learning session in the project',
+        url: '/glimpses/23 copy.jpg',
+        thumbnail: '/glimpses/23 copy.jpg',
+        title: 'Senior Guidance session',
+        caption: 'Senior Guidance session photo',
         category: 'Events',
         aspectRatio: 4 / 3
     },
     {
         id: '10',
         type: 'photo',
-        url: '/glimpses/10-min.jpg',
-        thumbnail: '/glimpses/10-min.jpg',
-        title: 'Speaker',
-        caption: 'Speaker at the event',
+        url: '/glimpses/29.jpg',
+        thumbnail: '/glimpses/29.jpg',
+        title: 'Hackathon',
+        caption: 'Hackathon event',
         category: 'Events',
         aspectRatio: 4 / 3
     },
@@ -8017,183 +8029,107 @@ function GallerySection({ className = "" }) {
                     once: true
                 },
                 className: "flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        "data-orchids-id": "src\\components\\GallerySection.tsx:425:8",
-                        "data-orchids-name": "div",
-                        className: "flex flex-wrap gap-2",
-                        children: FILTER_OPTIONS.map((filter, index)=>{
-                            const Icon = filter.icon;
-                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    "data-orchids-id": "src\\components\\GallerySection.tsx:425:8",
+                    "data-orchids-name": "div",
+                    className: "flex flex-wrap gap-2",
+                    children: FILTER_OPTIONS.map((filter, index)=>{
+                        const Icon = filter.icon;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                            "data-map-index": index,
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:429:14@FILTER_OPTIONS",
+                            "data-orchids-name": "motion.div",
+                            initial: {
+                                opacity: 0,
+                                x: prefersReducedMotion ? 0 : -20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                x: 0
+                            },
+                            transition: {
+                                duration: prefersReducedMotion ? 0 : 0.3,
+                                delay: index * 0.1
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                 "data-map-index": index,
-                                "data-orchids-id": "src\\components\\GallerySection.tsx:429:14@FILTER_OPTIONS",
-                                "data-orchids-name": "motion.div",
-                                initial: {
-                                    opacity: 0,
-                                    x: prefersReducedMotion ? 0 : -20
-                                },
-                                whileInView: {
-                                    opacity: 1,
-                                    x: 0
-                                },
-                                transition: {
-                                    duration: prefersReducedMotion ? 0 : 0.3,
-                                    delay: index * 0.1
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    "data-map-index": index,
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:436:16@FILTER_OPTIONS",
-                                    "data-orchids-name": "Button",
-                                    variant: activeFilter === filter.value ? "default" : "outline",
-                                    size: "sm",
-                                    onClick: ()=>setActiveFilter(filter.value),
-                                    className: "h-9 relative overflow-hidden group",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:442:18@FILTER_OPTIONS",
-                                            "data-orchids-name": "motion.div",
-                                            className: "flex items-center gap-2",
-                                            whileHover: prefersReducedMotion ? {} : {
-                                                scale: 1.05
-                                            },
-                                            whileTap: prefersReducedMotion ? {} : {
-                                                scale: 0.95
-                                            },
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                                    "data-map-index": index,
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:447:20@FILTER_OPTIONS",
-                                                    "data-orchids-name": "Icon",
-                                                    className: "w-4 h-4"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 447,
-                                                    columnNumber: 21
-                                                }, this),
-                                                filter.label
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 442,
-                                            columnNumber: 19
-                                        }, this),
-                                        activeFilter === filter.value && !prefersReducedMotion && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:451:20@FILTER_OPTIONS",
-                                            "data-orchids-name": "motion.div",
-                                            className: "absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20",
-                                            layoutId: "activeFilter",
-                                            transition: {
-                                                duration: 0.3
-                                            }
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 451,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 436,
-                                    columnNumber: 17
-                                }, this)
-                            }, filter.value, false, {
+                                "data-orchids-id": "src\\components\\GallerySection.tsx:436:16@FILTER_OPTIONS",
+                                "data-orchids-name": "Button",
+                                variant: activeFilter === filter.value ? "default" : "outline",
+                                size: "sm",
+                                onClick: ()=>setActiveFilter(filter.value),
+                                className: "h-9 relative overflow-hidden group",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        "data-map-index": index,
+                                        "data-orchids-id": "src\\components\\GallerySection.tsx:442:18@FILTER_OPTIONS",
+                                        "data-orchids-name": "motion.div",
+                                        className: "flex items-center gap-2",
+                                        whileHover: prefersReducedMotion ? {} : {
+                                            scale: 1.05
+                                        },
+                                        whileTap: prefersReducedMotion ? {} : {
+                                            scale: 0.95
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                                                "data-map-index": index,
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:447:20@FILTER_OPTIONS",
+                                                "data-orchids-name": "Icon",
+                                                className: "w-4 h-4"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/GallerySection.tsx",
+                                                lineNumber: 447,
+                                                columnNumber: 21
+                                            }, this),
+                                            filter.label
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/GallerySection.tsx",
+                                        lineNumber: 442,
+                                        columnNumber: 19
+                                    }, this),
+                                    activeFilter === filter.value && !prefersReducedMotion && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        "data-map-index": index,
+                                        "data-orchids-id": "src\\components\\GallerySection.tsx:451:20@FILTER_OPTIONS",
+                                        "data-orchids-name": "motion.div",
+                                        className: "absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20",
+                                        layoutId: "activeFilter",
+                                        transition: {
+                                            duration: 0.3
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/GallerySection.tsx",
+                                        lineNumber: 451,
+                                        columnNumber: 21
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 429,
-                                columnNumber: 15
-                            }, this);
-                        })
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/GallerySection.tsx",
-                        lineNumber: 425,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                        "data-orchids-id": "src\\components\\GallerySection.tsx:463:8",
-                        "data-orchids-name": "motion.div",
-                        initial: {
-                            opacity: 0,
-                            x: prefersReducedMotion ? 0 : 20
-                        },
-                        whileInView: {
-                            opacity: 1,
-                            x: 0
-                        },
-                        transition: {
-                            duration: prefersReducedMotion ? 0 : 0.6,
-                            delay: 0.2
-                        },
-                        viewport: {
-                            once: true
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:469:10",
-                            "data-orchids-name": "Button",
-                            onClick: ()=>setShowUploadDialog(true),
-                            className: "shrink-0 relative overflow-hidden group",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:473:12",
-                                    "data-orchids-name": "motion.div",
-                                    className: "flex items-center gap-2",
-                                    whileHover: prefersReducedMotion ? {} : {
-                                        scale: 1.05
-                                    },
-                                    whileTap: prefersReducedMotion ? {} : {
-                                        scale: 0.95
-                                    },
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:478:14",
-                                            "data-orchids-name": "Upload",
-                                            className: "w-4 h-4"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 478,
-                                            columnNumber: 15
-                                        }, this),
-                                        "Upload Media"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 473,
-                                    columnNumber: 13
-                                }, this),
-                                !prefersReducedMotion && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:482:14",
-                                    "data-orchids-name": "motion.div",
-                                    className: "absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100",
-                                    transition: {
-                                        duration: 0.3
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 482,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                                lineNumber: 436,
+                                columnNumber: 17
+                            }, this)
+                        }, filter.value, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 469,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/GallerySection.tsx",
-                        lineNumber: 463,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                            lineNumber: 429,
+                            columnNumber: 15
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/src/components/GallerySection.tsx",
+                    lineNumber: 425,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/components/GallerySection.tsx",
                 lineNumber: 418,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                "data-orchids-id": "src\\components\\GallerySection.tsx:492:6@containerVariants",
+                "data-orchids-id": "src\\components\\GallerySection.tsx:465:6@containerVariants",
                 "data-orchids-name": "motion.div",
                 variants: containerVariants,
                 initial: "hidden",
@@ -8207,14 +8143,14 @@ function GallerySection({ className = "" }) {
                     gridAutoRows: '20px'
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                    "data-orchids-id": "src\\components\\GallerySection.tsx:503:8",
+                    "data-orchids-id": "src\\components\\GallerySection.tsx:476:8",
                     "data-orchids-name": "AnimatePresence",
                     mode: "popLayout",
                     children: filteredMedia.map((item, index)=>{
                         const gridRowEnd = Math.ceil((280 / item.aspectRatio + 40) / 20);
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             "data-map-index": index,
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:508:14@filteredMedia@itemVariants",
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:481:14@filteredMedia@itemVariants",
                             "data-orchids-name": "motion.div",
                             layout: true,
                             variants: itemVariants,
@@ -8234,18 +8170,18 @@ function GallerySection({ className = "" }) {
                             onClick: ()=>openLightbox(item),
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
                                 "data-map-index": index,
-                                "data-orchids-id": "src\\components\\GallerySection.tsx:523:16@filteredMedia",
+                                "data-orchids-id": "src\\components\\GallerySection.tsx:496:16@filteredMedia",
                                 "data-orchids-name": "Card",
                                 className: "h-full overflow-hidden border-2 border-white/10 hover:border-primary/30 transition-all duration-300 relative",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
                                     "data-map-index": index,
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:524:18@filteredMedia",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:497:18@filteredMedia",
                                     "data-orchids-name": "CardContent",
                                     className: "p-0 relative h-full",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].img, {
                                             "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:525:20@filteredMedia",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:498:20@filteredMedia",
                                             "data-orchids-name": "motion.img",
                                             src: item.thumbnail,
                                             alt: item.title,
@@ -8259,12 +8195,12 @@ function GallerySection({ className = "" }) {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 525,
+                                            lineNumber: 498,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                             "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:535:20@filteredMedia",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:508:20@filteredMedia",
                                             "data-orchids-name": "motion.div",
                                             className: "absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center",
                                             animate: hoveredItem === item.id && !prefersReducedMotion ? {
@@ -8283,7 +8219,7 @@ function GallerySection({ className = "" }) {
                                                         [
                                                             ...Array(6)
                                                         ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                "data-orchids-id": "src\\components\\GallerySection.tsx:550:28",
+                                                                "data-orchids-id": "src\\components\\GallerySection.tsx:523:28",
                                                                 "data-orchids-name": "motion.div",
                                                                 className: "absolute w-1 h-1 bg-white rounded-full",
                                                                 initial: {
@@ -8313,11 +8249,11 @@ function GallerySection({ className = "" }) {
                                                                 }
                                                             }, i, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 550,
+                                                                lineNumber: 523,
                                                                 columnNumber: 29
                                                             }, this)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:572:26",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:545:26",
                                                             "data-orchids-name": "motion.div",
                                                             initial: {
                                                                 opacity: 0,
@@ -8332,18 +8268,18 @@ function GallerySection({ className = "" }) {
                                                                 className: "w-12 h-12 text-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 577,
+                                                                lineNumber: 550,
                                                                 columnNumber: 29
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 572,
+                                                            lineNumber: 545,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true),
                                                 item.type === 'video' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:583:24",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:556:24",
                                                     "data-orchids-name": "motion.div",
                                                     initial: {
                                                         opacity: 0,
@@ -8357,28 +8293,28 @@ function GallerySection({ className = "" }) {
                                                         duration: 0.2
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__["Play"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:591:26",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:564:26",
                                                         "data-orchids-name": "Play",
                                                         className: "w-12 h-12 text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 591,
+                                                        lineNumber: 564,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 583,
+                                                    lineNumber: 556,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 535,
+                                            lineNumber: 508,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                             "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:597:20@filteredMedia",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:570:20@filteredMedia",
                                             "data-orchids-name": "motion.div",
                                             initial: {
                                                 opacity: 0,
@@ -8393,24 +8329,24 @@ function GallerySection({ className = "" }) {
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
                                                 "data-map-index": index,
-                                                "data-orchids-id": "src\\components\\GallerySection.tsx:602:22@filteredMedia",
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:575:22@filteredMedia",
                                                 "data-orchids-name": "Badge",
                                                 variant: "secondary",
                                                 className: "absolute top-2 left-2 capitalize text-xs backdrop-blur-sm",
                                                 children: item.type
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 602,
+                                                lineNumber: 575,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 597,
+                                            lineNumber: 570,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                             "data-map-index": index,
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:611:20@filteredMedia",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:584:20@filteredMedia",
                                             "data-orchids-name": "motion.div",
                                             className: "absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3",
                                             initial: {
@@ -8426,7 +8362,7 @@ function GallerySection({ className = "" }) {
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h3, {
                                                 "data-map-index": index,
-                                                "data-orchids-id": "src\\components\\GallerySection.tsx:617:22@filteredMedia",
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:590:22@filteredMedia",
                                                 "data-orchids-name": "motion.h3",
                                                 className: "text-white font-medium text-sm line-clamp-1",
                                                 whileHover: prefersReducedMotion ? {} : {
@@ -8435,43 +8371,43 @@ function GallerySection({ className = "" }) {
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 617,
+                                                lineNumber: 590,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 611,
+                                            lineNumber: 584,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 524,
+                                    lineNumber: 497,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 523,
+                                lineNumber: 496,
                                 columnNumber: 17
                             }, this)
                         }, item.id, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 508,
+                            lineNumber: 481,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 503,
+                    lineNumber: 476,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/GallerySection.tsx",
-                lineNumber: 492,
+                lineNumber: 465,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
-                "data-orchids-id": "src\\components\\GallerySection.tsx:633:6",
+                "data-orchids-id": "src\\components\\GallerySection.tsx:606:6",
                 "data-orchids-name": "Dialog",
                 open: !!selectedMedia,
                 onOpenChange: ()=>{
@@ -8479,30 +8415,30 @@ function GallerySection({ className = "" }) {
                     setIsSlideshow(false);
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
-                    "data-orchids-id": "src\\components\\GallerySection.tsx:637:8",
+                    "data-orchids-id": "src\\components\\GallerySection.tsx:610:8",
                     "data-orchids-name": "DialogContent",
                     className: "max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-white/10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogHeader"], {
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:638:10",
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:611:10",
                             "data-orchids-name": "DialogHeader",
                             className: "sr-only",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
-                                "data-orchids-id": "src\\components\\GallerySection.tsx:639:12",
+                                "data-orchids-id": "src\\components\\GallerySection.tsx:612:12",
                                 "data-orchids-name": "DialogTitle",
                                 children: selectedMedia?.title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 639,
+                                lineNumber: 612,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 638,
+                            lineNumber: 611,
                             columnNumber: 11
                         }, this),
                         selectedMedia && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:643:12",
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:616:12",
                             "data-orchids-name": "motion.div",
                             className: "relative w-full h-full flex flex-col",
                             initial: {
@@ -8518,7 +8454,7 @@ function GallerySection({ className = "" }) {
                             },
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:650:14",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:623:14",
                                     "data-orchids-name": "motion.div",
                                     className: "absolute top-4 left-4 right-4 z-10 flex justify-between items-center",
                                     initial: {
@@ -8534,12 +8470,12 @@ function GallerySection({ className = "" }) {
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:656:16",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:629:16",
                                             "data-orchids-name": "div",
                                             className: "flex gap-2",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:657:18",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:630:18",
                                                     "data-orchids-name": "motion.div",
                                                     whileHover: prefersReducedMotion ? {} : {
                                                         scale: 1.1
@@ -8548,7 +8484,7 @@ function GallerySection({ className = "" }) {
                                                         scale: 0.9
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:658:20",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:631:20",
                                                         "data-orchids-name": "Button",
                                                         size: "icon",
                                                         variant: "secondary",
@@ -8557,34 +8493,34 @@ function GallerySection({ className = "" }) {
                                                         "aria-label": isSlideshow ? "Stop slideshow" : "Start slideshow",
                                                         className: "backdrop-blur-sm",
                                                         children: isSlideshow ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$pause$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PauseCircle$3e$__["PauseCircle"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:666:37",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:639:37",
                                                             "data-orchids-name": "PauseCircle",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 666,
+                                                            lineNumber: 639,
                                                             columnNumber: 38
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PlayCircle$3e$__["PlayCircle"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:666:75",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:639:75",
                                                             "data-orchids-name": "PlayCircle",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 666,
+                                                            lineNumber: 639,
                                                             columnNumber: 167
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 658,
+                                                        lineNumber: 631,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 657,
+                                                    lineNumber: 630,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:669:18",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:642:18",
                                                     "data-orchids-name": "motion.div",
                                                     whileHover: prefersReducedMotion ? {} : {
                                                         scale: 1.1
@@ -8593,7 +8529,7 @@ function GallerySection({ className = "" }) {
                                                         scale: 0.9
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:670:20",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:643:20",
                                                         "data-orchids-name": "Button",
                                                         size: "icon",
                                                         variant: "secondary",
@@ -8601,45 +8537,45 @@ function GallerySection({ className = "" }) {
                                                         "aria-label": showCaptions ? "Hide captions" : "Show captions",
                                                         className: "backdrop-blur-sm",
                                                         children: showCaptions ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:677:38",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:650:38",
                                                             "data-orchids-name": "Eye",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 677,
+                                                            lineNumber: 650,
                                                             columnNumber: 39
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2d$off$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__EyeOff$3e$__["EyeOff"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:677:68",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:650:68",
                                                             "data-orchids-name": "EyeOff",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 677,
+                                                            lineNumber: 650,
                                                             columnNumber: 152
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 670,
+                                                        lineNumber: 643,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 669,
+                                                    lineNumber: 642,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 656,
+                                            lineNumber: 629,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:682:16",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:655:16",
                                             "data-orchids-name": "div",
                                             className: "flex gap-2",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:683:18",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:656:18",
                                                     "data-orchids-name": "motion.div",
                                                     whileHover: prefersReducedMotion ? {} : {
                                                         scale: 1.1
@@ -8648,7 +8584,7 @@ function GallerySection({ className = "" }) {
                                                         scale: 0.9
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:684:20@handleDownload",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:657:20@handleDownload",
                                                         "data-orchids-name": "Button",
                                                         size: "icon",
                                                         variant: "secondary",
@@ -8656,26 +8592,26 @@ function GallerySection({ className = "" }) {
                                                         "aria-label": "Download image",
                                                         className: "backdrop-blur-sm",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:691:22",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:664:22",
                                                             "data-orchids-name": "Download",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 691,
+                                                            lineNumber: 664,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 684,
+                                                        lineNumber: 657,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 683,
+                                                    lineNumber: 656,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:694:18",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:667:18",
                                                     "data-orchids-name": "motion.div",
                                                     whileHover: prefersReducedMotion ? {} : {
                                                         scale: 1.1
@@ -8684,7 +8620,7 @@ function GallerySection({ className = "" }) {
                                                         scale: 0.9
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:695:20@handleShare",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:668:20@handleShare",
                                                         "data-orchids-name": "Button",
                                                         size: "icon",
                                                         variant: "secondary",
@@ -8692,40 +8628,40 @@ function GallerySection({ className = "" }) {
                                                         "aria-label": "Share image",
                                                         className: "backdrop-blur-sm",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$share$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Share2$3e$__["Share2"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:702:22",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:675:22",
                                                             "data-orchids-name": "Share2",
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 702,
+                                                            lineNumber: 675,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 695,
+                                                        lineNumber: 668,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 694,
+                                                    lineNumber: 667,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 682,
+                                            lineNumber: 655,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 650,
+                                    lineNumber: 623,
                                     columnNumber: 15
                                 }, this),
                                 filteredMedia.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:711:18",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:684:18",
                                             "data-orchids-name": "motion.div",
                                             initial: {
                                                 opacity: 0,
@@ -8739,7 +8675,7 @@ function GallerySection({ className = "" }) {
                                                 delay: 0.3
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                "data-orchids-id": "src\\components\\GallerySection.tsx:716:20",
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:689:20",
                                                 "data-orchids-name": "Button",
                                                 size: "icon",
                                                 variant: "secondary",
@@ -8747,26 +8683,26 @@ function GallerySection({ className = "" }) {
                                                 onClick: ()=>navigateMedia('prev'),
                                                 "aria-label": "Previous image",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:723:22",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:696:22",
                                                     "data-orchids-name": "ChevronLeft",
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 723,
+                                                    lineNumber: 696,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 716,
+                                                lineNumber: 689,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 711,
+                                            lineNumber: 684,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:726:18",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:699:18",
                                             "data-orchids-name": "motion.div",
                                             initial: {
                                                 opacity: 0,
@@ -8780,7 +8716,7 @@ function GallerySection({ className = "" }) {
                                                 delay: 0.3
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                "data-orchids-id": "src\\components\\GallerySection.tsx:731:20",
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:704:20",
                                                 "data-orchids-name": "Button",
                                                 size: "icon",
                                                 variant: "secondary",
@@ -8788,36 +8724,36 @@ function GallerySection({ className = "" }) {
                                                 onClick: ()=>navigateMedia('next'),
                                                 "aria-label": "Next image",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:738:22",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:711:22",
                                                     "data-orchids-name": "ChevronRight",
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 738,
+                                                    lineNumber: 711,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 731,
+                                                lineNumber: 704,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 726,
+                                            lineNumber: 699,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:745:14",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:718:14",
                                     "data-orchids-name": "div",
                                     className: "flex-1 flex items-center justify-center p-4 pt-16",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                        "data-orchids-id": "src\\components\\GallerySection.tsx:746:16",
+                                        "data-orchids-id": "src\\components\\GallerySection.tsx:719:16",
                                         "data-orchids-name": "AnimatePresence",
                                         mode: "wait",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].img, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:747:18",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:720:18",
                                             "data-orchids-name": "motion.img",
                                             src: selectedMedia.url,
                                             alt: selectedMedia.title,
@@ -8842,21 +8778,21 @@ function GallerySection({ className = "" }) {
                                             }
                                         }, selectedMedia.id, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 747,
+                                            lineNumber: 720,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                        lineNumber: 746,
+                                        lineNumber: 719,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 745,
+                                    lineNumber: 718,
                                     columnNumber: 15
                                 }, this),
                                 showCaptions && selectedMedia.caption && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:762:16",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:735:16",
                                     "data-orchids-name": "motion.div",
                                     className: "bg-black/80 p-4 backdrop-blur-sm",
                                     initial: {
@@ -8872,7 +8808,7 @@ function GallerySection({ className = "" }) {
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h3, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:768:18",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:741:18",
                                             "data-orchids-name": "motion.h3",
                                             className: "text-white font-medium text-lg mb-1",
                                             whileHover: prefersReducedMotion ? {} : {
@@ -8881,11 +8817,11 @@ function GallerySection({ className = "" }) {
                                             children: selectedMedia.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 768,
+                                            lineNumber: 741,
                                             columnNumber: 19
                                         }, this),
                                         selectedMedia.caption && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:775:20",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:748:20",
                                             "data-orchids-name": "motion.p",
                                             className: "text-white/80 text-sm mb-2",
                                             initial: {
@@ -8900,80 +8836,80 @@ function GallerySection({ className = "" }) {
                                             children: selectedMedia.caption
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 775,
+                                            lineNumber: 748,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 762,
+                                    lineNumber: 735,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 643,
+                            lineNumber: 616,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 637,
+                    lineNumber: 610,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/GallerySection.tsx",
-                lineNumber: 633,
+                lineNumber: 606,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
-                "data-orchids-id": "src\\components\\GallerySection.tsx:792:6",
+                "data-orchids-id": "src\\components\\GallerySection.tsx:765:6",
                 "data-orchids-name": "Dialog",
                 open: showUploadDialog,
                 onOpenChange: setShowUploadDialog,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
-                    "data-orchids-id": "src\\components\\GallerySection.tsx:793:8",
+                    "data-orchids-id": "src\\components\\GallerySection.tsx:766:8",
                     "data-orchids-name": "DialogContent",
                     className: "max-w-md",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogHeader"], {
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:794:10",
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:767:10",
                             "data-orchids-name": "DialogHeader",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
-                                "data-orchids-id": "src\\components\\GallerySection.tsx:795:12",
+                                "data-orchids-id": "src\\components\\GallerySection.tsx:768:12",
                                 "data-orchids-name": "DialogTitle",
                                 children: "Upload Media"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 795,
+                                lineNumber: 768,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 794,
+                            lineNumber: 767,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\GallerySection.tsx:798:10",
+                            "data-orchids-id": "src\\components\\GallerySection.tsx:771:10",
                             "data-orchids-name": "div",
                             className: "space-y-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:799:12",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:772:12",
                                     "data-orchids-name": "div",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:800:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:773:14",
                                             "data-orchids-name": "Label",
                                             htmlFor: "file",
                                             children: "File *"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 800,
+                                            lineNumber: 773,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:801:14@handleFileSelect",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:774:14@handleFileSelect",
                                             "data-orchids-name": "Input",
                                             id: "file",
                                             type: "file",
@@ -8982,51 +8918,51 @@ function GallerySection({ className = "" }) {
                                             className: "mt-1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 801,
+                                            lineNumber: 774,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 799,
+                                    lineNumber: 772,
                                     columnNumber: 13
                                 }, this),
                                 uploadForm.file && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:811:14",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:784:14",
                                     "data-orchids-name": "div",
                                     className: "relative w-full h-32 bg-muted rounded-md overflow-hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        "data-orchids-id": "src\\components\\GallerySection.tsx:812:16",
+                                        "data-orchids-id": "src\\components\\GallerySection.tsx:785:16",
                                         "data-orchids-name": "img",
                                         src: URL.createObjectURL(uploadForm.file),
                                         alt: "Preview",
                                         className: "w-full h-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                        lineNumber: 812,
+                                        lineNumber: 785,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 811,
+                                    lineNumber: 784,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:820:12",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:793:12",
                                     "data-orchids-name": "div",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:821:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:794:14",
                                             "data-orchids-name": "Label",
                                             htmlFor: "title",
                                             children: "Title *"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 821,
+                                            lineNumber: 794,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:822:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:795:14",
                                             "data-orchids-name": "Input",
                                             id: "title",
                                             value: uploadForm.title,
@@ -9038,31 +8974,31 @@ function GallerySection({ className = "" }) {
                                             className: "mt-1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 822,
+                                            lineNumber: 795,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 820,
+                                    lineNumber: 793,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:831:12",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:804:12",
                                     "data-orchids-name": "div",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:832:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:805:14",
                                             "data-orchids-name": "Label",
                                             htmlFor: "caption",
                                             children: "Caption"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 832,
+                                            lineNumber: 805,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:833:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:806:14",
                                             "data-orchids-name": "Textarea",
                                             id: "caption",
                                             value: uploadForm.caption,
@@ -9075,27 +9011,27 @@ function GallerySection({ className = "" }) {
                                             rows: 3
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 833,
+                                            lineNumber: 806,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 831,
+                                    lineNumber: 804,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:843:12",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:816:12",
                                     "data-orchids-name": "div",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:844:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:817:14",
                                             "data-orchids-name": "Label",
                                             htmlFor: "category",
                                             children: "Category"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 844,
+                                            lineNumber: 817,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -9106,91 +9042,91 @@ function GallerySection({ className = "" }) {
                                                     })),
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:849:16",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:822:16",
                                                     "data-orchids-name": "SelectTrigger",
                                                     className: "mt-1",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectValue"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:850:18",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:823:18",
                                                         "data-orchids-name": "SelectValue"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 850,
+                                                        lineNumber: 823,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 849,
+                                                    lineNumber: 822,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
-                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:852:16",
+                                                    "data-orchids-id": "src\\components\\GallerySection.tsx:825:16",
                                                     "data-orchids-name": "SelectContent",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:853:18",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:826:18",
                                                             "data-orchids-name": "SelectItem",
                                                             value: "Events",
                                                             children: "Events"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 853,
+                                                            lineNumber: 826,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:854:18",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:827:18",
                                                             "data-orchids-name": "SelectItem",
                                                             value: "Portraits",
                                                             children: "Portraits"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 854,
+                                                            lineNumber: 827,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:855:18",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:828:18",
                                                             "data-orchids-name": "SelectItem",
                                                             value: "Marketing",
                                                             children: "Marketing"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 855,
+                                                            lineNumber: 828,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:856:18",
+                                                            "data-orchids-id": "src\\components\\GallerySection.tsx:829:18",
                                                             "data-orchids-name": "SelectItem",
                                                             value: "Videos",
                                                             children: "Videos"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 856,
+                                                            lineNumber: 829,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 852,
+                                                    lineNumber: 825,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 845,
+                                            lineNumber: 818,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 843,
+                                    lineNumber: 816,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    "data-orchids-id": "src\\components\\GallerySection.tsx:861:12",
+                                    "data-orchids-id": "src\\components\\GallerySection.tsx:834:12",
                                     "data-orchids-name": "div",
                                     className: "flex gap-2 pt-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:862:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:835:14",
                                             "data-orchids-name": "Button",
                                             variant: "outline",
                                             onClick: ()=>setShowUploadDialog(false),
@@ -9198,11 +9134,11 @@ function GallerySection({ className = "" }) {
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 862,
+                                            lineNumber: 835,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            "data-orchids-id": "src\\components\\GallerySection.tsx:869:14",
+                                            "data-orchids-id": "src\\components\\GallerySection.tsx:842:14",
                                             "data-orchids-name": "motion.div",
                                             whileHover: prefersReducedMotion ? {} : {
                                                 scale: 1.02
@@ -9212,53 +9148,53 @@ function GallerySection({ className = "" }) {
                                             },
                                             className: "flex-1",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                "data-orchids-id": "src\\components\\GallerySection.tsx:874:16@handleUploadSubmit",
+                                                "data-orchids-id": "src\\components\\GallerySection.tsx:847:16@handleUploadSubmit",
                                                 "data-orchids-name": "Button",
                                                 onClick: handleUploadSubmit,
                                                 className: "w-full",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:878:18",
+                                                        "data-orchids-id": "src\\components\\GallerySection.tsx:851:18",
                                                         "data-orchids-name": "Plus",
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 878,
+                                                        lineNumber: 851,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Upload"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 874,
+                                                lineNumber: 847,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 869,
+                                            lineNumber: 842,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 861,
+                                    lineNumber: 834,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 798,
+                            lineNumber: 771,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 793,
+                    lineNumber: 766,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/GallerySection.tsx",
-                lineNumber: 792,
+                lineNumber: 765,
                 columnNumber: 7
             }, this)
         ]
@@ -9365,36 +9301,14 @@ const GUILDS = [
         label: 'Design Guild'
     }
 ];
-const FEEDBACK_CATEGORIES = [
-    {
-        value: 'website',
-        label: 'Website Experience'
-    },
-    {
-        value: 'events',
-        label: 'Events'
-    },
-    {
-        value: 'community',
-        label: 'Community'
-    },
-    {
-        value: 'content',
-        label: 'Content & Resources'
-    },
-    {
-        value: 'technical',
-        label: 'Technical Issues'
-    },
-    {
-        value: 'other',
-        label: 'Other'
-    }
-];
 const CONTACT_SUBJECTS = [
     {
         value: 'general',
         label: 'General Inquiry'
+    },
+    {
+        value: 'sponsorship',
+        label: 'Sponsorship'
     },
     {
         value: 'partnership',
@@ -9403,10 +9317,6 @@ const CONTACT_SUBJECTS = [
     {
         value: 'media',
         label: 'Media & Press'
-    },
-    {
-        value: 'support',
-        label: 'Support'
     },
     {
         value: 'feedback',
@@ -9421,9 +9331,6 @@ const validateRequired = (value)=>{
     return value.trim().length > 0;
 };
 function FooterJoinContact() {
-    // Newsletter state
-    const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [isSubmitting, setIsSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     // Form states
     const [joinForm, setJoinForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         name: '',
@@ -9443,14 +9350,6 @@ function FooterJoinContact() {
     });
     const [applyErrors, setApplyErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
     const [applySubmitting, setApplySubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [feedbackForm, setFeedbackForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
-        category: '',
-        rating: 0,
-        message: ''
-    });
-    const [feedbackErrors, setFeedbackErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
-    const [feedbackSubmitting, setFeedbackSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [showFeedbackConfirm, setShowFeedbackConfirm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [contactForm, setContactForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         subject: '',
         message: ''
@@ -9460,19 +9359,6 @@ function FooterJoinContact() {
     // Animation states
     const [clickedButtons, setClickedButtons] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [sparklePositions, setSparklePositions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
-    // Newsletter handler
-    const handleSubscribe = async (e)=>{
-        e.preventDefault();
-        if (!email) return;
-        setIsSubmitting(true);
-        // Simulate API call
-        await new Promise((resolve)=>setTimeout(resolve, 1000));
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success('Subscribed successfully!', {
-            description: 'You\'ll receive updates about upcoming events and opportunities.'
-        });
-        setEmail('');
-        setIsSubmitting(false);
-    };
     const handleButtonClick = (buttonId, event)=>{
         const rect = event.currentTarget.getBoundingClientRect();
         const sparkles = Array.from({
@@ -9500,42 +9386,6 @@ function FooterJoinContact() {
             });
         }, 1000);
     };
-    // Feedback Form Handlers
-    const validateFeedbackForm = ()=>{
-        const errors = {};
-        if (!feedbackForm.category) {
-            errors.category = 'Please select a category';
-        }
-        if (feedbackForm.rating === 0) {
-            errors.rating = 'Please provide a rating';
-        }
-        if (!validateRequired(feedbackForm.message)) {
-            errors.message = 'Please provide your feedback';
-        }
-        setFeedbackErrors(errors);
-        return Object.keys(errors).length === 0;
-    };
-    const handleFeedbackSubmit = async (e)=>{
-        e.preventDefault();
-        if (!validateFeedbackForm()) return;
-        setFeedbackSubmitting(true);
-        try {
-            await new Promise((resolve)=>setTimeout(resolve, 1500));
-            setShowFeedbackConfirm(true);
-            setFeedbackForm({
-                category: '',
-                rating: 0,
-                message: ''
-            });
-            setFeedbackErrors({});
-        } catch (error) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error('Failed to submit feedback', {
-                description: 'Please try again later.'
-            });
-        } finally{
-            setFeedbackSubmitting(false);
-        }
-    };
     // Join Us Form Handlers
     const validateJoinForm = ()=>{
         const errors = {};
@@ -9562,12 +9412,24 @@ function FooterJoinContact() {
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success('Welcome to the guild!', {
                 description: 'We\'ll be in touch soon with next steps.'
             });
+            // Build WhatsApp message dynamically
+            const { name, email, guild } = joinForm;
+            const message = `Hello, my name is ${name}.
+I would like to join the ${guild} guild.
+Please guide me through the next steps.`;
+            // Encode message for URL (preserves spaces & line breaks)
+            const encodedMessage = encodeURIComponent(message);
+            // WhatsApp link (⚠️ remove + sign, wa.me does not support it)
+            const whatsappLink = `https://wa.me/918441867211/?text=${encodedMessage}`;
+            // Reset form
             setJoinForm({
                 name: '',
                 email: '',
                 guild: ''
             });
             setJoinErrors({});
+            // Redirect to WhatsApp
+            window.location.href = whatsappLink;
         } catch (error) {
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error('Something went wrong', {
                 description: 'Please try again later.'
@@ -9647,11 +9509,19 @@ function FooterJoinContact() {
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success('Message sent!', {
                 description: 'We\'ll get back to you as soon as possible.'
             });
+            // Build WhatsApp message dynamically
+            const { subject, message } = contactForm;
+            const whatsappMessage = `New Inquiry Received\n\nCategory: ${subject}\n\nMessage:\n${message}\n`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappLink = `https://wa.me/918130939274?text=${encodedMessage}`;
+            // Reset form
             setContactForm({
                 subject: '',
                 message: ''
             });
             setContactErrors({});
+            // Redirect to WhatsApp
+            window.location.href = whatsappLink;
         } catch (error) {
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error('Failed to send message', {
                 description: 'Please try again later.'
@@ -9661,95 +9531,95 @@ function FooterJoinContact() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:335:4",
+        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:289:4",
         "data-orchids-name": "footer",
         className: "bg-background border-t border-border",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:336:6",
+            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:290:6",
             "data-orchids-name": "div",
             className: "container mx-auto px-6 py-16",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:338:8",
+                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:292:8",
                     "data-orchids-name": "div",
-                    className: "grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 justify-center",
+                    className: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 justify-center max-w-6xl mx-auto lg:items-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:340:10",
+                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:294:10",
                             "data-orchids-name": "div",
-                            className: "space-y-6 lg:col-start-1",
+                            className: "space-y-6 flex",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:341:12",
+                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:295:12",
                                 "data-orchids-name": "Card",
-                                className: "bg-card border-border",
+                                className: "bg-card border-border flex-1 flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:342:14",
+                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:296:14",
                                         "data-orchids-name": "CardHeader",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:343:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:297:16",
                                                 "data-orchids-name": "CardTitle",
                                                 className: "flex items-center gap-2 text-xl",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:344:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:298:18",
                                                         "data-orchids-name": "Users",
                                                         className: "h-5 w-5 text-primary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 344,
+                                                        lineNumber: 298,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Join Us"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 343,
+                                                lineNumber: 297,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:347:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:301:16",
                                                 "data-orchids-name": "CardDescription",
                                                 children: "Become part of our community and contribute to the future"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 347,
+                                                lineNumber: 301,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                        lineNumber: 342,
+                                        lineNumber: 296,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:351:14",
+                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:305:14",
                                         "data-orchids-name": "CardContent",
-                                        className: "space-y-6",
+                                        className: "space-y-6 flex-1",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:352:16@handleJoinSubmit",
+                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:306:16@handleJoinSubmit",
                                             "data-orchids-name": "form",
                                             onSubmit: handleJoinSubmit,
                                             className: "space-y-4",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:353:18",
+                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:307:18",
                                                     "data-orchids-name": "div",
                                                     className: "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:354:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:308:20",
                                                             "data-orchids-name": "Label",
                                                             htmlFor: "join-name",
                                                             children: "Name"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 354,
+                                                            lineNumber: 308,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:355:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:309:20",
                                                             "data-orchids-name": "Input",
                                                             id: "join-name",
                                                             type: "text",
@@ -9763,11 +9633,11 @@ function FooterJoinContact() {
                                                             "aria-describedby": joinErrors.name ? 'join-name-error' : undefined
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 355,
+                                                            lineNumber: 309,
                                                             columnNumber: 21
                                                         }, this),
                                                         joinErrors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:365:22",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:319:22",
                                                             "data-orchids-name": "p",
                                                             id: "join-name-error",
                                                             className: "text-sm text-destructive",
@@ -9775,32 +9645,32 @@ function FooterJoinContact() {
                                                             children: joinErrors.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 365,
+                                                            lineNumber: 319,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                    lineNumber: 353,
+                                                    lineNumber: 307,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:371:18",
+                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:325:18",
                                                     "data-orchids-name": "div",
                                                     className: "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:372:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:326:20",
                                                             "data-orchids-name": "Label",
                                                             htmlFor: "join-email",
                                                             children: "Email"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 372,
+                                                            lineNumber: 326,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:373:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:327:20",
                                                             "data-orchids-name": "Input",
                                                             id: "join-email",
                                                             type: "email",
@@ -9814,11 +9684,11 @@ function FooterJoinContact() {
                                                             "aria-describedby": joinErrors.email ? 'join-email-error' : undefined
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 373,
+                                                            lineNumber: 327,
                                                             columnNumber: 21
                                                         }, this),
                                                         joinErrors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:383:22",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:337:22",
                                                             "data-orchids-name": "p",
                                                             id: "join-email-error",
                                                             className: "text-sm text-destructive",
@@ -9826,28 +9696,28 @@ function FooterJoinContact() {
                                                             children: joinErrors.email
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 383,
+                                                            lineNumber: 337,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                    lineNumber: 371,
+                                                    lineNumber: 325,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:389:18",
+                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:343:18",
                                                     "data-orchids-name": "div",
                                                     className: "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:390:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:344:20",
                                                             "data-orchids-name": "Label",
                                                             htmlFor: "join-guild",
                                                             children: "Guild Interest"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 390,
+                                                            lineNumber: 344,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -9858,51 +9728,51 @@ function FooterJoinContact() {
                                                                     })),
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:395:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:349:22",
                                                                     "data-orchids-name": "SelectTrigger",
                                                                     id: "join-guild",
                                                                     className: `bg-input border-border focus:border-primary ${joinErrors.guild ? 'border-destructive' : ''}`,
                                                                     "aria-describedby": joinErrors.guild ? 'join-guild-error' : undefined,
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectValue"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:400:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:354:24",
                                                                         "data-orchids-name": "SelectValue",
                                                                         placeholder: "Choose a guild"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 400,
+                                                                        lineNumber: 354,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 395,
+                                                                    lineNumber: 349,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:402:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:356:22",
                                                                     "data-orchids-name": "SelectContent",
                                                                     children: GUILDS.map((guild)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:404:26@GUILDS",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:358:26@GUILDS",
                                                                             "data-orchids-name": "SelectItem",
                                                                             value: guild.value,
                                                                             children: guild.label
                                                                         }, guild.value, false, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 404,
+                                                                            lineNumber: 358,
                                                                             columnNumber: 27
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 402,
+                                                                    lineNumber: 356,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 391,
+                                                            lineNumber: 345,
                                                             columnNumber: 21
                                                         }, this),
                                                         joinErrors.guild && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:411:22",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:365:22",
                                                             "data-orchids-name": "p",
                                                             id: "join-guild-error",
                                                             className: "text-sm text-destructive",
@@ -9910,22 +9780,22 @@ function FooterJoinContact() {
                                                             children: joinErrors.guild
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 411,
+                                                            lineNumber: 365,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                    lineNumber: 389,
+                                                    lineNumber: 343,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:417:18",
+                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:371:18",
                                                     "data-orchids-name": "div",
                                                     className: "flex gap-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:418:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:372:20",
                                                             "data-orchids-name": "motion.div",
                                                             className: "flex-1 relative",
                                                             whileHover: {
@@ -9935,7 +9805,7 @@ function FooterJoinContact() {
                                                                 scale: 0.98
                                                             },
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:423:22",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:377:22",
                                                                 "data-orchids-name": "Button",
                                                                 type: "submit",
                                                                 disabled: joinSubmitting,
@@ -9943,7 +9813,7 @@ function FooterJoinContact() {
                                                                 onClick: (e)=>handleButtonClick('join-quick', e),
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:429:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:383:24",
                                                                         "data-orchids-name": "motion.span",
                                                                         animate: clickedButtons.includes('join-quick') ? {
                                                                             scale: [
@@ -9958,15 +9828,15 @@ function FooterJoinContact() {
                                                                         children: joinSubmitting ? 'Joining...' : 'Quick Join'
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 429,
+                                                                        lineNumber: 383,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:437:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:391:24",
                                                                         "data-orchids-name": "AnimatePresence",
                                                                         children: sparklePositions['join-quick'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                                             children: sparklePositions['join-quick'].map((pos, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:441:32",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:395:32",
                                                                                     "data-orchids-name": "motion.div",
                                                                                     className: "absolute w-1 h-1 bg-white rounded-full pointer-events-none",
                                                                                     style: {
@@ -10003,38 +9873,38 @@ function FooterJoinContact() {
                                                                                     }
                                                                                 }, i, false, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 441,
+                                                                                    lineNumber: 395,
                                                                                     columnNumber: 33
                                                                                 }, this))
                                                                         }, void 0, false)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 437,
+                                                                        lineNumber: 391,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 423,
+                                                                lineNumber: 377,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 418,
+                                                            lineNumber: 372,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:462:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:416:20",
                                                             "data-orchids-name": "Dialog",
                                                             open: showApplyModal,
                                                             onOpenChange: setShowApplyModal,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTrigger"], {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:463:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:417:22",
                                                                     "data-orchids-name": "DialogTrigger",
                                                                     asChild: true,
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:464:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:418:24",
                                                                         "data-orchids-name": "motion.div",
                                                                         whileHover: {
                                                                             scale: 1.02
@@ -10044,14 +9914,14 @@ function FooterJoinContact() {
                                                                         },
                                                                         className: "relative",
                                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:469:26",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:423:26",
                                                                             "data-orchids-name": "Button",
                                                                             variant: "outline",
                                                                             className: "border-border hover:bg-muted relative overflow-hidden",
                                                                             onClick: (e)=>handleButtonClick('join-apply', e),
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:474:28",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:428:28",
                                                                                     "data-orchids-name": "motion.span",
                                                                                     className: "flex items-center gap-1",
                                                                                     animate: clickedButtons.includes('join-apply') ? {
@@ -10067,26 +9937,26 @@ function FooterJoinContact() {
                                                                                     children: [
                                                                                         "Apply",
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:480:30",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:434:30",
                                                                                             "data-orchids-name": "ChevronRight",
                                                                                             className: "h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 480,
+                                                                                            lineNumber: 434,
                                                                                             columnNumber: 31
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 474,
+                                                                                    lineNumber: 428,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:484:28",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:438:28",
                                                                                     "data-orchids-name": "AnimatePresence",
                                                                                     children: sparklePositions['join-apply'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                                                         children: sparklePositions['join-apply'].map((pos, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:488:36",
+                                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:442:36",
                                                                                                 "data-orchids-name": "motion.div",
                                                                                                 className: "absolute pointer-events-none",
                                                                                                 style: {
@@ -10112,97 +9982,97 @@ function FooterJoinContact() {
                                                                                                     className: "w-3 h-3 text-primary"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 497,
+                                                                                                    lineNumber: 451,
                                                                                                     columnNumber: 39
                                                                                                 }, this)
                                                                                             }, i, false, {
                                                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                lineNumber: 488,
+                                                                                                lineNumber: 442,
                                                                                                 columnNumber: 37
                                                                                             }, this))
                                                                                     }, void 0, false)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 484,
+                                                                                    lineNumber: 438,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 469,
+                                                                            lineNumber: 423,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 464,
+                                                                        lineNumber: 418,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 463,
+                                                                    lineNumber: 417,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:506:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:460:22",
                                                                     "data-orchids-name": "DialogContent",
                                                                     className: "bg-popover border-border max-w-2xl max-h-[90vh] overflow-y-auto",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogHeader"], {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:507:24",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:461:24",
                                                                             "data-orchids-name": "DialogHeader",
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:508:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:462:26",
                                                                                     "data-orchids-name": "DialogTitle",
                                                                                     children: "Apply to Join"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 508,
+                                                                                    lineNumber: 462,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:509:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:463:26",
                                                                                     "data-orchids-name": "DialogDescription",
                                                                                     children: "Tell us more about yourself and why you'd like to join our community"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 509,
+                                                                                    lineNumber: 463,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 507,
+                                                                            lineNumber: 461,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:514:24@handleApplySubmit",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:468:24@handleApplySubmit",
                                                                             "data-orchids-name": "form",
                                                                             onSubmit: handleApplySubmit,
                                                                             className: "space-y-6",
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:515:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:469:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "grid grid-cols-1 md:grid-cols-2 gap-4",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:516:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:470:28",
                                                                                             "data-orchids-name": "div",
                                                                                             className: "space-y-2",
                                                                                             children: [
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:517:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:471:30",
                                                                                                     "data-orchids-name": "Label",
                                                                                                     htmlFor: "apply-name",
                                                                                                     children: "Name *"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 517,
+                                                                                                    lineNumber: 471,
                                                                                                     columnNumber: 31
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:518:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:472:30",
                                                                                                     "data-orchids-name": "Input",
                                                                                                     id: "apply-name",
                                                                                                     type: "text",
@@ -10216,11 +10086,11 @@ function FooterJoinContact() {
                                                                                                     "aria-describedby": applyErrors.name ? 'apply-name-error' : undefined
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 518,
+                                                                                                    lineNumber: 472,
                                                                                                     columnNumber: 31
                                                                                                 }, this),
                                                                                                 applyErrors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:528:32",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:482:32",
                                                                                                     "data-orchids-name": "p",
                                                                                                     id: "apply-name-error",
                                                                                                     className: "text-sm text-destructive",
@@ -10228,32 +10098,32 @@ function FooterJoinContact() {
                                                                                                     children: applyErrors.name
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 528,
+                                                                                                    lineNumber: 482,
                                                                                                     columnNumber: 33
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 516,
+                                                                                            lineNumber: 470,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:534:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:488:28",
                                                                                             "data-orchids-name": "div",
                                                                                             className: "space-y-2",
                                                                                             children: [
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:535:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:489:30",
                                                                                                     "data-orchids-name": "Label",
                                                                                                     htmlFor: "apply-email",
                                                                                                     children: "Email *"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 535,
+                                                                                                    lineNumber: 489,
                                                                                                     columnNumber: 31
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:536:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:490:30",
                                                                                                     "data-orchids-name": "Input",
                                                                                                     id: "apply-email",
                                                                                                     type: "email",
@@ -10267,11 +10137,11 @@ function FooterJoinContact() {
                                                                                                     "aria-describedby": applyErrors.email ? 'apply-email-error' : undefined
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 536,
+                                                                                                    lineNumber: 490,
                                                                                                     columnNumber: 31
                                                                                                 }, this),
                                                                                                 applyErrors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:546:32",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:500:32",
                                                                                                     "data-orchids-name": "p",
                                                                                                     id: "apply-email-error",
                                                                                                     className: "text-sm text-destructive",
@@ -10279,34 +10149,34 @@ function FooterJoinContact() {
                                                                                                     children: applyErrors.email
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 546,
+                                                                                                    lineNumber: 500,
                                                                                                     columnNumber: 33
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 534,
+                                                                                            lineNumber: 488,
                                                                                             columnNumber: 29
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 515,
+                                                                                    lineNumber: 469,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:553:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:507:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "space-y-2",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:554:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:508:28",
                                                                                             "data-orchids-name": "Label",
                                                                                             htmlFor: "apply-guild",
                                                                                             children: "Guild Interest *"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 554,
+                                                                                            lineNumber: 508,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -10317,51 +10187,51 @@ function FooterJoinContact() {
                                                                                                     })),
                                                                                             children: [
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:559:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:513:30",
                                                                                                     "data-orchids-name": "SelectTrigger",
                                                                                                     id: "apply-guild",
                                                                                                     className: `bg-input border-border focus:border-primary ${applyErrors.guild ? 'border-destructive' : ''}`,
                                                                                                     "aria-describedby": applyErrors.guild ? 'apply-guild-error' : undefined,
                                                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectValue"], {
-                                                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:564:32",
+                                                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:518:32",
                                                                                                         "data-orchids-name": "SelectValue",
                                                                                                         placeholder: "Choose a guild"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                        lineNumber: 564,
+                                                                                                        lineNumber: 518,
                                                                                                         columnNumber: 33
                                                                                                     }, this)
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 559,
+                                                                                                    lineNumber: 513,
                                                                                                     columnNumber: 31
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
-                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:566:30",
+                                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:520:30",
                                                                                                     "data-orchids-name": "SelectContent",
                                                                                                     children: GUILDS.map((guild)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:568:34@GUILDS",
+                                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:522:34@GUILDS",
                                                                                                             "data-orchids-name": "SelectItem",
                                                                                                             value: guild.value,
                                                                                                             children: guild.label
                                                                                                         }, guild.value, false, {
                                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                            lineNumber: 568,
+                                                                                                            lineNumber: 522,
                                                                                                             columnNumber: 35
                                                                                                         }, this))
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                    lineNumber: 566,
+                                                                                                    lineNumber: 520,
                                                                                                     columnNumber: 31
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 555,
+                                                                                            lineNumber: 509,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         applyErrors.guild && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:575:30",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:529:30",
                                                                                             "data-orchids-name": "p",
                                                                                             id: "apply-guild-error",
                                                                                             className: "text-sm text-destructive",
@@ -10369,32 +10239,32 @@ function FooterJoinContact() {
                                                                                             children: applyErrors.guild
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 575,
+                                                                                            lineNumber: 529,
                                                                                             columnNumber: 31
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 553,
+                                                                                    lineNumber: 507,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:581:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:535:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "space-y-2",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:582:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:536:28",
                                                                                             "data-orchids-name": "Label",
                                                                                             htmlFor: "apply-experience",
                                                                                             children: "Experience & Skills *"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 582,
+                                                                                            lineNumber: 536,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:583:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:537:28",
                                                                                             "data-orchids-name": "Textarea",
                                                                                             id: "apply-experience",
                                                                                             value: applyForm.experience,
@@ -10408,11 +10278,11 @@ function FooterJoinContact() {
                                                                                             "aria-describedby": applyErrors.experience ? 'apply-experience-error' : undefined
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 583,
+                                                                                            lineNumber: 537,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         applyErrors.experience && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:593:30",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:547:30",
                                                                                             "data-orchids-name": "p",
                                                                                             id: "apply-experience-error",
                                                                                             className: "text-sm text-destructive",
@@ -10420,32 +10290,32 @@ function FooterJoinContact() {
                                                                                             children: applyErrors.experience
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 593,
+                                                                                            lineNumber: 547,
                                                                                             columnNumber: 31
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 581,
+                                                                                    lineNumber: 535,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:599:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:553:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "space-y-2",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:600:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:554:28",
                                                                                             "data-orchids-name": "Label",
                                                                                             htmlFor: "apply-motivation",
                                                                                             children: "Why do you want to join? *"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 600,
+                                                                                            lineNumber: 554,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:601:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:555:28",
                                                                                             "data-orchids-name": "Textarea",
                                                                                             id: "apply-motivation",
                                                                                             value: applyForm.motivation,
@@ -10459,11 +10329,11 @@ function FooterJoinContact() {
                                                                                             "aria-describedby": applyErrors.motivation ? 'apply-motivation-error' : undefined
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 601,
+                                                                                            lineNumber: 555,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         applyErrors.motivation && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:611:30",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:565:30",
                                                                                             "data-orchids-name": "p",
                                                                                             id: "apply-motivation-error",
                                                                                             className: "text-sm text-destructive",
@@ -10471,32 +10341,32 @@ function FooterJoinContact() {
                                                                                             children: applyErrors.motivation
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 611,
+                                                                                            lineNumber: 565,
                                                                                             columnNumber: 31
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 599,
+                                                                                    lineNumber: 553,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:617:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:571:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "space-y-2",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:618:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:572:28",
                                                                                             "data-orchids-name": "Label",
                                                                                             htmlFor: "apply-portfolio",
                                                                                             children: "Portfolio/GitHub (Optional)"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 618,
+                                                                                            lineNumber: 572,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:619:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:573:28",
                                                                                             "data-orchids-name": "Input",
                                                                                             id: "apply-portfolio",
                                                                                             type: "url",
@@ -10509,22 +10379,22 @@ function FooterJoinContact() {
                                                                                             placeholder: "https://..."
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 619,
+                                                                                            lineNumber: 573,
                                                                                             columnNumber: 29
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 617,
+                                                                                    lineNumber: 571,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:629:26",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:583:26",
                                                                                     "data-orchids-name": "div",
                                                                                     className: "flex justify-end gap-3",
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:630:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:584:28",
                                                                                             "data-orchids-name": "Button",
                                                                                             type: "button",
                                                                                             variant: "outline",
@@ -10533,11 +10403,11 @@ function FooterJoinContact() {
                                                                                             children: "Cancel"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 630,
+                                                                                            lineNumber: 584,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:638:28",
+                                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:592:28",
                                                                                             "data-orchids-name": "motion.div",
                                                                                             whileHover: {
                                                                                                 scale: 1.02
@@ -10546,7 +10416,7 @@ function FooterJoinContact() {
                                                                                                 scale: 0.98
                                                                                             },
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:642:30",
+                                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:596:30",
                                                                                                 "data-orchids-name": "Button",
                                                                                                 type: "submit",
                                                                                                 disabled: applySubmitting,
@@ -10554,127 +10424,127 @@ function FooterJoinContact() {
                                                                                                 children: applySubmitting ? 'Submitting...' : 'Submit Application'
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                                lineNumber: 642,
+                                                                                                lineNumber: 596,
                                                                                                 columnNumber: 31
                                                                                             }, this)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                            lineNumber: 638,
+                                                                                            lineNumber: 592,
                                                                                             columnNumber: 29
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 629,
+                                                                                    lineNumber: 583,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 514,
+                                                                            lineNumber: 468,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 506,
+                                                                    lineNumber: 460,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 462,
+                                                            lineNumber: 416,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                    lineNumber: 417,
+                                                    lineNumber: 371,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 306,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                        lineNumber: 351,
+                                        lineNumber: 305,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                lineNumber: 341,
+                                lineNumber: 295,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                            lineNumber: 340,
+                            lineNumber: 294,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:661:10",
+                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:615:10",
                             "data-orchids-name": "div",
-                            className: "space-y-6",
+                            className: "space-y-6 flex",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:662:12",
+                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:616:12",
                                 "data-orchids-name": "Card",
-                                className: "bg-card border-border",
+                                className: "bg-card border-border flex-1 flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:663:14",
+                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:617:14",
                                         "data-orchids-name": "CardHeader",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:664:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:618:16",
                                                 "data-orchids-name": "CardTitle",
                                                 className: "flex items-center gap-2 text-xl",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:665:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:619:18",
                                                         "data-orchids-name": "Mail",
                                                         className: "h-5 w-5 text-primary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 665,
+                                                        lineNumber: 619,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Contact"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 664,
+                                                lineNumber: 618,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:668:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:622:16",
                                                 "data-orchids-name": "CardDescription",
                                                 children: "Get in touch with our team"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 668,
+                                                lineNumber: 622,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                        lineNumber: 663,
+                                        lineNumber: 617,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:672:14",
+                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:626:14",
                                         "data-orchids-name": "CardContent",
-                                        className: "space-y-6",
+                                        className: "space-y-6 flex-1 flex flex-col",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:674:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:628:16",
                                                 "data-orchids-name": "div",
                                                 className: "space-y-4",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:675:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:629:18",
                                                         "data-orchids-name": "motion.div",
                                                         className: "flex items-start gap-3",
                                                         whileHover: {
@@ -10685,63 +10555,63 @@ function FooterJoinContact() {
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:680:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:634:20",
                                                                 "data-orchids-name": "MapPin",
                                                                 className: "h-4 w-4 text-muted-foreground mt-1 shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 680,
+                                                                lineNumber: 634,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:681:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:635:20",
                                                                 "data-orchids-name": "div",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:682:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:636:22",
                                                                         "data-orchids-name": "p",
                                                                         className: "text-sm font-medium",
                                                                         children: "Address"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 682,
+                                                                        lineNumber: 636,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:683:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:637:22",
                                                                         "data-orchids-name": "p",
                                                                         className: "text-sm text-muted-foreground",
                                                                         children: [
                                                                             "123 Innovation Drive",
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
-                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:684:44",
+                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:638:44",
                                                                                 "data-orchids-name": "br"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                lineNumber: 684,
+                                                                                lineNumber: 638,
                                                                                 columnNumber: 45
                                                                             }, this),
                                                                             "San Francisco, CA 94107"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 683,
+                                                                        lineNumber: 637,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 681,
+                                                                lineNumber: 635,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 675,
+                                                        lineNumber: 629,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:690:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:644:18",
                                                         "data-orchids-name": "motion.div",
                                                         className: "flex items-center gap-3",
                                                         whileHover: {
@@ -10752,53 +10622,53 @@ function FooterJoinContact() {
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:695:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:649:20",
                                                                 "data-orchids-name": "Mail",
                                                                 className: "h-4 w-4 text-muted-foreground shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 695,
+                                                                lineNumber: 649,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:696:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:650:20",
                                                                 "data-orchids-name": "div",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:697:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:651:22",
                                                                         "data-orchids-name": "p",
                                                                         className: "text-sm font-medium",
                                                                         children: "Email"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 697,
+                                                                        lineNumber: 651,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:698:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:652:22",
                                                                         "data-orchids-name": "a",
                                                                         href: "mailto:hello@example.com",
                                                                         className: "text-sm text-primary hover:underline",
                                                                         children: "hello@example.com"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 698,
+                                                                        lineNumber: 652,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 696,
+                                                                lineNumber: 650,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 690,
+                                                        lineNumber: 644,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:704:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:658:18",
                                                         "data-orchids-name": "motion.div",
                                                         className: "flex items-center gap-3",
                                                         whileHover: {
@@ -10809,62 +10679,62 @@ function FooterJoinContact() {
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__["Phone"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:709:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:663:20",
                                                                 "data-orchids-name": "Phone",
                                                                 className: "h-4 w-4 text-muted-foreground shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 709,
+                                                                lineNumber: 663,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:710:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:664:20",
                                                                 "data-orchids-name": "div",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:711:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:665:22",
                                                                         "data-orchids-name": "p",
                                                                         className: "text-sm font-medium",
                                                                         children: "Phone"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 711,
+                                                                        lineNumber: 665,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:712:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:666:22",
                                                                         "data-orchids-name": "a",
-                                                                        href: "tel:+1-555-0123",
+                                                                        href: "tel:+91-8441867211",
                                                                         className: "text-sm text-primary hover:underline",
-                                                                        children: "+1 (555) 012-3456"
+                                                                        children: "+91 8441867211"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 712,
+                                                                        lineNumber: 666,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 710,
+                                                                lineNumber: 664,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 704,
+                                                        lineNumber: 658,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:719:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:673:18",
                                                         "data-orchids-name": "div",
                                                         className: "flex items-center gap-3",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:720:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:674:20",
                                                             "data-orchids-name": "div",
                                                             className: "flex items-center gap-2",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:721:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:675:22",
                                                                     "data-orchids-name": "motion.a",
                                                                     href: "https://github.com",
                                                                     className: "p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors",
@@ -10877,21 +10747,21 @@ function FooterJoinContact() {
                                                                         scale: 0.9
                                                                     },
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__["Github"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:728:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:682:24",
                                                                         "data-orchids-name": "Github",
                                                                         className: "h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 728,
+                                                                        lineNumber: 682,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 721,
+                                                                    lineNumber: 675,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:730:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:684:22",
                                                                     "data-orchids-name": "motion.a",
                                                                     href: "https://twitter.com",
                                                                     className: "p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors",
@@ -10904,21 +10774,21 @@ function FooterJoinContact() {
                                                                         scale: 0.9
                                                                     },
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__["Twitter"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:737:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:691:24",
                                                                         "data-orchids-name": "Twitter",
                                                                         className: "h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 737,
+                                                                        lineNumber: 691,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 730,
+                                                                    lineNumber: 684,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:739:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:693:22",
                                                                     "data-orchids-name": "motion.a",
                                                                     href: "https://linkedin.com",
                                                                     className: "p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors",
@@ -10931,64 +10801,64 @@ function FooterJoinContact() {
                                                                         scale: 0.9
                                                                     },
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:746:24",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:700:24",
                                                                         "data-orchids-name": "Linkedin",
                                                                         className: "h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 746,
+                                                                        lineNumber: 700,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 739,
+                                                                    lineNumber: 693,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 720,
+                                                            lineNumber: 674,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 719,
+                                                        lineNumber: 673,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 674,
+                                                lineNumber: 628,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Separator"], {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:752:16",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:706:16",
                                                 "data-orchids-name": "Separator",
                                                 className: "bg-border"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 752,
+                                                lineNumber: 706,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:755:16@handleContactSubmit",
+                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:709:16@handleContactSubmit",
                                                 "data-orchids-name": "form",
                                                 onSubmit: handleContactSubmit,
                                                 className: "space-y-4",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:756:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:710:18",
                                                         "data-orchids-name": "div",
                                                         className: "space-y-2",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:757:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:711:20",
                                                                 "data-orchids-name": "Label",
                                                                 htmlFor: "contact-subject",
                                                                 children: "Subject"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 757,
+                                                                lineNumber: 711,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -10999,51 +10869,51 @@ function FooterJoinContact() {
                                                                         })),
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:762:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:716:22",
                                                                         "data-orchids-name": "SelectTrigger",
                                                                         id: "contact-subject",
                                                                         className: `bg-input border-border focus:border-primary ${contactErrors.subject ? 'border-destructive' : ''}`,
                                                                         "aria-describedby": contactErrors.subject ? 'contact-subject-error' : undefined,
                                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectValue"], {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:767:24",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:721:24",
                                                                             "data-orchids-name": "SelectValue",
                                                                             placeholder: "Select subject"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 767,
+                                                                            lineNumber: 721,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 762,
+                                                                        lineNumber: 716,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
-                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:769:22",
+                                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:723:22",
                                                                         "data-orchids-name": "SelectContent",
                                                                         children: CONTACT_SUBJECTS.map((subject)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:771:26@CONTACT_SUBJECTS",
+                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:725:26@CONTACT_SUBJECTS",
                                                                                 "data-orchids-name": "SelectItem",
                                                                                 value: subject.value,
                                                                                 children: subject.label
                                                                             }, subject.value, false, {
                                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                lineNumber: 771,
+                                                                                lineNumber: 725,
                                                                                 columnNumber: 27
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                        lineNumber: 769,
+                                                                        lineNumber: 723,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 758,
+                                                                lineNumber: 712,
                                                                 columnNumber: 21
                                                             }, this),
                                                             contactErrors.subject && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:778:22",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:732:22",
                                                                 "data-orchids-name": "p",
                                                                 id: "contact-subject-error",
                                                                 className: "text-sm text-destructive",
@@ -11051,32 +10921,32 @@ function FooterJoinContact() {
                                                                 children: contactErrors.subject
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 778,
+                                                                lineNumber: 732,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 756,
+                                                        lineNumber: 710,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:784:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:738:18",
                                                         "data-orchids-name": "div",
                                                         className: "space-y-2",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:785:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:739:20",
                                                                 "data-orchids-name": "Label",
                                                                 htmlFor: "contact-message",
                                                                 children: "Message"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 785,
+                                                                lineNumber: 739,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:786:20",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:740:20",
                                                                 "data-orchids-name": "Textarea",
                                                                 id: "contact-message",
                                                                 value: contactForm.message,
@@ -11090,11 +10960,11 @@ function FooterJoinContact() {
                                                                 "aria-describedby": contactErrors.message ? 'contact-message-error' : undefined
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 786,
+                                                                lineNumber: 740,
                                                                 columnNumber: 21
                                                             }, this),
                                                             contactErrors.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:796:22",
+                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:750:22",
                                                                 "data-orchids-name": "p",
                                                                 id: "contact-message-error",
                                                                 className: "text-sm text-destructive",
@@ -11102,17 +10972,17 @@ function FooterJoinContact() {
                                                                 children: contactErrors.message
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                lineNumber: 796,
+                                                                lineNumber: 750,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 784,
+                                                        lineNumber: 738,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:802:18",
+                                                        "data-orchids-id": "src\\components\\FooterJoinContact.tsx:756:18",
                                                         "data-orchids-name": "motion.div",
                                                         whileHover: {
                                                             scale: 1.02
@@ -11122,7 +10992,7 @@ function FooterJoinContact() {
                                                         },
                                                         className: "relative",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:807:20",
+                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:761:20",
                                                             "data-orchids-name": "Button",
                                                             type: "submit",
                                                             disabled: contactSubmitting,
@@ -11130,7 +11000,7 @@ function FooterJoinContact() {
                                                             onClick: (e)=>handleButtonClick('contact-send', e),
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:813:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:767:22",
                                                                     "data-orchids-name": "motion.div",
                                                                     className: "flex items-center gap-2",
                                                                     animate: clickedButtons.includes('contact-send') ? {
@@ -11145,27 +11015,27 @@ function FooterJoinContact() {
                                                                     },
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
-                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:818:24",
+                                                                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:772:24",
                                                                             "data-orchids-name": "Send",
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                            lineNumber: 818,
+                                                                            lineNumber: 772,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         contactSubmitting ? 'Sending...' : 'Send Message'
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 813,
+                                                                    lineNumber: 767,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:823:22",
+                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:777:22",
                                                                     "data-orchids-name": "AnimatePresence",
                                                                     children: sparklePositions['contact-send'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                                         children: sparklePositions['contact-send'].map((pos, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:827:30",
+                                                                                "data-orchids-id": "src\\components\\FooterJoinContact.tsx:781:30",
                                                                                 "data-orchids-name": "motion.div",
                                                                                 className: "absolute pointer-events-none",
                                                                                 style: {
@@ -11187,88 +11057,87 @@ function FooterJoinContact() {
                                                                                     delay: i * 0.1
                                                                                 },
                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
-                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:836:32",
+                                                                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:790:32",
                                                                                     "data-orchids-name": "Zap",
                                                                                     className: "w-3 h-3 text-yellow-400"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                    lineNumber: 836,
+                                                                                    lineNumber: 790,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, i, false, {
                                                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                                lineNumber: 827,
+                                                                                lineNumber: 781,
                                                                                 columnNumber: 31
                                                                             }, this))
                                                                     }, void 0, false)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                                    lineNumber: 823,
+                                                                    lineNumber: 777,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                            lineNumber: 807,
+                                                            lineNumber: 761,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                        lineNumber: 802,
+                                                        lineNumber: 756,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                                lineNumber: 755,
+                                                lineNumber: 709,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                        lineNumber: 672,
+                                        lineNumber: 626,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                lineNumber: 662,
+                                lineNumber: 616,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                            lineNumber: 661,
+                            lineNumber: 615,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                    lineNumber: 338,
+                    lineNumber: 292,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Separator"], {
-                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:851:8",
+                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:805:8",
                     "data-orchids-name": "Separator",
                     className: "bg-border mb-8"
                 }, void 0, false, {
                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                    lineNumber: 851,
+                    lineNumber: 805,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:853:8",
+                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:807:8",
                     "data-orchids-name": "div",
                     className: "flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:855:10",
+                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:809:10",
                             "data-orchids-name": "div",
                             className: "flex flex-wrap items-center gap-6",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:856:12",
-                                    "data-orchids-name": "motion.a",
-                                    href: "/privacy",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:810:12",
+                                    "data-orchids-name": "motion.p",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11276,13 +11145,12 @@ function FooterJoinContact() {
                                     children: "Privacy Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 856,
+                                    lineNumber: 810,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:863:12",
-                                    "data-orchids-name": "motion.a",
-                                    href: "/terms",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:816:12",
+                                    "data-orchids-name": "motion.p",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11290,13 +11158,12 @@ function FooterJoinContact() {
                                     children: "Terms of Service"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 863,
+                                    lineNumber: 816,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:870:12",
-                                    "data-orchids-name": "motion.a",
-                                    href: "/cookies",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:822:12",
+                                    "data-orchids-name": "motion.p",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11304,13 +11171,12 @@ function FooterJoinContact() {
                                     children: "Cookie Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 870,
+                                    lineNumber: 822,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:877:12",
-                                    "data-orchids-name": "motion.a",
-                                    href: "/accessibility",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:828:12",
+                                    "data-orchids-name": "motion.p",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11318,22 +11184,22 @@ function FooterJoinContact() {
                                     children: "Accessibility"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 877,
+                                    lineNumber: 828,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                            lineNumber: 855,
+                            lineNumber: 809,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:887:10",
+                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:837:10",
                             "data-orchids-name": "div",
                             className: "flex flex-wrap items-center gap-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:888:12",
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:838:12",
                                     "data-orchids-name": "motion.a",
                                     href: "/",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
@@ -11343,13 +11209,13 @@ function FooterJoinContact() {
                                     children: "Home"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 888,
+                                    lineNumber: 838,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:895:12",
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:845:12",
                                     "data-orchids-name": "motion.a",
-                                    href: "/about",
+                                    href: "#members",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11357,13 +11223,13 @@ function FooterJoinContact() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 895,
+                                    lineNumber: 845,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:902:12",
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:852:12",
                                     "data-orchids-name": "motion.a",
-                                    href: "/events",
+                                    href: "#events",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11371,13 +11237,13 @@ function FooterJoinContact() {
                                     children: "Events"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 902,
+                                    lineNumber: 852,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:909:12",
+                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:859:12",
                                     "data-orchids-name": "motion.a",
-                                    href: "/guilds",
+                                    href: "#guilds",
                                     className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
                                     whileHover: {
                                         scale: 1.05
@@ -11385,54 +11251,40 @@ function FooterJoinContact() {
                                     children: "Guilds"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 909,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
-                                    "data-orchids-id": "src\\components\\FooterJoinContact.tsx:916:12",
-                                    "data-orchids-name": "motion.a",
-                                    href: "/resources",
-                                    className: "text-sm text-muted-foreground hover:text-foreground transition-colors",
-                                    whileHover: {
-                                        scale: 1.05
-                                    },
-                                    children: "Resources"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/FooterJoinContact.tsx",
-                                    lineNumber: 916,
+                                    lineNumber: 859,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                            lineNumber: 887,
+                            lineNumber: 837,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:926:10",
+                            "data-orchids-id": "src\\components\\FooterJoinContact.tsx:869:10",
                             "data-orchids-name": "div",
                             className: "text-sm text-muted-foreground",
-                            children: "© 2024 Community Platform. All rights reserved."
+                            children: "© 2025 Community Platform. All rights reserved."
                         }, void 0, false, {
                             fileName: "[project]/src/components/FooterJoinContact.tsx",
-                            lineNumber: 926,
+                            lineNumber: 869,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/FooterJoinContact.tsx",
-                    lineNumber: 853,
+                    lineNumber: 807,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/FooterJoinContact.tsx",
-            lineNumber: 336,
+            lineNumber: 290,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/FooterJoinContact.tsx",
-        lineNumber: 335,
+        lineNumber: 289,
         columnNumber: 5
     }, this);
 }
