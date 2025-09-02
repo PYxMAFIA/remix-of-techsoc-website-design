@@ -18,6 +18,7 @@ import {
   MapPin,
   Github,
   Twitter,
+  Instagram,
   Linkedin,
   Send,
   Star,
@@ -286,7 +287,7 @@ Please guide me through the next steps.`
 
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background border-t border-border" id="footer">
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 justify-center max-w-6xl mx-auto lg:items-start">
@@ -635,8 +636,8 @@ Please guide me through the next steps.`
                     <div>
                       <p className="text-sm font-medium">Address</p>
                       <p className="text-sm text-muted-foreground">
-                        123 Innovation Drive<br />
-                        San Francisco, CA 94107
+                        Delhi Technology University<br />
+                        Delhi, India
                       </p>
                     </div>
                   </motion.div>
@@ -649,8 +650,8 @@ Please guide me through the next steps.`
                     <Mail className="h-4 w-4 text-muted-foreground shrink-0" />
                     <div>
                       <p className="text-sm font-medium">Email</p>
-                      <a href="mailto:hello@example.com" className="text-sm text-primary hover:underline">
-                        hello@example.com
+                      <a href="mailto:roundtabledtu@gmail.com" className="text-sm text-primary hover:underline">
+                        roundtabledtu@gmail.com
                       </a>
                     </div>
                   </motion.div>
@@ -672,26 +673,17 @@ Please guide me through the next steps.`
                   {/* Social Links */}
                   <div className="flex items-center gap-3">
                     <div className="flex items-center gap-2">
-                      <motion.a
-                        href="https://github.com"
+                        <motion.a
+                        href="https://www.instagram.com/roundtable_dtu/"
                         className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
-                        aria-label="GitHub"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <Github className="h-4 w-4" />
-                      </motion.a>
-                      <motion.a
-                        href="https://twitter.com"
-                        className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
-                        aria-label="Twitter"
+                        aria-label="Instagram"
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         whileTap={{ scale: 0.9 }}
-                      >
-                        <Twitter className="h-4 w-4" />
-                      </motion.a>
+                        >
+                        <Instagram className="h-4 w-4" />
+                        </motion.a>
                       <motion.a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/company/round-table-dtu/"
                         className="p-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
                         aria-label="LinkedIn"
                         whileHover={{ scale: 1.1, rotate: 5 }}

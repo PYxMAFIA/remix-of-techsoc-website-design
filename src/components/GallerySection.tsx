@@ -414,53 +414,6 @@ export default function GallerySection({ className = "" }: GallerySectionProps) 
 
   return (
     <div className={`bg-background ${className}`}>
-      {/* Header with filters and upload button */}
-      <motion.div
-        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
-        viewport={{ once: true }}
-        className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8"
-      >
-        <div className="flex flex-wrap gap-2">
-          {FILTER_OPTIONS.map((filter, index) => {
-            const Icon = filter.icon
-            return (
-              <motion.div
-                key={filter.value}
-                initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Button
-                  variant={activeFilter === filter.value ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setActiveFilter(filter.value)}
-                  className="h-9 relative overflow-hidden group"
-                >
-                  <motion.div 
-                    className="flex items-center gap-2"
-                    whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                    whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
-                  >
-                    <Icon className="w-4 h-4" />
-                    {filter.label}
-                  </motion.div>
-                  {activeFilter === filter.value && !prefersReducedMotion && (
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"
-                      layoutId="activeFilter"
-                      transition={{ duration: 0.3 }}
-                    />
-                  )}
-                </Button>
-              </motion.div>
-            )
-          })}
-        </div>
-      </motion.div>
-
       {/* Masonry Grid with Enhanced Animations */}
       <motion.div 
         variants={containerVariants}

@@ -371,12 +371,19 @@ export default function GuildsSection() {
                   </Dialog>
 
                   <Dialog>
-                    <DialogTrigger asChild>
-                      <Button size="sm" className="flex-1">
-                        <UserPlus className="h-4 w-4 mr-2" />
-                        Join
-                      </Button>
-                    </DialogTrigger>
+                    <Button
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => {
+                        const footer = document.getElementById("footer");
+                        if (footer) {
+                          footer.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                    >
+                      <UserPlus className="h-4 w-4 mr-2" />
+                      Join
+                    </Button>
                     <DialogContent>
                       <DialogHeader>
                         <DialogTitle>Request to Join {guild.name}</DialogTitle>

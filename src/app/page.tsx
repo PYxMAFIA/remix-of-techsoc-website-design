@@ -32,9 +32,9 @@ export default function HomePage() {
           
           <div className="w-full h-px bg-border my-16" />
           
-          <section id="events" className="scroll-mt-16 py-16">
+          {/* <section id="events" className="scroll-mt-16 py-16">
             <EventsSection />
-          </section>
+          </section> */}
           
           <div className="w-full h-px bg-border my-16" />
           

@@ -17,66 +17,60 @@ interface Testimonial {
 
 const mockTestimonials: Testimonial[] = [
   {
-    id: "1",
-    name: "Sarah Chen",
-    role: "Former President",
-    quote: "Being part of this tech society was transformative. The projects we built, the hackathons we won, and the lifelong connections I made here shaped my entire career trajectory.",
-    photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-  },
-  {
     id: "2",
-    name: "Marcus Rodriguez",
-    role: "Alumni",
-    quote: "The collaborative environment here taught me more about software engineering than any textbook could. From React to AI/ML, we explored cutting-edge technologies together.",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-
+    name: "Archit",
+    role: "Co-head",
+    quote: "This society is really very good. Seniors guided me so well during placements and even helped me in bagging my internship. The coding sessions here boosted my confidence a lot.",
+    photo: "./Members/archit.jpg",
   },
   {
     id: "3",
-    name: "Emily Watson",
-    role: "Former VP Engineering",
-    quote: "Leading technical workshops and mentoring new members gave me invaluable leadership experience. This society is where I discovered my passion for developer advocacy.",
-    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-
+    name: "Priya Sharma",
+    role: "Data Analyst at Flipkart",
+    quote: "Joining this society was one of my best decisions. I got real exposure to projects and the seniors were always ready to help. Their mentorship played a huge role in my career growth.",
+    photo: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
   },
   {
     id: "4",
-    name: "David Park",
-    role: "Alumni",
-    quote: "The 24-hour hackathons were legendary! Nothing beats the rush of building something amazing with your friends. Those late nights debugging taught me perseverance.",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-
+    name: "Rohan Gupta",
+    role: "SDE at Amazon",
+    quote: "The culture here is amazing. I learned teamwork, leadership and got guidance from seniors for internships. Society events and hackathons gave me the perfect industry exposure.",
+    photo: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=150&h=150&fit=crop&crop=face",
   },
   {
     id: "5",
-    name: "Aisha Patel",
-    role: "Former Secretary",
-    quote: "From organizing tech talks to coordinating industry partnerships, this society gave me incredible project management skills that I use every day in my startup.",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-
+    name: "Ananya Singh",
+    role: "Research Intern at IIT Bombay",
+    quote: "This society really shaped my journey. From coding contests to mentorship, everything was so valuable. Seniors personally helped me prepare for interviews and research internships.",
+    photo: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
   },
   {
     id: "6",
-    name: "James Liu",
-    role: "Alumni",
-    quote: "The open-source projects we contributed to gave me real-world experience that made my resume stand out. Recruiters were impressed by our GitHub contributions.",
-    photo: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
-
+    name: "Vikram Nair",
+    role: "Backend Developer at Zomato",
+    quote: "I still remember how the seniors guided me step by step during internship season. The projects I worked on in this society were directly useful in my interviews. Very good platform!",
+    photo: "https://images.unsplash.com/photo-1502767089025-6572583495b0?w=150&h=150&fit=crop&crop=face",
   },
   {
     id: "7",
-    name: "Sophie Anderson",
-    role: "Former Treasurer",
-    quote: "The mentorship I received here was incredible. Senior members genuinely cared about our growth and helped us navigate both technical challenges and career decisions.",
-    photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+    name: "Neha Verma",
+    role: "Frontend Developer at Swiggy",
+    quote: "This society is not just about coding but also about bonding. Seniors always encouraged us, reviewed our resumes, and helped us crack internships. Best decision to join here.",
+    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
   },
   {
     id: "8",
-    name: "Ryan Thompson",
-    role: "Alumni",
-    quote: "This society isn't just about coding - it's about building the future together. The entrepreneurial spirit here inspired me to start my own tech company.",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-
+    name: "Arjun Patel",
+    role: "AI/ML Engineer at TCS",
+    quote: "The projects, the culture, the guidance – everything was just perfect. Seniors helped me with interview prep and also connected me with industry people. Truly a life-changing society.",
+    photo: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150&h=150&fit=crop&crop=face",
+  },
+  {
+    id: "9",
+    name: "Kavya Iyer",
+    role: "Product Designer at Paytm",
+    quote: "This society gave me confidence to pursue my career. Seniors were very supportive and even helped me get design internship opportunities. A very good place to grow and learn.",
+    photo: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=150&h=150&fit=crop&crop=face",
   }
 ];
 
