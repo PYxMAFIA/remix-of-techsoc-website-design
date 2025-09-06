@@ -44,9 +44,9 @@ export default function HomePage() {
           
           <div className="w-full h-px bg-border my-16" />
           
-          <section id="testimonials" className="scroll-mt-16">
+{/*           <section id="testimonials" className="scroll-mt-16">
             <TestimonialsSection />
-          </section>
+          </section> */}
           
           <div className="w-full h-px bg-border my-16" />
           
