@@ -24,114 +24,135 @@ import {
 interface Project {
   id: string;
   title: string;
-  description: string;
   techStack: string[];
-  category: 'Web Apps' | 'Mobile Apps' | 'AI/ML' | 'Open Source' | 'Finance' | 'Games';
+  category: 'Web Apps' | 'Mobile Apps' | 'AI/ML' | 'Finance';
   author: {
     name: string;
     avatar: string;
-    role: string;
   };
   image: string;
   githubUrl: string;
-  liveUrl?: string;
-  createdAt: string;
+  liveUrl: string;
 }
 
 const mockProjects: Project[] = [
   {
     id: '1',
-    title: 'TaskFlow Pro',
-    description: 'A collaborative project management platform with real-time updates, Kanban boards, and team analytics.',
-    techStack: ['React', 'Node.js', 'Socket.io', 'PostgreSQL', 'Tailwind CSS'],
+    title: 'Chat App',
+    techStack: ['ReactJs', 'Node.js', 'Mongo-DB', 'Tailwind CSS'],
     category: 'Web Apps',
     author: {
-      name: 'Sarah Chen',
-      avatar: '/api/placeholder/40/40',
-      role: 'Full Stack Developer'
+      name: 'Piyus Kumar',
+      avatar: './Members/piyush.jpg'
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/sarahchen/taskflow-pro',
-    liveUrl: 'https://taskflow-pro.vercel.app',
-    createdAt: '2024-01-15'
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/PYxMAFIA/chat-app',
+    liveUrl: 'https://chat-app-s7hd.onrender.com/',
   },
   {
     id: '2',
-    title: 'MindReader AI',
-    description: 'An AI-powered sentiment analysis tool that processes text and provides emotional insights with visualization.',
-    techStack: ['Python', 'TensorFlow', 'FastAPI', 'React', 'D3.js'],
-    category: 'AI/ML',
+    title: 'Spotify-designed local music player',
+    techStack: ['Html', 'VanillaCSS', 'Vanilla Js'],
+    category: 'Web Apps',
     author: {
-      name: 'Marcus Johnson',
-      avatar: '/api/placeholder/40/40',
-      role: 'ML Engineer'
+      name: 'Bibhu Kumar Singh',
+      avatar: './Members/bibhu.jpg'
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/mjohnson/mindreader-ai',
-    liveUrl: 'https://mindreader-ai.com',
-    createdAt: '2024-02-03'
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/bib58/Spotify_cloned',
+    liveUrl: 'https://bib58.github.io/Spotify_cloned/'
   },
   {
     id: '3',
-    title: 'FitTracker Mobile',
-    description: 'Cross-platform fitness tracking app with workout plans, progress analytics, and social features.',
-    techStack: ['React Native', 'Expo', 'Firebase', 'Redux', 'TypeScript'],
-    category: 'Mobile Apps',
+    title: 'Budget Bee',
+    techStack: ['ReactJs`'],
+    category: 'Web Apps',
     author: {
-      name: 'Emma Rodriguez',
-      avatar: '/api/placeholder/40/40',
-      role: 'Mobile Developer'
+      name: 'Gautam Swami',
+      avatar: './Members/gautam.jpg',
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/erodriguez/fittracker',
-    createdAt: '2024-01-28'
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://gautam2401.github.io/BudgetBee/',
+    liveUrl: 'https://gautam2401.github.io/BudgetBee/',
   },
   {
     id: '4',
-    title: 'DevTools CLI',
-    description: 'A powerful command-line interface for developers with project scaffolding, code generation, and deployment tools.',
-    techStack: ['Go', 'Cobra', 'Docker', 'GitHub Actions'],
-    category: 'Finance',
+    title: 'Notes',
+    techStack: ['ReactJs', 'Node.js', 'Mongo-DB', 'Tailwind CSS'],
+    category: 'Web Apps',
     author: {
-      name: 'Alex Kim',
-      avatar: '/api/placeholder/40/40',
-      role: 'DevOps Engineer'
+      name: 'Piyus Kumar',
+      avatar: './Members/piyush.jpg',
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/alexkim/devtools-cli',
-    createdAt: '2024-02-10'
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/PYxMAFIA/mern-Keeper',
+    liveUrl: 'https://mern-keeper-y2l2.onrender.com/',
   },
   {
     id: '5',
-    title: 'EcoSim Game',
-    description: 'An educational ecosystem simulation game teaching environmental science through interactive gameplay.',
-    techStack: ['Unity', 'C#', 'WebGL', 'Firebase'],
-    category: 'Games',
+    title: 'Dsa instructor',
+    techStack: ['Html', 'Vanilla CSS', 'Vanilla JS', "API's"],
+    category: 'Web Apps',
     author: {
-      name: 'Zoe Williams',
-      avatar: '/api/placeholder/40/40',
-      role: 'Game Developer'
+      name: 'Bibhu Kumar Singh',
+      avatar: './Members/bibhu.jpg',
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/zoewilliams/ecosim',
-    liveUrl: 'https://ecosim-game.netlify.app',
-    createdAt: '2024-01-22'
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/bib58/dsa_guru',
+    liveUrl: 'https://bib58.github.io/dsa_guru/',
   },
   {
     id: '6',
-    title: 'OpenChat Protocol',
-    description: 'An open-source, decentralized messaging protocol with end-to-end encryption and cross-platform support.',
-    techStack: ['Rust', 'WebRTC', 'React', 'Electron', 'Cryptography'],
-    category: 'Open Source',
+    title: 'To-do list',
+    techStack: ['ReactJs', 'Node.js', 'Mongo-DB', 'Tailwind CSS'],
+    category: 'Web Apps',
     author: {
-      name: 'David Park',
-      avatar: '/api/placeholder/40/40',
-      role: 'Systems Architect'
+      name: 'Piyus Kumar',
+      avatar: './Members/piyush.jpg',
     },
-    image: '/api/placeholder/400/250',
-    githubUrl: 'https://github.com/dpark/openchat-protocol',
-    createdAt: '2024-02-01'
-  }
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/PYxMAFIA/todolist.ai',
+    liveUrl: 'https://todolist-ai.onrender.com/login',
+  },
+  {
+    id: '7',
+    title: 'Food Lens',
+    techStack: ['ReactsJS', 'Teachable Machines'],
+    category: 'Web Apps',
+    author: {
+      name: 'Gautam Swami',
+      avatar: './Members/gautam.jpg',
+    },
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://gautam2401.github.io/FoodLens/',
+    liveUrl: 'https://gautam2401.github.io/FoodLens/',
+  },
+  {
+    id: '8',
+    title: 'Cloned Bookmyshow Landing Page',
+    techStack: ['Html', 'Vanilla CSS', 'Vanilla JS'],
+    category: 'Web Apps',
+    author: {
+      name: 'Bibhu Kumar Singh',
+      avatar: './Members/bibhu.jpg',
+    },
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/bib58/bookmyshow',
+    liveUrl: 'https://bib58.github.io/bookmyshow/',
+  },
+  {
+    id: '9',
+    title: 'Used react-redux to create BillDesk at Swiggy Clone',
+    techStack: ['ReactJs', 'Tailwind CSS'],
+    category: 'Web Apps',
+    author: {
+      name: 'Bibhu Kumar Singh',
+      avatar: './Members/bibhu.jpg',
+    },
+    image: 'https://picsum.photos/200',
+    githubUrl: 'https://github.com/bib58/Proj_using_comp_react',
+    liveUrl: '..........................',
+  },
 ];
 
 const categories = [
@@ -215,7 +236,7 @@ export const ProjectsSection = () => {
         </motion.div>
 
         {/* Category Filters */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: 0.1 }}
@@ -241,7 +262,7 @@ export const ProjectsSection = () => {
               </motion.button>
             );
           })}
-        </motion.div>
+        </motion.div> */}
 
         {/* Loading State */}
         {isLoading && (
@@ -346,39 +367,38 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants, prefersRed
       exit="hidden"
       whileHover={prefersReducedMotion ? {} : { 
         y: -8,
+        boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+        scale: 1.02,
         transition: { duration: 0.2 }
       }}
-      className="bg-card rounded-xl border border-border overflow-hidden group shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-card rounded-2xl border border-border overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-300"
     >
       {/* Project Image */}
       <div className="relative overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 rounded-t-2xl"
         />
         <div className="absolute top-4 right-4">
-          <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-medium">
+          <span className="bg-primary text-primary-foreground px-3 py-1 rounded-lg text-xs font-semibold shadow">
             {project.category}
           </span>
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col gap-4">
         {/* Project Title & Description */}
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+        <h3 className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-          {project.description}
-        </p>
 
         {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-2">
           {project.techStack.slice(0, 3).map((tech, index) => (
             <span
               key={index}
-              className="bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-xs"
+              className="bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-xs font-semibold shadow"
             >
               {tech}
             </span>
@@ -391,23 +411,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants, prefersRed
         </div>
 
         {/* Author */}
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-3 mb-2">
           <img
             src={project.author.avatar}
             alt={project.author.name}
-            className="w-8 h-8 rounded-full"
+            className="w-8 h-8 rounded-full border-2 border-primary shadow"
           />
-          </div>
-        
+          <span className="text-base font-medium text-muted-foreground">{project.author.name}</span>
+        </div>
+
         {/* Action Buttons */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 mt-2">
           <motion.a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-            whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
-            className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-3 py-2 rounded-lg text-sm font-medium hover:bg-secondary/80 transition-colors"
+            whileHover={prefersReducedMotion ? {} : { scale: 1.08 }}
+            whileTap={prefersReducedMotion ? {} : { scale: 0.96 }}
+            className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-3 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/80 transition-colors shadow"
           >
             <Github className="w-4 h-4" />
             Code
@@ -417,9 +438,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants, prefersRed
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-              whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+              whileHover={prefersReducedMotion ? {} : { scale: 1.08 }}
+              whileTap={prefersReducedMotion ? {} : { scale: 0.96 }}
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-3 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors shadow"
             >
               <ExternalLink className="w-4 h-4" />
               Demo
