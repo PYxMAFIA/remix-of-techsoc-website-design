@@ -40,7 +40,7 @@ const people: Person[] = [
     email: "bibhukumarsingh355@gmail.com",
     linkedin: "https://www.linkedin.com/in/bibhu-kumar-singh-6b7684316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
-      {
+  {
     id: 20,
     name: "Sujal",
     role: "President",
@@ -49,6 +49,16 @@ const people: Person[] = [
     category: "Senior Council",
     email: "kumarsuajal1356@gmail.com",
     linkedin: "https://www.linkedin.com/in/sujal-kumar-b49141292/",
+  },
+  {
+    id: 64,
+    name: "Soumil Malhotra",
+    role: "Tech co-head",
+    description: "Work and work",
+    image: "./Members/soumil.jpg",
+    category: "Junior Council",
+    email: "malhotrasoumil1@gmail.com",
+    linkedin: "https://www.linkedin.com/in/soumil-malhotra-3b6a27334/",
   },
     {
     id: 14,
