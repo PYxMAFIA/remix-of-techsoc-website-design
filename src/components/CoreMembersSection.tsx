@@ -179,16 +179,6 @@ const people: Person[] = [
     category: "Junior Council",
     email: "shivisahani09@gmail.com",
     linkedin: "https://www.linkedin.com/in/shivanshika-sahani-29b821248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    id: 18,
-    name: "Bhupender Nayak",
-    role: "Design CO-head",
-    description: "Its design that fuels your imagination",
-    image: "./Members/bhupi.jpeg",
-    category: "Junior Council",
-    email: "graphicdesigner321q@gmail.com",
-    linkedin: "https://www.linkedin.com/in/bhupendernayak/",
   }
 ];
 
